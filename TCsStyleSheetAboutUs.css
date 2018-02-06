@@ -1,0 +1,183 @@
+/*
+Tyler Chapman
+TC's Family Restaurant
+9/23/16
+*/
+p{
+color: black;
+text-align: center;
+}
+body{
+	background-color: black;
+	background-image: url("https://inspirationhut.net/wp-content/uploads/2013/05/201.png");	
+	font-family: Verdana,sans-serif;
+}
+.logo{
+	position: absolute;
+	top: 25px;
+	left: 50%;
+	margin-left: -100px;
+	/*http://stackoverflow.com/questions/16758102/
+	how-do-i-horizontally-center-an-absolute-
+	positioned-element-inside-a-100-width*/	
+}
+.homepage{
+ 	position: absolute;
+	top: 285px;
+	left: 50%;
+	margin-left: -140px;
+}
+.menu{
+ 	position: absolute;
+	top: 285px;
+	left: 50%;
+	margin-left: -20px;
+}
+.aboutus{
+ 	position: absolute;
+	top: 285px;
+	left: 50%;
+	margin-left: 55px;
+}	
+.number{
+	position: absolute;
+	top: 235px;
+	left: 50%;
+	margin-left: -165px;
+	font-size: 40px;
+	-webkit-text-fill-color: white; 
+   	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+   	/*https://css-tricks.com/adding-stroke-to-web-text/*/
+}
+a:hover { 
+    background-color: yellow;
+}
+
+td { 
+	color:black;
+}
+
+th{
+	text-align:left;
+	color:black;
+}
+table{
+	color:black;
+	
+	/*width = "100%";
+	border = "1";
+	float: left;*/
+}
+
+@media only screen and (max-width: 1129px){
+    
+.tableone{
+	position: absolute;
+	top: 3050px;
+	left: 50%;
+	margin-left: -460px;
+}
+.tabletwo{
+position: absolute;
+	top: 3050px;
+	left: 50%;
+	margin-left: -70px;
+	}	
+.tablethree{
+	position: absolute;
+	top: 3050px;
+	left: 50%;
+	margin-left: 220px;
+	 
+    }
+}
+@media only screen and (min-width: 1130px){
+    
+.tableone{
+	position: absolute;
+	top: 2950px;
+	left: 50%;
+	margin-left: -460px;
+}
+.tabletwo{
+position: absolute;
+	top: 2950px;
+	left: 50%;
+	margin-left: -70px;
+	}	
+.tablethree{
+	position: absolute;
+	top: 2950px;
+	left: 50%;
+	margin-left: 220px;
+	 
+    }
+}
+@media only screen and (max-width: 920px){
+    
+.tableone{
+	position: absolute;
+	top: 3100px;
+	left: 50%;
+	margin-left: -420px;
+}
+.tabletwo{
+position: absolute;
+	top: 3100px;
+	left: 50%;
+	margin-left: -70px;
+	}	
+.tablethree{
+	position: absolute;
+	top: 3100px;
+	left: 50%;
+	margin-left: 180px;
+	 
+    }
+}
+@media only screen and (max-width: 844px){
+    
+.tableone{
+	position: absolute;
+	top: 3200px;
+	left: 50%;
+	margin-left: -380px;
+}
+.tabletwo{
+position: absolute;
+	top: 3200px;
+	left: 50%;
+	margin-left: -70px;
+	}	
+.tablethree{
+	position: absolute;
+	top: 3200px;
+	left: 50%;
+	margin-left: 150px;
+	 
+    }
+}
+@media only screen and (max-width: 730px){
+    
+.tableone{
+	position: absolute;
+	top: 3300px;
+	left: 50%;
+	margin-left: -350px;
+}
+.tabletwo{
+position: absolute;
+	top: 3300px;
+	left: 50%;
+	margin-left: -70px;
+	}	
+.tablethree{
+	position: absolute;
+	top: 3300px;
+	left: 50%;
+	margin-left: 130px;
+	 
+    }
+}
+

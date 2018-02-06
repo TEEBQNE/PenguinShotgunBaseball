@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--Tyler Chapman-->
+<!--TC's Family Restaurant-->
+<!--9/23/16-->
+<!--Homepage-->
+<html>
+ <header>
+  <title>
+   TC's Family Restaurant
+  </title>
+   <link rel = "stylesheet" type = "text/css" href="TCStyleSheet.css"> 
+   <meta charset="utf-8">
+ </header>
+ <body>
+  <div>
+   <img src = "http://i.imgur.com/amiRWac.jpg" height = "203" width = "200"class = "logo"/>
+  </div>
+  <div>
+   <img src = "http://i.imgur.com/QPnjUNE.jpg" height = "300" width = "100%"/>
+   <div class = "homepage"> <a href = "TCsWebsite.html"> Homepage </a> </div>
+   <div class = "menu"> <a href = "Menu.html"> Menu </a> </div>
+   <div class = "aboutus"> <a href = "AboutUs.html"> About Us </a> </div>
+   <div class = "number"> (802) 464-5900 </div>
+  </div> 
+  <style>
+* {box-sizing:border-box}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align:center; 
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+}
+</style>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ 
+  <img src="http://imgur.com/nAI156e.jpg" style="width:50%" style="height:50%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="http://imgur.com/u1Z6BqB.jpg" style="width:50%" style="height:50%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://imgur.com/0bSj19n.jpg" style="width:50%" style="height:50%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://imgur.com/fGU1yDj.jpg" style="width:50%" style="height:50%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://imgur.com/XuYdLd8.jpg" style="width:50%" style="height:50%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="http://imgur.com/iiclLVA.jpg" style="width:50%" style="height:50%">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<!--http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto-->
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2500); 
+}//http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto
+</script>
+<br></br>
+<div>
+<table>
+  <tr>
+    <th>Hours</th>
+  </tr>
+  <tr>
+    <td>
+    Monday - Thursday 4PM - 9PM<br>
+    Friday 4PM - 10PM<br>
+    Saturday 11:30AM - 10PM<br>
+    Sunday 11:30AM - 9PM
+    </td>
+  </tr>
+</table>
+</div>
+<div>
+<div>
+<table>
+   <tr>
+    <th>Address</th>
+  </tr>
+  <tr>
+    <td >
+    178 VT Route 100<br>
+  	West Dover, VT 05356<br>
+  	tcsrestaurant@gmail.com<br>
+  	T  /  802-464-9422
+  </td>
+  </tr>
+</table>
+</div>
+<div>
+<table>
+   <tr>
+    <th>Find Us</th>
+  </tr>
+  <tr>
+    <td >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.649954977806!2d-72.86324568459439!3d42.94350590604801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e0e52e7814cbc1%3A0x474c2ec20f75c183!2s178+VT-100%2C+West+Dover%2C+VT+05356!5e0!3m2!1sen!2sus!4v1475254730246" width="240" height="90" frameborder="0" style="border:0" allowfullscreen></iframe>
+  	</td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>
