@@ -919,7 +919,7 @@ function enlargeMemory() {
  abortOnCannotGrowMemory();
 }
 var TOTAL_STACK = Module["TOTAL_STACK"] || 5242880;
-var TOTAL_MEMORY = Module["TOTAL_MEMORY"] || 425721856;
+var TOTAL_MEMORY = Module["TOTAL_MEMORY"] || 1231028224;
 var totalMemory = 64 * 1024;
 while (totalMemory < TOTAL_MEMORY || totalMemory < 2 * TOTAL_STACK) {
  if (totalMemory < 16 * 1024 * 1024) {
