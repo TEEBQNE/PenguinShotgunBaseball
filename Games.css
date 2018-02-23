@@ -52,14 +52,14 @@ a:active
 {
 position:relative;
 	color:white;
-	top: 110px;
+	top: 150px;
 	margin-left: 250px;
 }
 
 .penguinAbout
 {
 	color:gray;
-	top: 110px;
+	top: 140px;
 	left: 50%;
 	margin-left: 200px;
 }
@@ -102,7 +102,7 @@ position:relative;
 .firstGame
 {
 	position:relative;
-	top: 100px;
+	top: 130px;
 	margin-left: 350px;
 }
 
