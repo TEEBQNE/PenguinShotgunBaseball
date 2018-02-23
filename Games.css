@@ -10,15 +10,18 @@ body{
 	margin: 0; padding: 0;
 	background: url('https://i.imgur.com/35CMAeF.png') no-repeat fixed; 
 	background-size: 100% 100%;
-		-webkit-background-size: cover;
+	-webkit-background-size: cover;
      
         background-size: cover;
-	font-family: Verdana,sans-serif;
-	
+		font-family: Verdana,sans-serif;
+		background-attachment: scroll;
+		
 }
+
 a {
 	text-decoration: none; 
 }
+
 a:link
 {
 	color: black;
@@ -39,10 +42,68 @@ a:active
 	color: orange;
 }
 
+.page
+{
+	width: 1250px;
+  	margin: 0 auto;
+}
+
+.penguinTitle
+{
+position:relative;
+	color:white;
+	top: 110px;
+	margin-left: 380px;
+}
+
+.penguinAbout
+{
+	color:gray;
+	top: 110px;
+	left: 50%;
+	margin-left: 300px;
+}
+
+.educationTitle
+{
+	color:white;
+	top: 10px;
+	margin-left: 255px;
+}
+
+.emptySpace
+{
+	position:relative;
+	top:100px;
+}
+
+.educationText
+{
+	color:gray;
+	margin-left: 255px;
+}
+
+.darkTitle
+{
+	color:white;
+	position:relative;
+	top: 85px;
+}
+
+.darkAbout
+{
+	color:gray;
+	position:relative;
+	top:95px;
+	left: 50%;
+	margin-left: -400px;
+}
+
 .firstGame
 {
 	position:relative;
 	top: 100px;
+	margin-left: 450px;
 }
 
 .secondGame
