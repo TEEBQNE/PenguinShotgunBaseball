@@ -1,2 +1,0 @@
-# PenguinShotgunBaseball
-Webhost for game
