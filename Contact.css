@@ -1,0 +1,311 @@
+/*
+Tyler Chapman
+Resume website
+2/22/18
+Contact CSS
+*/
+body{
+	background-color: black;
+	/*background-image: url("https://i.imgur.com/35CMAeF.png") no-repeat center center fixed;	*/
+	margin: 0; padding: 0;
+	background: url('https://i.imgur.com/35CMAeF.png') no-repeat fixed; 
+	background-size: 100% 100%;
+		-webkit-background-size: cover;
+     
+        background-size: cover;
+	font-family: Verdana,sans-serif;
+}
+a {
+	text-decoration: none; 
+}
+a:link
+{
+	color: black;
+}
+
+a:visited
+{
+	color: black;
+}
+
+a:hover
+{
+	color: orange;
+}
+
+.form
+{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -180px;
+	color:white;
+}
+
+a:active
+{
+	color: orange;
+}
+
+.contact a
+{
+	color: orange;
+}
+
+.homepage{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: -180px;
+}
+
+.games{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.resume{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: -50px;
+}	
+
+.blog{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 30px;
+}
+
+.contact{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 85px;
+}
+
+td { 
+	color:black;
+}
+
+th{
+	text-align:left;
+	color:black;
+}
+
+table{
+	color:black;
+}
+
+@media only screen and (max-width: 1106px), only screen and (min-width: 949px){
+    
+.tableone{
+	position: absolute;
+	top: 1100px;
+	left: 50%;
+	margin-left: -460px;
+}
+
+.tabletwo{
+position: absolute;
+	top: 1100px;
+	left: 50%;
+	margin-left: -70px;
+}
+	
+.tablethree{
+	position: absolute;
+	top: 1100px;
+	left: 50%;
+	margin-left: 220px;
+	 
+    }
+}
+
+@media only screen and (min-width: 1107px){
+.tableone{
+	position: absolute;
+	top: 1100px;
+	left: 50%;
+	margin-left: -540px;
+}
+
+.tabletwo{
+	position: absolute;
+	top: 1100px;
+	left: 50%;
+	margin-left: -70px;
+}
+	
+.tablethree{
+	position: absolute;
+	top: 1100px;
+	left: 50%;
+	margin-left: 300px;
+	}
+}
+
+@media only screen and (max-width: 948px) {
+    
+.tableone{
+	position: absolute;
+	top: 1080px;
+	left: 50%;
+	margin-left: -420px;
+}
+.tabletwo{
+	position: absolute;
+	top: 1080px;
+	left: 50%;
+	margin-left: -70px;
+}
+	
+.tablethree{
+	position: absolute;
+	top: 1080px;
+	left: 50%;
+	margin-left: 200px;
+	 
+    }
+}
+
+@media only screen and (max-width: 913px) {
+    
+.tableone{
+	position: absolute;
+	top: 1050px;
+	left: 50%;
+	margin-left: -380px;
+}
+.tabletwo{
+	position: absolute;
+	top: 1050px;
+	left: 50%;
+	margin-left: -70px;
+}
+	
+.tablethree{
+	position: absolute;
+	top: 1050px;
+	left: 50%;
+	margin-left: 180px;
+	 
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    
+.tableone{
+	position: absolute;
+	top: 1030px;
+	left: 50%;
+	margin-left: -350px;
+}
+
+.tabletwo{
+	position: absolute;
+	top: 1030px;
+	left: 50%;
+	margin-left: -70px;
+}
+	
+.tablethree{
+	position: absolute;
+	top: 1030px;
+	left: 50%;
+	margin-left: 160px;
+	 
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    
+.tableone{
+	position: absolute;
+	top: 1010px;
+	left: 50%;
+	margin-left: -350px;
+}
+
+.tabletwo{
+	position: absolute;
+	top: 1010px;
+	left: 50%;
+	margin-left: -70px;
+}
+	
+.tablethree{
+	position: absolute;
+	top: 1010px;
+	left: 50%;
+	margin-left: 160px;
+	 
+    }
+}
+
+@media only screen and (max-width: 698px) {
+    
+.tableone{
+	position: absolute;
+	top: 950px;
+	left: 50%;
+	margin-left: -330px;	
+}
+
+.tabletwo{
+	position: absolute;
+	top: 950px;
+	left: 50%;
+	margin-left: -70px;
+	
+}
+	
+.tablethree{
+	position: absolute;
+	top: 950px;
+	left: 50%;
+	margin-left: 150px;
+	
+	 
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    
+.tableone{
+	display: none;	
+}
+
+.tabletwo{
+	display: none;	
+}
+	
+.tablethree{
+	display: none;	 
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+
+.number{
+
+	top: 250px;
+	left: 50%;
+	margin-left: -80px;
+	font-size: 20px;	
+}
+
+img{
+max-width: 100%;
+	}
+(-webkit-min-device-pixel-ratio: 2)
+}
+
+@media only screen and (min-width: 644px){
+.tablemain{
+	display: none;
+}
+
