@@ -22,15 +22,66 @@ a {
 	text-decoration: none; 
 }
 
+a.engineAbout:link
+{
+	color: orange;
+}
+
+a.engineAbout:visited
+{
+	color: orange;
+}
+
+.engineAbout a:visited
+{
+	color: orange;
+}
+
+a.engineAbout:visited
+{
+	color: orange;
+}
+
+.engineAbout a:hover
+{
+	color: white;
+}
+a.penguinAbout:link
+{
+	color: orange;
+}
+
+a.penguinAbout:visited
+{
+	color: orange;
+}
+
+.penguinAbout a:visited
+{
+	color: orange;
+}
+
+
+
+.penguinAbout a:hover
+{
+	color: white;
+}
+
 a:link
 {
 	color: black;
 }
 
+
+
+
 a:visited
 {
 	color: black;
 }
+
+
 
 a:hover
 {
@@ -50,7 +101,7 @@ a:active
 
 .penguinTitle
 {
-position:relative;
+	position:relative;
 	color:white;
 	top: 150px;
 	margin-left: 250px;
@@ -61,7 +112,23 @@ position:relative;
 	color:gray;
 	top: 140px;
 	left: 50%;
+	margin-left: 350px;
+}
+
+.engineAbout
+{
+	color:gray;
+	top: 140px;
+	left: 50%;
 	margin-left: 200px;
+}
+
+.engineTitle
+{
+	position:relative;
+	color:white;
+	top: 150px;
+	margin-left: 360px;
 }
 
 .educationTitle
