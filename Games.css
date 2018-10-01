@@ -22,34 +22,19 @@ a {
 	text-decoration: none; 
 }
 
-a.penguinAbout:link
-{
-	color: orange;
-}
-
-.penguinAbout a:visited
-{
-	color: orange;
-}
-
-.penguinAbout a:active
-{
-	color: orange;
-}
-
-a.penguinAbout:active
-{
-	color:orange;
-}
-
 div.penguinAbout a:link
 {
 	color:orange;
 }
 
-.penguinAbout a:hover
+div.penguinAbout a:visited
 {
-	color: white;
+	color:orange;
+}
+
+div.penguinAbout a:hover
+{
+	color:white;
 }
 
 a:link
@@ -67,6 +52,15 @@ div.engineAbout a:link
 	color:orange;
 }
 
+div.engineAbout a:visited
+{
+	color:orange;
+}
+
+div.engineAbout a:hover
+{
+	color:white;
+}
 
 a:hover
 {
