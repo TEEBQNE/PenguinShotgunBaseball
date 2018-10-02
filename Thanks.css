@@ -307,7 +307,6 @@ position: absolute;
 
 img{
 max-width: 100%;
-(-webkit-min-device-pixel-ratio: 2)
 }
 
 @media only screen and (min-width: 644px){
