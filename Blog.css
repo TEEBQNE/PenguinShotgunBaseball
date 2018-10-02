@@ -9,7 +9,6 @@ body{
 	/*background-image: url("https://i.imgur.com/35CMAeF.png") no-repeat center center fixed;	*/
 	margin: 0; padding: 0; 
 	background-size: 100% 100%;
-		-webkit-background-size: cover;
      
         background-size: cover;
 	font-family: Verdana,sans-serif;
@@ -298,7 +297,6 @@ position: absolute;
 
 img{
 max-width: 100%;
-	}
 (-webkit-min-device-pixel-ratio: 2)
 }
 

@@ -10,7 +10,6 @@ body{
 	margin: 0; padding: 0;
 	background: url('https://i.imgur.com/MoJAKIGr.png') repeat fixed; 
 	background-size: 100% 100%;
-		-webkit-background-size: cover;
      
         background-size: cover;
 	font-family: Verdana,sans-serif;
@@ -300,7 +299,6 @@ position: absolute;
 
 img{
 max-width: 100%;
-	}
 (-webkit-min-device-pixel-ratio: 2)
 }
 
