@@ -17,6 +17,22 @@ body{
 a {
 	text-decoration: none; 
 }
+
+div.contactMe a:link
+{
+	color:orange;
+}
+
+div.contactMe a:visited
+{
+	color:orange;
+}
+
+div.contactMe a:hover
+{
+	color:blue;
+}
+
 a:link
 {
 	color: black;
@@ -120,6 +136,14 @@ position: absolute;
 	margin-left: 220px;
 	 
     }
+}
+
+img
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 @media only screen and (min-width: 1107px){
