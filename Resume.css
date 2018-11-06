@@ -38,6 +38,30 @@ a:active
 	color: orange;
 }
 
+.download p
+{
+	margin-left: 420px;
+}
+
+.download a
+{
+	color:orange;
+	
+}
+
+.download a:hover
+{
+	color:white;
+	text-decoration: underline;
+}
+
+.phone
+{
+	color:white;
+	position:relative;
+	top: 20px;
+}
+
 .title
 {
 	color:white;
@@ -61,33 +85,15 @@ a:active
 
 .download
 {
-	position: relative;
-	top: 100px;
-	color:gray;
-}
-
-.download a
-{
-	color:orange;
-	
-}
-
-.download a:hover
-{
-	color:white;
-	text-decoration: underline;
-}
-
-.phone
-{
-	color:white;
+	margin-left: -440px;
 	position:relative;
-	top: 20px;
+	top: 80px;
+	color:gray;
 }
 
 .allText
 {
-	width: 1000px;
+	max-width: 1000px;
   	margin: 0 auto;
 }
 
@@ -340,6 +346,10 @@ div.headerPic img{
 	 
     }
     
+ 
+ 
+ 
+
 }
 
 @media only screen and (max-width: 913px) {
@@ -389,6 +399,22 @@ div.headerPic img{
 	margin-left: 160px;
 	 
     }
+    
+div.allText p
+{
+	margin-left: -100px;
+}
+
+div.allText p
+{
+	font-size: 14px;
+}
+
+div.email, div.name, div.title, div.email p
+{
+	font-size: 14px;
+}
+
 }
 
 @media only screen and (max-width: 830px) {
@@ -414,6 +440,11 @@ div.headerPic img{
 	margin-left: 160px;
 	 
     }
+    
+/*div.allText,div.title,div.hometown,div.email p
+{
+	margin-left: -140px;
+}*/
 }
 
 @media only screen and (max-width: 698px) {
@@ -481,6 +512,8 @@ div.headerPic img{
 	left: 50%;
 	margin-left: 85px;
 }
+
+
 }
 
 @media only screen and (max-width: 645px) {
@@ -541,6 +574,21 @@ div.headerPic img{
 	margin-left: 85px;
 	font-size: 14px;
 }
+
+div.allText p
+{
+	margin-left: -120px;
+}
+
+div.allText p
+{
+	font-size: 12px;
+}
+
+div.email, div.name, div.title, div.email p
+{
+	font-size: 13px;
+}
 }
 
 @media only screen and (max-width: 550px) {
@@ -600,6 +648,33 @@ div.headerPic img{
 	left: 50%;
 	margin-left: 65px;
 	font-size: 10px;
+}
+
+div.email, div.email, div.phone, div.hometown p
+{
+	font-size: 10px;
+}
+
+div.allText p
+{
+	margin-left: -140px;
+}
+
+div.allText p
+{
+	font-size: 8px;
+}
+}
+
+@media only screen and (max-width: 550px) {
+div.allText p
+{
+	margin-left: -180px;
+}
+
+div.email, div.email, div.phone, div.hometown p
+{
+	font-size: 9px;
 }
 }
 
