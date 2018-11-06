@@ -35,9 +35,9 @@ a:hover
 .form
 {
 	position: absolute;
-	top: 250px;
+	top: 100px;
 	left: 50%;
-	margin-left: -100px;
+	margin-left: -150px;
 	color:white;
 }
 
