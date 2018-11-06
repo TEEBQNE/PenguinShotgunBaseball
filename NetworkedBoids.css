@@ -113,6 +113,11 @@ table{
 	color:black;
 }
 
+div.headerPic img{
+	width: 100%;
+    height: 100px;
+}	
+
 @media only screen and (max-width: 1106px), only screen and (min-width: 949px){
     
 .tableone{
@@ -136,14 +141,47 @@ position: absolute;
 	margin-left: 220px;
 	 
     }
+    
+    div.headerPic img{
+	width: 100%;
+    height: 80px;
+}	
+
+.homepage{
+ 	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: -180px;
 }
 
-img
-{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+.games{
+ 	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.resume{
+ 	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: -50px;
+}	
+
+.blog{
+ 	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: 30px;
+}
+
+.contact{
+ 	position: absolute;
+	top: 9px;
+	left: 50%;
+	margin-left: 85px;
+}
+
 }
 
 @media only screen and (min-width: 1107px){
@@ -167,6 +205,46 @@ img
 	left: 50%;
 	margin-left: 300px;
 	}
+	
+div.headerPic img{
+	width: 100%;
+    height: 120px;
+}
+
+.homepage{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: -180px;
+}
+
+.games{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.resume{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: -50px;
+}	
+
+.blog{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 30px;
+}
+
+.contact{
+ 	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 85px;
+}
 }
 
 @media only screen and (max-width: 948px) {
@@ -191,6 +269,7 @@ img
 	margin-left: 200px;
 	 
     }
+    
 }
 
 @media only screen and (max-width: 913px) {
@@ -292,6 +371,46 @@ img
 	
 	 
     }
+    
+div.headerPic img{
+	width: 100%;
+    height: 60px;
+}	
+
+.homepage{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -180px;
+}
+
+.games{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.resume{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -50px;
+}	
+
+.blog{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: 30px;
+}
+
+.contact{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: 85px;
+}
 }
 
 @media only screen and (max-width: 645px) {
@@ -307,6 +426,111 @@ img
 .tablethree{
 	display: none;	 
     }
+    
+div.headerPic img{
+	width: 100%;
+    height: 50px;
+}
+
+.homepage{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -180px;
+	font-size: 14px;
+}
+
+.games{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -120px;
+	font-size: 14px;
+}
+
+.resume{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -50px;
+	font-size: 14px;
+}	
+
+.blog{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: 30px;
+	font-size: 14px;
+}
+
+.contact{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: 85px;
+	font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 550px) {
+    
+.tableone{
+	display: none;	
+}
+
+.tabletwo{
+	display: none;	
+}
+	
+.tablethree{
+	display: none;	 
+    }
+    
+div.headerPic img{
+	width: 100%;
+    height: 40px;
+}
+
+.homepage{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -125px;
+	font-size: 10px;
+}
+
+.games{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -80px;
+	font-size: 10px;
+}
+
+.resume{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: -30px;
+	font-size: 10px;
+}	
+
+.blog{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: 25px;
+	font-size: 10px;
+}
+
+.contact{
+ 	position: absolute;
+	top: 3px;
+	left: 50%;
+	margin-left: 65px;
+	font-size: 10px;
+}
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -329,6 +553,3 @@ img
 		display: none;
 	}
 }
-
-
-
