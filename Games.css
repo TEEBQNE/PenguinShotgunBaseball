@@ -21,17 +21,17 @@ a {
 	text-decoration: none; 
 }
 
-div.penguinAbout a:link
+div.gameLink a:link
 {
 	color:orange;
 }
 
-div.penguinAbout a:visited
+div.gameLink a:visited
 {
 	color:orange;
 }
 
-div.penguinAbout a:hover
+div.gameLink a:hover
 {
 	color:white;
 }
@@ -46,17 +46,17 @@ a:visited
 	color: black;
 }
 
-div.engineAbout a:link
+div.gameLink a:link
 {
 	color:orange;
 }
 
-div.engineAbout a:visited
+div.gameLink a:visited
 {
 	color:orange;
 }
 
-div.engineAbout a:hover
+div.gameLink a:hover
 {
 	color:white;
 }
@@ -167,6 +167,29 @@ a:active
 	top: 15px;
 	left: 50%;
 	margin-left: -180px;
+}
+
+iframe
+{
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+
+p
+{
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	color: gray;
+}
+
+h1
+{
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	color: white;
 }
 
 .games{
@@ -567,6 +590,12 @@ div.headerPic img{
 	margin-left: 85px;
 	font-size: 14px;
 }
+
+iframe
+{
+	width: 500px;
+	height: 250px;
+}
 }
 
 @media only screen and (max-width: 550px) {
@@ -626,6 +655,12 @@ div.headerPic img{
 	left: 50%;
 	margin-left: 65px;
 	font-size: 10px;
+}
+
+iframe
+{
+	width: 400px;
+	height: 220px;
 }
 }
 
