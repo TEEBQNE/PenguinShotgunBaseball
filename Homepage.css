@@ -423,6 +423,11 @@ div.headerPic img{
 	left: 50%;
 	margin-left: 85px;
 }
+
+div.firstPara p
+{
+	font-size: 12px;
+}
 }
 
 @media only screen and (max-width: 645px) {
@@ -542,6 +547,18 @@ div.headerPic img{
 	left: 50%;
 	margin-left: 65px;
 	font-size: 10px;
+}
+
+div.firstPara p
+{
+	font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 500px) {
+	div.firstPara p
+{
+	font-size: 9px;
 }
 }
 
