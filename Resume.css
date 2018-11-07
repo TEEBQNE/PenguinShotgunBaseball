@@ -195,30 +195,7 @@ div.headerPic img{
 }	
 
 @media only screen and (max-width: 1106px), only screen and (min-width: 949px){
-    
-.tableone{
-	position: absolute;
-	top: 1100px;
-	left: 50%;
-	margin-left: -460px;
-}
-
-.tabletwo{
-position: absolute;
-	top: 1100px;
-	left: 50%;
-	margin-left: -70px;
-}
-	
-.tablethree{
-	position: absolute;
-	top: 1100px;
-	left: 50%;
-	margin-left: 220px;
-	 
-    }
-    
-    div.headerPic img{
+div.headerPic img{
 	width: 100%;
     height: 80px;
 }	
@@ -261,27 +238,6 @@ position: absolute;
 }
 
 @media only screen and (min-width: 1107px){
-.tableone{
-	position: absolute;
-	top: 1100px;
-	left: 50%;
-	margin-left: -540px;
-}
-
-.tabletwo{
-	position: absolute;
-	top: 1100px;
-	left: 50%;
-	margin-left: -70px;
-}
-	
-.tablethree{
-	position: absolute;
-	top: 1100px;
-	left: 50%;
-	margin-left: 300px;
-	}
-	
 div.headerPic img{
 	width: 100%;
     height: 120px;
@@ -323,82 +279,7 @@ div.headerPic img{
 }
 }
 
-@media only screen and (max-width: 948px) {
-    
-.tableone{
-	position: absolute;
-	top: 1080px;
-	left: 50%;
-	margin-left: -420px;
-}
-.tabletwo{
-	position: absolute;
-	top: 1080px;
-	left: 50%;
-	margin-left: -70px;
-}
-	
-.tablethree{
-	position: absolute;
-	top: 1080px;
-	left: 50%;
-	margin-left: 200px;
-	 
-    }
-    
- 
- 
- 
-
-}
-
-@media only screen and (max-width: 913px) {
-    
-.tableone{
-	position: absolute;
-	top: 1050px;
-	left: 50%;
-	margin-left: -380px;
-}
-.tabletwo{
-	position: absolute;
-	top: 1050px;
-	left: 50%;
-	margin-left: -70px;
-}
-	
-.tablethree{
-	position: absolute;
-	top: 1050px;
-	left: 50%;
-	margin-left: 180px;
-	 
-    }
-}
-
 @media only screen and (max-width: 870px) {
-    
-.tableone{
-	position: absolute;
-	top: 1030px;
-	left: 50%;
-	margin-left: -350px;
-}
-
-.tabletwo{
-	position: absolute;
-	top: 1030px;
-	left: 50%;
-	margin-left: -70px;
-}
-	
-.tablethree{
-	position: absolute;
-	top: 1030px;
-	left: 50%;
-	margin-left: 160px;
-	 
-    }
     
 div.allText p
 {
@@ -417,62 +298,7 @@ div.email, div.name, div.title, div.email p
 
 }
 
-@media only screen and (max-width: 830px) {
-    
-.tableone{
-	position: absolute;
-	top: 1010px;
-	left: 50%;
-	margin-left: -350px;
-}
-
-.tabletwo{
-	position: absolute;
-	top: 1010px;
-	left: 50%;
-	margin-left: -70px;
-}
-	
-.tablethree{
-	position: absolute;
-	top: 1010px;
-	left: 50%;
-	margin-left: 160px;
-	 
-    }
-    
-/*div.allText,div.title,div.hometown,div.email p
-{
-	margin-left: -140px;
-}*/
-}
-
-@media only screen and (max-width: 698px) {
-    
-.tableone{
-	position: absolute;
-	top: 950px;
-	left: 50%;
-	margin-left: -330px;	
-}
-
-.tabletwo{
-	position: absolute;
-	top: 950px;
-	left: 50%;
-	margin-left: -70px;
-	
-}
-	
-.tablethree{
-	position: absolute;
-	top: 950px;
-	left: 50%;
-	margin-left: 150px;
-	
-	 
-    }
-    
+@media only screen and (max-width: 698px) { 
 div.headerPic img{
 	width: 100%;
     height: 60px;
@@ -517,19 +343,6 @@ div.headerPic img{
 }
 
 @media only screen and (max-width: 645px) {
-    
-.tableone{
-	display: none;	
-}
-
-.tabletwo{
-	display: none;	
-}
-	
-.tablethree{
-	display: none;	 
-    }
-    
 div.headerPic img{
 	width: 100%;
     height: 50px;
@@ -591,20 +404,7 @@ div.email, div.name, div.title, div.email p
 }
 }
 
-@media only screen and (max-width: 550px) {
-    
-.tableone{
-	display: none;	
-}
-
-.tabletwo{
-	display: none;	
-}
-	
-.tablethree{
-	display: none;	 
-    }
-    
+@media only screen and (max-width: 550px) {  
 div.headerPic img{
 	width: 100%;
     height: 40px;
@@ -690,11 +490,5 @@ div.email, div.email, div.phone, div.hometown p
 
 	img{
 		max-width: 100%;
-	}
-}
-
-@media only screen and (min-width: 644px){
-	.tablemain{
-		display: none;
 	}
 }
