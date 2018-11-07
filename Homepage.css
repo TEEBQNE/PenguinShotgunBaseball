@@ -80,7 +80,6 @@ a:hover
 {
 	position: relative;
 	top: 80px;
-	margin-left: -20px;
 	
 }
 
@@ -89,7 +88,6 @@ a:hover
 	color:white;
 	position: relative;
 	top: 85px;
-	margin-left: -20px;
 }
 
 .firstPara a
@@ -108,7 +106,6 @@ a:hover
 	position: relative;
 	color:gray;
 	top: 110px;
-	margin-left: -20px;
 }
 
 
@@ -559,6 +556,13 @@ div.firstPara p
 	div.firstPara p
 {
 	font-size: 9px;
+}
+}
+
+@media only screen and (max-width: 360px) {
+	div.firstPara p
+{
+	font-size: 7px;
 }
 }
 
