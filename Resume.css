@@ -492,3 +492,11 @@ div.email, div.email, div.phone, div.hometown p
 		max-width: 100%;
 	}
 }
+
+@media only screen and (max-width: 375px) {
+div.allText p
+{
+	margin-left: -210px;
+	font-size: 7px;
+}
+}
