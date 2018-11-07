@@ -380,3 +380,11 @@ div.card img
 		max-width: 100%;
 	}
 }
+
+@media only screen and (max-width: 360px) {
+div.card img
+{
+	max-width: 300px;
+	height: auto;
+}
+}

@@ -338,3 +338,10 @@ div.headerPic img{
 	}
 }
 
+@media only screen and (max-width: 400px) {
+div.theTitle h2
+{
+	font-size: 45px;
+}
+}
+
