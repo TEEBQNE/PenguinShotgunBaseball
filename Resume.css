@@ -55,18 +55,25 @@ a:active
 	text-decoration: underline;
 }
 
-.phone
-{
-	color:white;
-	position:relative;
-	top: 20px;
-}
-
 .title
 {
 	color:white;
 	position: relative;
 	top: 75px;
+}
+
+.phone
+{
+	color:white;
+	position:relative;
+	top: -10px;
+}
+
+.github
+{
+	color:white;
+	position: relative;
+	top: 10px;
 }
 
 .hometown
@@ -402,6 +409,8 @@ div.email, div.name, div.title, div.email p
 {
 	font-size: 13px;
 }
+
+
 }
 
 @media only screen and (max-width: 550px) {  
@@ -455,6 +464,20 @@ div.email, div.email, div.phone, div.hometown p
 	font-size: 10px;
 }
 
+.phone
+{
+	color:white;
+	position:relative;
+	top: 10px;
+}
+
+.github
+{
+	color:white;
+	position: relative;
+	top: 20px;
+}
+
 div.allText p
 {
 	margin-left: -140px;
@@ -475,6 +498,11 @@ div.allText p
 div.email, div.email, div.phone, div.hometown p
 {
 	font-size: 9px;
+}
+
+div.github h3
+{
+	font-size: 10px;
 }
 }
 
