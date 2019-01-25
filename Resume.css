@@ -28,6 +28,16 @@ a:visited
 	color: black;
 }
 
+.experienceText a
+{
+	color:orange;
+}
+
+.experienceText a:hover
+{
+	color: white;
+}
+
 a:hover
 {
 	color: orange;
@@ -410,6 +420,38 @@ div.email, div.name, div.title, div.email p
 	font-size: 13px;
 }
 
+div.title h1
+{
+	font-size:18px;
+}
+
+.phone
+{
+	color:white;
+	position:relative;
+	top: 10px;
+}
+
+.email
+{
+	color:white;
+	position: relative;
+	top: 50px;
+}
+
+.githubLink
+{
+	position: relative;
+	top: 30px;
+	font-size:13px;
+}
+
+div.hometown
+{
+	top: 60px;
+	font-size: 13px;
+}
+
 
 }
 
@@ -468,14 +510,24 @@ div.email, div.email, div.phone, div.hometown p
 {
 	color:white;
 	position:relative;
-	top: 10px;
+	top: 20px;
+}
+
+.email
+{
+	top: 55px;
 }
 
 .githubLink
 {
 	color:white;
 	position: relative;
-	top: 20px;
+	top: 23px;
+}
+
+div.hometown
+{
+	font-size: 10px;
 }
 
 div.allText p
