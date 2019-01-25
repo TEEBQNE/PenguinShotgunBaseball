@@ -36,6 +36,11 @@ div.gameLink a:hover
 	color:white;
 }
 
+div.gameLink
+{
+	text-align: justify;
+}
+
 a:link
 {
 	color: black;
