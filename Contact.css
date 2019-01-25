@@ -34,11 +34,12 @@ a:hover
 
 .form
 {
-	position: absolute;
+	/*position: absolute;*/
 	top: 100px;
-	left: 50%;
-	margin-left: -150px;
+	/*left: 50%;*/
+	/*margin-left: -150px;*/
 	color:white;
+	text-align:center;
 }
 
 a:active
