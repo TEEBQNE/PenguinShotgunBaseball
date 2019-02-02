@@ -59,6 +59,9 @@ ul
   position: relative;
    display: inline-block;
    word-break:break-all; /* wrap extended text*/
+   -webkit-column-count: 2; /* Chrome, Safari, Opera */
+   -moz-column-count: 2; /* Firefox */
+   column-count: 2;
 }
 
 .container {
@@ -71,9 +74,7 @@ ul
 .container img{
     vertical-align: bottom;
     max-width: 100%;
-}
-
-.container img{
+    display: inline-block;
     border-radius:50% 50% 50% 50%;
 }
 
@@ -122,7 +123,7 @@ ul
 
 .username a:visited
 {
-	color:white;
+	color:black;
 }
 
 .username a:hover
