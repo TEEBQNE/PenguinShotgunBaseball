@@ -4,6 +4,45 @@
 	<title>Active streamer lobbies</title>
 	 <link rel="stylesheet" href="test.css">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	 <script>
+	 function sortList() {
+	 
+	 	// get the list
+	 	var ul = $("#myUL:first");
+	 	
+	 	// get the element of the list
+	 	var list = document.getElementById("myUL");
+	 	
+	 	// get all viewer counts
+	 	var elements = list.querySelectorAll("#viewerCount");
+	 	
+	 	// throw viewer counts in an array
+	 	var arr = $.makeArray(elements);
+	
+		// sort the viewercounts by numerical values 	
+	 	arr.sort(function(a, b) {
+    		var textA = +$(a).text();
+    		var textB = +$(b).text();
+
+    		if (textA > textB) return -1;
+    		if (textA < textB) return 1;
+
+    		return 0;
+		});
+		
+		// empty the list
+	 	ul.empty();
+
+		// fill the list back up by what is returned by the new array
+		$.each(arr, function() {
+    		ul.append(this.parentNode.parentNode);
+		});
+	}
+	 
+	  window.onload = sortList;
+	  
+	  </script>
 </head>
 
 <body>
@@ -27,7 +66,7 @@ project or stop streaming-->
   <li>
   	<div class="username"><a href="#"><span>Name1</span></a></div>
   	<div class = "userPicture"><img src="https://secure.webtoolhub.com/static/resources/icons/set47/f9a9f6cc.png"></div>
-  	<div class="viewerCount"><p><span>count</span></p>
+  	<div id="viewerCount" class="viewerCount"><p><span>100</span></p>
   </li>
 </div>
   
@@ -35,7 +74,7 @@ project or stop streaming-->
   <li>
   	<div class="username"><a href="#"><span>otherName</span></a></div>
   	<div class = "userPicture"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdKDNI_-Y1qqzRbwTpCvifz_Qb5LfQkrHliD7iHE4SS0DmWgpCJA"></div>
-  	<div class="viewerCount"><p><span>count</span></p>
+  	<div id="viewerCount" class="viewerCount"><p><span>2</span></p>
   </li>
 </div>
 
@@ -43,7 +82,7 @@ project or stop streaming-->
   <li>
   	<div class="username"><a href="#"><span>testWords</span></a></div>	
   	<div class = "userPicture"><img src="https://vignette.wikia.nocookie.net/blogclan-2/images/b/b9/Random-image-15.jpg"></div>
-  	<div class="viewerCount"><p><span>count</span></p>
+  	<div id="viewerCount" class="viewerCount"><p><span>0</span></p>
   </li>
 </div>
   
@@ -51,7 +90,7 @@ project or stop streaming-->
   <li>
  	 <div class="username"><a href="#"><span>English</span></a></div>
   	<div class = "userPicture"><img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg"></div>
-  	<div class="viewerCount"><p><span>count</span></p>	
+  	<div id="viewerCount" class="viewerCount"><p><span>51</span></p>	
   </li>
 </div>
 
@@ -59,7 +98,7 @@ project or stop streaming-->
   <li>
   	<div class="username"><a href="#"><span>What</span></a></div>
   	<div class = "userPicture"><img src="https://www.newton.ac.uk/files/covers/968361.jpg"></div>
-  	<div class="viewerCount"><p><span>count</span></p>	
+  	<div id="viewerCount" class="viewerCount"><p><span>23</span></p>	
   </li>
 </div>
   
@@ -67,7 +106,7 @@ project or stop streaming-->
   <li>
   	<div class="username"><a href="#"><span>EarlyClock</span></a></div>
   	<div class = "userPicture"><img src="https://wallpaperbrowse.com/media/images/750814.jpg"></div>
-  	<div class="viewerCount"><p><span>count</span></p>
+  	<div id="viewerCount" class="viewerCount"><p><span>51</span></p>
   </li>
 </div>
   
@@ -75,10 +114,12 @@ project or stop streaming-->
   <li>
   	<div class="username"><a href="#"><span>INedSleep</span></a></div>	
   	<div class = "userPicture"><img src="http://climatecommunication.yale.edu/wp-content/uploads/2017/04/001-stone-circle-jpeg-768x350.jpg"></div>
-  	<div class="viewerCount"><p><span>count</span></p>
+  	<div id="viewerCount" class="viewerCount"><p><span>1412</span></p>
   </li>
 </div>
 </ul>
+
+<div id = "test"></div>
 
 <script>
 function myFunction() {
@@ -96,6 +137,7 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
+    sortList();
 }
 </script>
 
