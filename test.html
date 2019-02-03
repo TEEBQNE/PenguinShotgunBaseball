@@ -19,8 +19,7 @@
 	 	
 	 	// throw viewer counts in an array
 	 	var arr = $.makeArray(elements);
-	
-		// sort the viewercounts by numerical values 	
+	 	
 	 	arr.sort(function(a, b) {
     		var textA = +$(a).text();
     		var textB = +$(b).text();
@@ -30,12 +29,73 @@
 
     		return 0;
 		});
-		
-		// empty the list
 	 	ul.empty();
+	 	
+	 	var newarr=[];
+	 	
+	 	for(var x = 0; x < arr.length; x++)
+	 	{
+	 		console.log(arr[x].innerHTML);
+	 	}
+	 	
+	 	while(arr.length)
+	 		newarr.push(arr.splice(0,2));
+	 		
+	 	newArr = transpose(newarr);
+	 	
+	 	//console.log(newArr);
+	 	
+	 	var newerArr=[];
+	 	
+		function transpose(a) {
 
-		// fill the list back up by what is returned by the new array
-		$.each(arr, function() {
+		  // Calculate the width and height of the Array
+		  var w = a.length || 0;
+		  var h = a[0] instanceof Array ? a[0].length : 0;
+
+		  // In case it is a zero matrix, no transpose routine needed.
+		  if(h === 0 || w === 0) { return []; }
+
+		  /**
+		   * @var {Number} i Counter
+		   * @var {Number} j Counter
+		   * @var {Array} t Transposed data is stored in this array.
+		   */
+		  var i, j, t = [];
+
+		  // Loop through every item in the outer array (height)
+		  for(i=0; i<h; i++) {
+
+			// Insert a new row (array)
+			t[i] = [];
+
+			// Loop through every item per item in outer array (width)
+			for(j=0; j<w; j++) {
+
+			  // Save transposed data.
+			  t[i][j] = a[j][i];
+			}
+		  }
+
+		  return t;
+		}
+		
+		// hard-coding to two columns
+		for(var x = 0; x < 2; x++)
+		{
+			for(var y = 0; y < Math.ceil(newarr.length); y++)
+			{
+				
+				if(newarr[y][x] != null)
+				{
+					newerArr.push(newarr[y][x]);
+				}
+			}
+		}
+		
+		console.log(newerArr);
+
+		$.each(newerArr, function() {
     		ul.append(this.parentNode.parentNode);
 		});
 	}
