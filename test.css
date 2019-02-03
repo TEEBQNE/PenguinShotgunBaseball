@@ -8,6 +8,17 @@ iframe {
   left: 0px;
 }
 
+#cover {
+	position: fixed; 
+	height: 100%; 
+	width: 100%; 
+	top:0; 
+	left: 0; 
+	background: #000; 
+	z-index:9999;
+	color: white;
+}
+
 /* hides the scrollbar - -should we have it?*/
 html {
   overflow:   scroll;
@@ -54,30 +65,27 @@ ul
 #myUL li img{
   height: 50vw;
   width: 50vw;
-  /*background: tomato;*/
   line-height: 25vw;
   font-size: 20vw;
   margin-right: -4px;
   position: relative;
-   display: inline-block;
-   word-break:break-all; /* wrap extended text*/
-   -webkit-column-count: 2; /* Chrome, Safari, Opera */
-   -moz-column-count: 2; /* Firefox */
-   column-count: 2;
 }
 
 .container {
     position: relative;
     width: 100%;
     margin-bottom: 0px; 
-    display:inline-block;
 }
 
 .container img{
     vertical-align: bottom;
     max-width: 100%;
-    display: inline-block;
     border-radius:50% 50% 50% 50%;
+}
+
+.container li
+{
+	  display: inline-block;
 }
 
 .username {
@@ -103,7 +111,6 @@ ul
 
 .username:before, viewerCount:before {
     content: ' ';
-    display: inline-block;
     height: 100%;
     vertical-align: middle;   
 }

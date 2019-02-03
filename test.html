@@ -1,11 +1,23 @@
 <!DOCTYPE HTML>
 <html lang="en">
+<div id="cover">FETCHING STREAMS...</div>
 <head>
 	<title>Active streamer lobbies</title>
 	 <link rel="stylesheet" href="test.css">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	 <script>
+	 
+	$(window).on('load', function() {
+    	$("#cover").fadeOut(200);
+	});
+	
+	function newW()
+	{
+    	$(window).load();
+	}
+	setTimeout(newW, 1000);
+	 
 	 function sortList() {
 	 
 	 	// get the list
