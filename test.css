@@ -11,6 +11,7 @@ iframe {
 /* hides the scrollbar - -should we have it?*/
 html {
   overflow:   scroll;
+  display:inline-block;
 }
 ::-webkit-scrollbar {
     width: 0px;

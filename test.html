@@ -14,12 +14,18 @@
 	 	// get the element of the list
 	 	var list = document.getElementById("myUL");
 	 	
-	 	// get all viewer counts
-	 	var elements = list.querySelectorAll("#viewerCount");
+	 	// grabs all non hidden elements to display
+	 	var theElements = list.querySelectorAll('.container li:not([style*="display:none"]):not([style*="display: none"]) > #viewerCount');
 	 	
-	 	// throw viewer counts in an array
-	 	var arr = $.makeArray(elements);
+	 	// grabs rest of elements to not lose the data when appending new array
+	 	var otherElements = list.querySelectorAll('.container li[style*="display: none"] > #viewerCount');
 	 	
+	 	
+	 	// throws the above lists into arrays to handle data
+	 	var arr = $.makeArray(theElements);
+	 	var other = $.makeArray(otherElements);
+	 	
+	 	// sorting the visible array by numerical viewer value
 	 	arr.sort(function(a, b) {
     		var textA = +$(a).text();
     		var textB = +$(b).text();
@@ -29,21 +35,18 @@
 
     		return 0;
 		});
+		
+		// empty the ul element 
 	 	ul.empty();
 	 	
+	 	// create new array to hold info in 2D to transpose
 	 	var newarr=[];
 	 	
-	 	for(var x = 0; x < arr.length; x++)
-	 	{
-	 		console.log(arr[x].innerHTML);
-	 	}
-	 	
+	 	// create 2D array with 2 columns
 	 	while(arr.length)
 	 		newarr.push(arr.splice(0,2));
 	 		
 	 	newArr = transpose(newarr);
-	 	
-	 	//console.log(newArr);
 	 	
 	 	var newerArr=[];
 	 	
@@ -83,7 +86,7 @@
 		// hard-coding to two columns
 		for(var x = 0; x < 2; x++)
 		{
-			for(var y = 0; y < Math.ceil(newarr.length); y++)
+			for(var y = 0; y < (newarr.length); y++)
 			{
 				
 				if(newarr[y][x] != null)
@@ -93,14 +96,19 @@
 			}
 		}
 		
-		console.log(newerArr);
-
+		// append information to array (first show visible to order them correctly)
 		$.each(newerArr, function() {
     		ul.append(this.parentNode.parentNode);
 		});
+		
+		// append the rest to not lose the data
+		$.each(other, function() {
+			ul.append(this.parentNode.parentNode);
+		});
 	}
 	 
-	  window.onload = sortList;
+	// use this function on load
+	window.onload = sortList;
 	  
 	  </script>
 </head>
@@ -194,7 +202,7 @@ function myFunction() {
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
-            li[i].style.display = "none";
+            li[i].style.display = " none";
         }
     }
     sortList();
