@@ -1,23 +1,32 @@
+<!--Front-end test for lobby state. See lobby.php for actual implementation-->
+
 <!DOCTYPE HTML>
 <html lang="en">
+
+<!-- Needed so that javascript can load sorted list-->
 <div id="cover">FETCHING STREAMS...</div>
 <head>
 	<title>Active streamer lobbies</title>
 	 <link rel="stylesheet" href="test.css">
+	 
+	 <!-- disables zoom -->
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	 <script>
 	 
+	// shows black and "fetching streams..." until sort javascript loads
 	$(window).on('load', function() {
     	$("#cover").fadeOut(200);
 	});
 	
+	// helper function for the load in case it takes a while
 	function newW()
 	{
     	$(window).load();
 	}
 	setTimeout(newW, 1000);
 	 
+	 // sorts the list elements by numerical view value
 	 function sortList() {
 	 
 	 	// get the list
@@ -100,7 +109,6 @@
 		{
 			for(var y = 0; y < (newarr.length); y++)
 			{
-				
 				if(newarr[y][x] != null)
 				{
 					newerArr.push(newarr[y][x]);
@@ -126,14 +134,6 @@
 </head>
 
 <body>
-
-<!--example of iframe for embedded (switch out tfuea with username when generating
-player id
-<iframe  
-	src="https://player.twitch.tv/?channel=tfueå" 
-	scrolling="no"
-</iframe>
--->
 <h2>Active Streaming Lobbies</h2>
 <!-- info here will be generated and pulled from the mysql table
 each user info will be pulled from the table. It is initially put there
@@ -141,6 +141,7 @@ when a streamer creates a lobby and is deleted once they either quit the unity
 project or stop streaming-->
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a streamer.." title="Type in a name">
 
+<!-- example of streams-->
 <ul id="myUL">
 <div class="container">
   <li>
@@ -199,24 +200,41 @@ project or stop streaming-->
 </div>
 </ul>
 
-<div id = "test"></div>
 
 <script>
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
+    
+    // get the input box
     input = document.getElementById("myInput");
+    
+    // filter the input
     filter = input.value.toUpperCase();
+    
+    // get the ul id element
     ul = document.getElementById("myUL");
+    
+    // get the list elements
     li = ul.getElementsByTagName("li");
+    
+    // loop through all the list elements
     for (i = 0; i < li.length; i++) {
+    
+    	// grab the link within the list element
         a = li[i].getElementsByTagName("a")[0];
+        
+        // get the text in the link
         txtValue = a.textContent || a.innerText;
+        
+        // check if it is a match, if it is, show it, if not, hide it
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
             li[i].style.display = " none";
         }
     }
+    
+    // sort the new generated list
     sortList();
 }
 </script>
