@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/png" href="WebsiteArt/favicon.png">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="stream.css">
+	<link rel="stylesheet" href="emote.css">
+	<link rel="stylesheet" href="streamUI.css">
+	<link rel="stylesheet" href="gameLobby.css">
+	<link rel="stylesheet" href="emoteCustomization.css">
+	<script src="jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+	<script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+    	var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Chat.json", {onProgress: UnityProgress});
+    	
+		function SendMessage(messageToSend)
+		{
+			gameInstance.SendMessage("GameManager", "RecieveMessage", "Chat: " + messageToSend);
+		}
+
+		function SendEmote(emoteToSend)
+		{
+			gameInstance.SendMessage("GameManager", "RecieveEmoji", "Emote: " + emoteToSend);
+		}
+
+		function SendItem(itemToSend)
+		{
+			gameInstance.SendMessage("GameManager", "RecieveShopItem", "Item: " + itemToSend);
+		}
+    </script>
+	<title>Example Stream</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+</head>
+<span class = "portrait">
+	<div class = "gameLobby">
+		<html>
+		<head>
+		</head>
+		<body>
+
+		<div class="holder">
+				<div id="gameContainer"></div>
+		</div>
+
+		<div id = "notificationHolder"></div>
+
+		<div id = "rotateHolder">
+		<div id = "rotatePhoneNotification">To view the stream in full screen, rotate your phone to landscape. Rotate it back to interact with the game.</div>
+		</div>
+
+		<script>
+			// show the helpful text on load and then fade it
+			window.addEventListener('load', function() {
+				   var rotateBlock = document.getElementById('rotatePhoneNotification');
+				   setTimeout(function() {rotateBlock.classList.add('fadeClass')}, 4000);
+			});
+
+		   // remove the notification once the animation is finished
+		   $('#rotateHolder').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+			$(this).children(":first").remove();
+		   });
+		</script>
+		</body>
+		</html>
+	</div>
+
+	<div class = "streamUI">
+		<html>
+		<body>
+			<div class = "UIBanner">
+				<img id="highlight" src="WebsiteArt/MessageButtonSelect.png"/>
+				<input onclick="toggleIcons(1)"id ="shop" type="image" src="WebsiteArt/ShopButton.png" name="shop" class="btTxt submit"/>
+				<input onclick="toggleIcons(0)"id ="messages" type="image" src="WebsiteArt/MessageButton.png" name="message" class="btTxt submit"/>
+				<input onclick="toggleIcons(2)"id ="emote" type="image" src="WebsiteArt/EmoteButton.png" name="emote" class="btTxt submit"/>
+				<input onclick="toggleIcons(3)"id ="backButton" type="image" src="WebsiteArt/EmoteCustomButton.png" name="backButton" class="btTxt submit"/>
+				<p id = "money">$10000000k</p>
+				<div id = "moneyHolder"></div>
+				<div id = "verticalLine"></div>
+			</div>
+		</body>
+		</html>
+	</div>
+
+	<div class = "chat">
+		<html>
+		<head>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		  <link rel="stylesheet" href="chat.css">
+		<script type="text/javascript">
+		// dummy function to prevent page refresh / post on submission
+		function post()
+		{
+			return false;
+		}
+		</script>
+		</head>
+		<body>
+	
+		<div id="container">
+
+		<div id="result-wrapper">
+			<div id="result">
+				<div class="chats"></div>
+			</div>			
+		</div>
+
+		<form class = "theForm" onsubmit="return post();" id="my_form" name="my_form">
+
+		<div id="form-container">
+			<div class="form-text">
+				<input type="text" style="display:none" id="username">
+				<textarea type="text" maxlength="250"id="comment"></textarea>
+			</div>
+			<div class="form-btn">
+				<input type="submit" value="Send" id="btn" name="btn"/>
+			</div>
+		</div>
+		</form>
+		</div> 	
+		 </body>
+		</html>
+	</div>
+
+	<div class = "emoteTab" style="visibility: hidden;">
+	<!-- Emote tab portion of the stream page -->
+	<html>
+	<body>
+	<div class ="wrapper">
+	<div class = "theText" id = "theText">
+	<div id = "headerText">Spectator Interaction Menu</div>
+	<!--<div id = "headerText2">Interact with the streamer without changing gameplay</div>-->
+	</div>
+
+	<!-- 
+		 This can be generated with javascript but do to the buttons being loaded in from the server
+		 decided against it so the user load time for this page is not even larger
+	-->
+
+	<ul id="myUL">
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "timers" id = "timer1"></div>
+				<div class = "priceTag" id = "price1"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote1" type="image" src="WebsiteArt/BuyCheer.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown1">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout1">5000</div>
+				</div>
+				<div id="emoteId1" class="emoteId"><p><span>Cheer</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer2"></div>
+				<div class = "priceTag" id = "price2"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote2" type="image" src="WebsiteArt/BuyClap.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown2">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout2">5000</div>
+				</div>
+				<div id="emoteId2" class="emoteId"><p><span>Clap</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer3"></div>
+				<div class = "priceTag" id = "price3"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote3" type="image" src="WebsiteArt/basketball.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown3">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout3">5000</div>
+				</div>
+				<div id="emoteId3" class="emoteId"><p><span>BasketBall</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer4"></div>
+				<div class = "priceTag" id = "price4"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote4" type="image" src="WebsiteArt/ymca.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown4">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout4">5000</div>
+				</div>
+				<div id="emoteId4" class="emoteId"><p><span>YMCA</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer5"></div>
+				<div class = "priceTag" id = "price5"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote5" type="image" src="WebsiteArt/spin.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown5">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout5">5000</div>
+				</div>
+				<div id="emoteId5" class="emoteId"><p><span>Spin</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer6"></div>
+				<div class = "priceTag" id = "price6"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote6" type="image" src="WebsiteArt/throw.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown6">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout6">5000</div>
+				</div>
+				<div id="emoteId6" class="emoteId"><p><span>ThrowHead</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer7"></div>
+				<div class = "priceTag" id = "price7"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote7" type="image" src="WebsiteArt/BuyDab.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown7">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout7">5000</div>
+				</div>
+				<div id="emoteId7" class="emoteId"><p><span>Dab</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div style="visibility:hidden" class = "blackCircle" id = "circle8">&nbsp<span></span></div>
+				<div class = "timers" id = "timer8"></div>
+				<div class = "priceTag" id = "price8"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote8" type="image" src="WebsiteArt/backflip.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown8">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout8">5000</div>
+				</div>
+				<div id="emoteId8" class="emoteId"><p><span>Backflip</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+			
+				<div class = "timers" id = "timer9"></div>
+				<div class = "priceTag" id = "price9"><p>$3k</p></div>
+				<div class = "userPicture"><input onclick="interactButton(this.id)"id ="emote9" type="image" src="WebsiteArt/hide.png" name="message" class="btTxt submit"/></div>
+				<div class="cooldown" id="cooldown9">&nbsp<span></span></div>
+				<div class = "timeout" id = "timeout9">5000</div>
+				</div>
+				<div id="emoteId9" class="emoteId"><p><span>YouCantSeeMe</span></p></div>
+		</li>
+		</div>
+	</ul>
+
+	<div id = "recentEmotePurchase"></div>
+	<img id="buyableButton" src="WebsiteArt/BuyButton.png">
+	<button onclick="buyEmote()" id = "emoteInteractButton">Interact</button>
+	</div>
+
+
+	<script>
+	// actively selected element
+	var elementSelected = null;
+
+	var notificationHolder = document.getElementById('notificationHolder');
+
+		function writeNotificationToScreen(notificationToWrite, type)
+		{
+			// create a div, throw the text in it, add the correct div
+			// make it an animation (Possibly wait X seconds, then add fade animation)
+		
+			// make a new element to place the text in
+			var newDiv = document.createElement("div");
+		
+			if(type == 0)
+			{
+				// 'error' happened (not enough money, no item selected, etc.)
+				newDiv.className = "errorNotificationText";
+			}
+			else if(type == 1)
+			{
+				// bought item class
+				newDiv.className = "notificationText";
+			}
+			else if(type == 2)
+			{
+				// add money class
+				newDiv.className = "moneyNotificationText";
+			}
+			// create the text object
+			var notificationText = document.createTextNode(notificationToWrite);
+		
+			// append it to the new div
+			newDiv.appendChild(notificationText);
+		
+			// add the new div to the notification holder (anchor point)
+			notificationHolder.appendChild(newDiv);
+		
+			// start fading out the notification in 2 seconds
+			setTimeout(function() {newDiv.classList.add('fadeClass')}, 4000);
+		}
+
+		// subtract money based on purchase of emote
+		function emoteUpdateMoney(currentMoney, moneyElem, price)
+		{
+			// subtract the current money by the price and post the new money to server
+			currentMoney-=price;
+			moneyElem.text("$ " + currentMoney + "k");
+
+			var emoteName = document.getElementById('emoteId' + elementSelected.id[5]).textContent;
+		
+			// write the notification of purchase to screen
+			writeNotificationToScreen("You bought the emote: " + emoteName + ". Look for it in game!", 1);
+		
+			// send emote to server to be displayed in Unity
+			$.buyEmoteEvent(emoteName);				
+		
+			// make each emote go on cooldown (They now share a cooldown)
+			for(var x  = 1; x <= 9; x++)
+			{
+				buttonCooldown('emote' + x);
+			}
+		
+			// animate the money being subtracted for the purchase 
+			moneyAnimation(price, false);
+
+			// remove the border around button selected
+			elementSelected.classList.remove('thePicture');
+			elementSelected = null;
+		}
+
+		// get money from mysql table - - makes cheating harder but took out
+		// for extra performance 
+		function emoteRetrieveMoney()
+		{
+			/*$.ajax({
+				url: 'getMoney.php',
+				dataType: 'text',
+				success: function(data) {
+					// pulls information, converts ints to ints, does arithmetic calculation
+					// to test if they can buy emote
+					var moneyElem = $('#money');
+					var currentMoney = parseInt(data);
+					moneyElem.text();
+
+					var name = document.getElementById('emoteId' + elementSelected.id[5]).textContent;
+					var price = document.getElementById('price' + elementSelected.id[5]).textContent;
+
+					price = parseInt(price.replace(/\D+/g, ''), 10);
+
+					// if you have enough money, buy it and update money
+					if(price > currentMoney)
+					{
+						writeNotificationToScreen("You do not have enough to purchase " + name + ". It costs: $" + price + "k and you only have: $" + currentMoney + "k.", 0);
+					}
+					else
+					{
+						// update money on mysql table and in front end
+						emoteUpdateMoney(currentMoney, moneyElem, price);
+					}
+				}
+			});*/
+
+			// still functions, simply uses the local money value instead of the server tracked one
+		
+			// get the current money
+			var moneyElem = $('#money');
+		
+			// pull the text from it
+			var currentMoney = moneyElem.text();
+		
+			// remove everything but the numerical values and convert the string to an int
+			currentMoney = parseInt(currentMoney.replace(/\D+/g, ''), 10);
+
+			// get the emote purchased and its cost
+			var name = document.getElementById('emoteId' + elementSelected.id[5]).textContent;
+			var price = document.getElementById('price' + elementSelected.id[5]).textContent;
+
+			// remove everything but he numerical values and convert the string to int
+			price = parseInt(price.replace(/\D+/g, ''), 10);
+
+			// if you have enough money, buy it and update money
+			if(price > currentMoney)
+			{
+				// write the notification to screen that you are broke
+				writeNotificationToScreen("You do not have enough to purchase " + name + ". It costs: $" + price + "k and you only have: $" + currentMoney + "k.", 0);
+			}
+			else
+			{
+				// update money on mysql table and in front end
+				emoteUpdateMoney(currentMoney, moneyElem, price);
+			}
+		}
+	
+		function interactButton(info)
+		{
+			// removes previous button selected if a button has been selected already
+			if(elementSelected != null)
+				elementSelected.classList.remove('thePicture');
+		
+			// updates currently selected button
+			elementSelected = document.getElementById(info);
+			elementSelected.classList.add('thePicture');
+		}
+	
+		function buyEmote()
+		{
+			if(elementSelected != null)
+			{
+				// if you have an item selected, see if you can buy it
+				emoteRetrieveMoney();
+			}
+			else
+			{
+				// if you do not have an item selected, tell the user what they are doing wrong
+				writeNotificationToScreen("You need to select an item to buy before buying something!", 0);
+			}
+		}
+	
+		// add cool down animation class
+		$.addClassToId = function(sec, id)
+		{
+			// add the animation to cooldown on page refresh
+			var buttonSpan = $('#cooldown' + id + ' span');
+			buttonSpan.addClass('emoteRefresh');
+		
+			// is modular, but the time is the same now so does not matter as much
+			buttonSpan.css("-webkit-animation", "test " + sec + "s linear");
+			setTimeout(function(){buttonSpan.css("-webkit-animation", "");}, sec * 1000);
+		};
+	
+		// remove cooldown animation class when animation is over
+		$.removeClassToId = function(sec, id)
+		{
+			// remove animation class when animation is done
+			var buttonSpan = $('#cooldown' + id + ' span');
+			buttonSpan.removeClass('emoteRefresh');
+			buttonSpan.removeClass('emoteCD'+ id);
+		};
+	
+		function setTimer(timerID)
+		{ 
+			// check if animation is happening on refresh or by onclick
+			if (localStorage.getItem('timer' + timerID[5]) === null)
+			{
+				// animation happening from onclick, load data directly from the button
+				var sec = (parseInt(document.getElementById('timeout' + timerID[5]).textContent))/1000;
+			}
+			else
+			{
+				// loading information from local storage, add animation event as well
+				// prevents cheating by refreshing the page to get around cooldowns
+			
+				// loads the data from localStorage
+				var sec = parseInt(localStorage.getItem('timer' + timerID[5]));
+			
+				// disables the button
+				document.getElementById('emote' + timerID[5]).disabled = true;
+			
+				// sets a timeout until it will be re-enabled
+				setTimeout(function() {document.getElementById('emote' + timerID[5]).disabled = false;}, sec * 1000);
+				//setTimeout(function() {$('#emote' + timerID[5] + ' span').css("-webkit-animation", "");}, sec * 1000);
+				// adds the animation class back to it with a newer updated time
+				$.addClassToId(sec, timerID[5]);
+			}
+		
+			// start the first call to timer
+			theTimer();
+		
+			// then set interval of every second to call it until 0 seconds
+			var test = setInterval(theTimer, 1000);
+		
+			function theTimer(){
+				// updates the timer text
+				document.getElementById('timer' + timerID[5]).textContent=sec + '..';
+			
+				// update timer 
+				sec--;
+			
+				// sets local storage for timer
+				window.localStorage['timer' + timerID[5]] = sec;
+			
+				// if the timer goes below 0, reset it and re-enable button(s)
+				if (sec < 0) {
+			
+					// stop the interval
+					clearInterval(test);
+				
+					// remove the locally stored info for this timer
+					localStorage.removeItem('timer' + timerID[5]);
+				
+					// remove text component and enable button
+					document.getElementById('timer' + timerID[5]).textContent = '';
+					document.getElementById('emote' + timerID[5]).disabled = false;
+				
+					// remove animation class
+					$.removeClassToId(sec, timerID[5]);
+				}
+			}
+		}
+	
+		// function call on load to retrieve button data on refresh for 'cheating'
+		function onloadEmoteData()
+		{
+			// hard-coded for 9 as there will never be more than 9 buttons (easy to make modular) 
+			for(var x = 1; x < 10; x++)
+			{
+				// if the local storage of the timer is set, then it needs an animation
+				// and time data
+				if(!(localStorage.getItem('timer' + x) === null))
+				{
+					setTimer('emote' + x);
+				}
+			}
+		}
+	
+		function buttonCooldown(theID)
+		{
+			// disable button just selected
+			document.getElementById(theID).disabled = true;
+			document.getElementById(theID);
+		
+			var timeout = document.getElementById('timeout' + theID[5]).textContent;
+				
+			// animation function (adds/removes animation class)
+			$(function(){
+				// adds the cooldown animation class
+				var localID = theID;
+				setTimer(localID);
+				e1 = $('#cooldown' + localID[5] + ' span');
+				e1.addClass('emoteCD'+ localID[5]);
+		
+				// wait until animation has ended, then remove the class to hide it again
+				e1.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+				function (e) {
+					// removes the animation after the animation successfully ends
+					var localTest = $('#cooldown' + localID[5] + ' span');
+					localTest.removeClass('emoteCD'+ localID[5]);
+		   
+				});
+
+				setTimeout(function() { var localTest = $('#cooldown' + localID[5] + ' span'); localTest.removeClass('emoteCD'+ localID[5]);}, timeout);
+			});
+		
+			// currently set to X seconds (it is in ms)
+			setTimeout(function() {document.getElementById(theID).disabled = false;}, timeout);
+		}
+	
+		var moneyContainer = document.getElementById('moneyHolder');
+		function moneyAnimation(amount, increase)
+		{
+			// handles which text money animation to add to div
+			var newDiv = document.createElement("div");
+		
+		
+			if(increase)
+			{
+				// increase money, make it float upward and green
+				newDiv.className = "increaseMoney";
+				var incMoneyObj = document.createTextNode("+ $" + amount +"k");
+				newDiv.appendChild(incMoneyObj);
+			}
+			else
+			{
+				// decrease money, make it float downward and red
+				newDiv.className = "decreaseMoney";
+				var decMoneyObj = document.createTextNode("- $" + amount +"k");
+				newDiv.appendChild(decMoneyObj);
+			}
+			moneyContainer.appendChild(newDiv);
+		}
+	
+		// remove the element once the animation is finished
+		$('#moneyHolder').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+			$(this).children(":first").remove();
+		});
+	
+		// remove the notification once the animation is finished
+		$('#notificationHolder').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+			$(this).children(":first").remove();
+		});
+
+	</script>
+	</body>
+	</html>
+
+	</div>
+
+	<div class = "shopTab" style="visibility: hidden;">
+	<html>
+	<body>
+	<div class ="wrapper">
+	<div class = "theText"  id = "theText">
+	<div id = "headerText">Game Purchase Menu</div>
+	</div>
+	<ul id="myUL">
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised1"><p>$0k</p></div>
+				<div class = "priceTag" id = "itemPrice1"><p>$25k</p></div>
+				<div class = "userPicture"><input onclick="clickItemButton(this.id)"id ="item1" type="image" src="WebsiteArt/BuyGrunts.png"" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup1">&nbsp<span></span></div>
+				</div>
+				<div id="itemId1" class="emoteId"><p><span>Grunt Enemy</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised2"><p>$0k</p></div>
+				<div class = "priceTag" id = "itemPrice2"><p>$90k</p></div>
+				<div class = "userPicture"><input onclick="clickItemButton(this.id)"id ="item2" type="image" src="WebsiteArt/BuyBomb.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup2">&nbsp<span></span></div>
+				</div>
+				<div id="itemId2" class="emoteId"><p><span>Bomb</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised3"><p>$0k</p></div>
+				<div style="display: none" class = "priceTag" id = "itemPrice3"><p>$200k</p></div>
+				<div class = "userPicture"><input disabled onclick="clickItemButton(this.id)"id ="item3" type="image" src="WebsiteArt/BuyLock.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup3">&nbsp<span></span></div>
+				</div>
+				<div id="itemId3" class="emoteId"><p><span>Coming Soon</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised4"><p>$0k</p></div>
+				<div class = "priceTag" id = "itemPrice4"><p>$30k</p></div>
+				<div class = "userPicture"><input onclick="clickItemButton(this.id)"id ="item4" type="image" src="WebsiteArt/BuyLaser.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup4">&nbsp<span></span></div>
+				</div>
+				<div id="itemId4" class="emoteId"><p><span>Laser Enemy</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised5"><p>$0k</p></div>
+				<div class = "priceTag" id = "itemPrice5"><p>$300k</p></div>
+				<div class = "userPicture"><input onclick="clickItemButton(this.id)"id ="item5" type="image" src="WebsiteArt/BuyParty.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup5">&nbsp<span></span></div>
+				</div>
+				<div id="itemId5" class="emoteId"><p><span>Party Mode</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised6"><p>$0k</p></div>
+				<div style="display: none" class = "priceTag" id = "itemPrice6"><p>$420k</p></div>
+				<div class = "userPicture"><input disabled onclick="clickItemButton(this.id)"id ="item6" type="image" src="WebsiteArt/BuyLock.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup6">&nbsp<span></span></div>
+				</div>
+				<div id="itemId6" class="emoteId"><p><span>Coming Soon</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised7"><p>$0k</p></div>
+				<div class = "priceTag" id = "itemPrice7"><p>$60k</p></div>
+				<div class = "userPicture"><input onclick="clickItemButton(this.id)"id ="item7" type="image" src="WebsiteArt/BuyElite.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup7">&nbsp<span></span></div>
+				</div>
+				<div id="itemId7" class="emoteId"><p><span>Elite Enemy</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised8"><p>$0k</p></div>
+				<div class = "priceTag" id = "itemPrice8"><p>$450k</p></div>
+				<div class = "userPicture"><input onclick="clickItemButton(this.id)"id ="item8" type="image" src="WebsiteArt/BuyRagemode.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup8">&nbsp<span></span></div>
+				</div>
+				<div id="itemId8" class="emoteId"><p><span>Exploding Grunts</span></p></div>
+		</li>
+		</div>
+		<div class = "container">
+		<li>
+				<div id = "emoteImg">
+				<div class = "contributed" id = "raised9"><p>$0k</p></div>
+				<div style="display: none" class = "priceTag" id = "itemPrice9"><p>$900k</p></div>
+				<div class = "userPicture"><input disabled onclick="clickItemButton(this.id)"id ="item9" type="image" src="WebsiteArt/BuyLock.png" name="message" class="btTxt submit"/></div>
+				<div class="fillup" id="fillup9">&nbsp<span></span></div>
+				</div>
+				<div id="itemId9" class="emoteId"><p><span>Coming Soon</span></p></div>
+		</li>
+		</div>
+	</ul>
+
+	<img id="buyableButton" src="WebsiteArt/BuyButton.png">
+	<div id = "recentItemPurchase"></div>
+	<button onclick="singlePressBuyItem()" id = "interactButton">Contribute 5k</button>
+	</div>
+	<script>
+	var itemSelected = null;
+	var pressInterval;
+	var isHolding = false;
+	var firstItem = true;
+	var oldMoney = 0;
+
+	// accounts for weird iPhone task bar 
+	function correctSizeForIphone()
+	{
+		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		// check if you are on mobile
+		if(/iPad/.test(userAgent) && !window.MSStream)
+		{
+			$(function resizeiPhone(){
+				$("#myUL").css('margin-top', '11vh');
+				$(".container").css("padding", "1vh 1.5vh 6vh 1.5vh");
+				$(".theText").css('margin-top','1.5vh');
+			});
+		}
+		else if (/iPhone|iPod/.test(userAgent) && !window.MSStream)
+		{
+			$(function resizeiPhone(){
+				$("#myUL").css('margin-top', '6.2vh');
+				$(".container").css("padding", "1vh 1.5vh 4vh 1.5vh");
+				$(".theText").css('margin-top','0.2vh');
+			});
+		}
+	
+	}
+
+	// function to determine press down events
+	$("#interactButton").on('touchstart mousedown',function() {
+	  isHolding = true;
+	  pressInterval = setInterval(buyItem, 500);
+	}).on('touchend mouseup',function() {
+	  clearInterval(pressInterval);
+	  isHolding = false;
+	});
+	function clickItemButton(info)
+	{
+		// detects when an item button is clicked
+		if(itemSelected != null)
+			itemSelected.classList.remove('thePicture');
+		itemSelected = document.getElementById(info);
+		itemSelected.classList.add('thePicture');
+	}
+	function incContribution(theID)
+	{
+	var e1 = $('#fillup' + theID[5] + ' span');
+	var e2 = $('#fillup' + theID[5]);
+	var raised = $('#raised' + theID[5]);
+		$(function(){
+			// amount they contribute
+			var moneyAdded = 5;
+		
+			// grab items price
+			var totalCost = $('#itemPrice' + theID[5]).text();
+		
+			// remove the dolar sign and K from it while converting it to an int for calculations
+			totalCost = parseInt(totalCost.replace(/\D+/g, ''), 10);
+			var toRaised = raised.text();
+			toRaised = parseInt(toRaised.replace(/\D+/g, ''), 10);
+			toRaised += moneyAdded;
+			var toIncrease = (toRaised / totalCost) * 100;
+		
+			// update the text in html
+			raised.text('$' + toRaised + 'k');
+		
+			// update the height of the circle by % height
+			e1.css({'height': toIncrease + '%'});  
+		
+			// sends the current total cost
+			// current total is maintained by the server
+			//$.contributeToShopItem(totalCost, theID[5]);
+	
+			// check if it has hit 100% of the shape
+			if(toIncrease >= 100)
+			{
+				// reset everything (play some music or have an 'event'
+				raised.text('$' + 0 + 'k');
+				e1.css('height', 0); 
+				writeNotificationToScreen("Congrats you pooled enough money to buy a/an " + $('#itemId' + theID[5] + ' span').text(), 1);
+				$.buyItem($('#itemId' + theID[5] + ' span').text());
+			}
+		});
+	}
+	function updateShopButtonData(buttonID, buttonTotal, buttonCurrent)
+	{
+		var e1 = $('#fillup' + buttonID + ' span');
+		var e2 = $('#fillup' + buttonID);
+		var raised = $('#raised' + buttonID);
+	
+		// remove the dolar sign and K from it while converting it to an int for calculations
+		//totalCost = parseInt(totalCost.replace(/\D+/g, ''), 10);
+	
+		var toIncrease = (parseInt(buttonCurrent) / parseInt(buttonTotal)) * 100;
+		// update the text in html
+		raised.text('$' + buttonCurrent + 'k');
+		// update the height of the circle by % height
+		e1.css({'height': toIncrease + '%'});  
+		// check if it has hit 100% of the shape
+		if(toIncrease >= 100)
+		{
+			// reset everything (play some music or have an 'event'
+			raised.text('$' + 0 + 'k');
+			e1.css('height', 0); 
+			//alert("Congrats you pooled enough money to buy a/an " + $('#itemId' + buttonID + ' span').text());
+			writeNotificationToScreen("Congrats you pooled enough money to buy a/an " + $('#itemId' + buttonID + ' span').text(), 1);
+		}
+	}
+	function serverUpdateContribution(buttonID, newAmount)
+	{
+		var e1 = $('#fillup' + buttonID + ' span');
+		var e2 = $('#fillup' + buttonID);
+		var raised = $('#raised' + buttonID);
+		var totalCost = $('#itemPrice' + buttonID).text();
+	
+		// remove the dolar sign and K from it while converting it to an int for calculations
+		totalCost = parseInt(totalCost.replace(/\D+/g, ''), 10);
+	
+		var toIncrease = (parseInt(newAmount) / totalCost) * 100;
+		// update the text in html
+		raised.text('$' + newAmount + 'k');
+		// update the height of the circle by % height
+		e1.css({'height': toIncrease + '%'});  
+		// check if it has hit 100% of the shape
+		if(toIncrease >= 100)
+		{
+			// reset everything (play some music or have an 'event'
+			raised.text('$' + 0 + 'k');
+			e1.css('height', 0); 
+			writeNotificationToScreen("Congrats you pooled enough money to buy a/an " + $('#itemId' + buttonID + ' span').text(), 1);
+		}
+	}
+
+	function checkUpdateMoney()
+	{
+		var moneyElem = $('#money');
+			var currentMoney = moneyElem.text();
+			currentMoney = parseInt(currentMoney.replace(/\D+/g, ''), 10);	
+		if(currentMoney != oldMoney)
+		{
+			// not needed for this demo - is usually an ajax post
+		}
+	}
+
+	function updateMoney(currentMoney, moneyElem, price)
+	{
+		 currentMoney-=5;
+		 moneyElem.text("$ " + currentMoney + "k");
+			 incContribution('"' + itemSelected.id + '"');
+			 moneyAnimation(5, false);
+
+		// too slow - - just update every X seconds (Not accurate as fast but better than overcalling)
+		/*$.ajax({
+			type: 'POST',
+			url: 'updateMoney.php',
+			data: 
+			{
+				updatedMoney:currentMoney
+			},
+			success: function(data) {
+			}
+		});*/
+	}
+
+	/*function updateMoney(currentMoney, moneyElem, price)
+	{
+		// local contribution (used to update in server but was too slow)
+		currentMoney-=5;
+		moneyElem.text("$ " + currentMoney + "k");
+		incContribution('"' + itemSelected.id + '"');
+		moneyAnimation(5, false);
+	}
+
+	function updateTableMoney()
+	{
+		var moneyElem = $('#money');
+			var currentMoney = moneyElem.text();
+			currentMoney = parseInt(currentMoney.replace(/\D+/g, ''), 10);
+
+			$.ajax({
+					type: 'POST',
+			async: false,
+			url: 'updateMoney.php',
+			data: 
+			{
+					updatedMoney:currentMoney
+			}
+		});
+	}*/
+
+	function retrieveMoney()
+	{
+		/*$.ajax({
+			url: 'getMoney.php',
+			dataType: 'text',
+			success: function(data) {
+				// pulls information, converts ints to ints, does arithmetic calculation
+				// to test if they can buy emote
+				var moneyElem = $('#money');
+				var currentMoney = parseInt(data);
+				moneyElem.text();
+				var name = ($('#item' + itemSelected.id[4])).text();
+				var price = ($('#itemPrice' + itemSelected.id[4])).text();
+				price = parseInt(price.replace(/\D+/g, ''), 10);
+				if(price > currentMoney)
+				{
+					itemPurchaseText.textContent = "You do not have enough to purchase " + name + ". It costs: $" + price + "k and you only have: $" + currentMoney + "k.";
+				}
+				else
+				{
+					// update money on mysql table and in front end
+					updateMoney(currentMoney, moneyElem, price);
+				}
+			}
+		});*/
+	
+				var moneyElem = $('#money');
+			var currentMoney = moneyElem.text();
+			currentMoney = parseInt(currentMoney.replace(/\D+/g, ''), 10);
+			var name = ($('#itemId' + itemSelected.id[4])).text();
+			var price = ($('#itemPrice' + itemSelected.id[4])).text();
+			price = parseInt(price.replace(/\D+/g, ''), 10);
+			// hard-coding price as 5 as designers wanted
+			if(5 > currentMoney)
+			{
+				writeNotificationToScreen("You do not have enough to purchase " + name + ". It costs: $" + 5 + "k and you only have: $" + currentMoney + "k.", 0);
+			}
+			else
+			{
+				// update money on mysql table and in front end
+			updateMoney(currentMoney, moneyElem, price);
+			}
+	}
+	function buyItem()
+	{
+		if(!isHolding)
+		{
+			return;
+		}
+		else if(itemSelected != null)
+		{
+			// call to ajax as it is async
+			retrieveMoney();
+		}
+		else
+		{
+			writeNotificationToScreen("You need to select an item to buy before buying something!", 0);
+		}
+	}
+	function singlePressBuyItem()
+	{
+			if(itemSelected != null)
+			{
+					// call to ajax as it is async
+					retrieveMoney();
+			}
+			else
+			{
+					writeNotificationToScreen("You need to select an item to buy before buying something!", 0);
+			}
+	}
+	</script>
+	</body>
+	</html>
+
+	</div>
+	
+	<div class = "emoteCustomTab" style="visibility: hidden;">
+	<!-- https://dzone.com/articles/creating-your-own-html5 -->
+	<!-- Based on the color picker functionality from above -->
+	<html>
+	<body>
+	<script>
+	 var currentButtonSelected = null;
+	var hatNames = ["No hat", "Piston Hat", "Top Hat", "Baseball Cap", "Dunce Hat", "Sombrero"];
+	var hatImageRef = [];
+	var globalCurrentColor;
+	var globalCurrentHat;
+
+	function preloadImages(srcs, imgs) {
+		var img;
+		var currentHat = '';
+		for (var i = 0; i < srcs.length; i++) {
+			img = new Image();
+			// change this to WebsiteArt/ + src[i] + .jpg when hats are actually in
+			img.src = "WebsiteArt/" + srcs[i] + ".png";
+			imgs.push(img);
+		}
+	}
+
+	window.addEventListener('load', function(){
+		var hatUL = document.getElementById("hatHolder");
+		var currentHatText = document.getElementById("currentHatName");
+		var currentHatDiv = document.getElementById("currentHat");
+	
+		// preloads the images on load
+		preloadImages(hatNames, hatImageRef);
+	
+		for(var x = 0; x < hatImageRef.length; x++)
+		{
+			// generate the buttons instead of having them hard-coded
+			var hatContainerDiv = document.createElement("div");
+			hatContainerDiv.className = 'hatContainer';
+			var hatLi = document.createElement("LI");
+			hatLi.className = 'hatLI';
+			var hatImage = document.createElement("div");
+			hatImage.className = 'hatImage';
+			var theImage = document.createElement("input");
+			// if you want to send the name of the hat instead of index, use hatNames[' + x + '])' instead
+			theImage.setAttribute("onclick", 'setNewHat(hatImageRef[' + x + '].src, ' + x + ')');
+			theImage.setAttribute("id", "hat" + (x+1));
+			theImage.setAttribute("src", hatImageRef[x].src);
+			theImage.setAttribute("type", "image");
+		
+			// add the input image button to the image class div
+			hatImage.appendChild(theImage);
+		
+		
+		
+			hatLi.appendChild(hatImage);
+			hatContainerDiv.appendChild(hatLi);
+			hatUL.appendChild(hatContainerDiv);
+		}
+	
+			$('.customEmoteRightSide').css('backgroundColor', "#0000FF");
+			globalCurrentColor = "#0000FF";
+			globalCurrentHat = "0";
+		
+			currentHatText.innerHTML = globalCurrentHat;
+			currentHatDiv.src = hatImageRef[globalCurrentHat].src;
+		
+			currentButtonSelected = document.getElementById("hat" + (parseInt(globalCurrentHat, 10) + 1));
+			currentButtonSelected.style.border = '5px dashed green';
+		
+			// periodically check if the color or hat were changed by the user
+			// if they were, update them on the session variable
+			setInterval(updateColor, 5000);
+			setInterval(updateHat, 5000);
+	});
+
+	// function to update the color the user choses if it has changed
+	function updateColor()
+	{
+		// removed as is not needed in this demo
+	}
+
+	// function to update the hat the user choses if it has changed
+	function updateHat()
+	{
+		// removed as is not needed in this demo
+	}
+
+	$(function(){
+		var bCanPreview = true; // can preview
+
+		// create canvas and context objects
+		var canvas = document.getElementById('picker');
+		var ctx = canvas.getContext('2d');
+
+		// drawing active image
+		var image = new Image();
+		image.onload = function () {
+			ctx.drawImage(image, 0, 0, image.width*.5, image.height*.5); // draw the image on the canvas
+		}
+	
+		var imagesrc="WebsiteArt/colorWheel.png";
+		image.src = imagesrc;
+
+		// determines if a point is inside of the image (circle)
+		// radius / position changed due to scale *.5
+		function isIntersect(pointX, pointY) {
+			return Math.sqrt((pointX-50) ** 2 + (pointY - 50) ** 2) < 49;
+		}
+
+		// detects movement from mouse, when the user touches it on mobile or when they move it on mobile
+		$('#picker').on('touchmove touchstart mousemove',function(e) { // mouse move handler
+			if (bCanPreview) {
+				// get coordinates of current position
+				var canvasX;
+				var canvasY;
+				var canvasOffset = $(canvas).offset();
+			
+				var eventType = e.handleObj.origType;
+		
+				// depending on the touch event, need to find coordinate differently
+				// mouse has basic event.page while mobile is a bit more tedious
+				switch(eventType)
+				{
+					case 'mousemove':
+						canvasX = Math.floor(e.pageX - canvasOffset.left);
+						canvasY = Math.floor(e.pageY - canvasOffset.top);
+						break;
+					case 'touchstart':
+						canvasX = e.originalEvent.touches[0].pageX - canvasOffset.left;
+						canvasY = e.originalEvent.touches[0].pageY - canvasOffset.top;
+						break;
+					case 'touchmove':
+						canvasX = e.originalEvent.touches[0].pageX - canvasOffset.left;
+						canvasY = e.originalEvent.touches[0].pageY - canvasOffset.top;
+						break;
+					default:
+						break;
+				}
+			
+				if (isIntersect(canvasX, canvasY)) {
+					// get current pixel
+					var imageData = ctx.getImageData(canvasX, canvasY, 1, 1);
+					var pixel = imageData.data;
+
+					// update preview color
+					var pixelColor = "rgb("+pixel[0]+", "+pixel[1]+", "+pixel[2]+")";
+					$('.customEmoteRightSide').css('backgroundColor', pixelColor);
+
+					// update controls
+					$('#rVal').val(pixel[0]);
+					$('#gVal').val(pixel[1]);
+					$('#bVal').val(pixel[2]);
+					$('#rgbVal').val(pixel[0]+','+pixel[1]+','+pixel[2]);
+
+					var dColor = pixel[2] + 256 * pixel[1] + 65536 * pixel[0];
+					globalCurrentColor = '#' + ('0000' + dColor.toString(16)).substr(-6);
+					$('#hexVal').val('#' + ('0000' + dColor.toString(16)).substr(-6));
+				
+				}
+			}
+		});
+	
+		// selects the color after they click
+		$('#picker').on('click touchend',function(e) { // click event handler
+			bCanPreview = !bCanPreview;
+		});
+	
+		$('#picker').on('touchstart',function(e) { // click event handler
+			bCanPreview = true;
+		});
+	});
+	</script>
+	<div class = "emoteCustomWrapper">
+	<div class = "customEmoteLeftSide split">
+		<h1>Hats</h1>
+		<ul id = "hatHolder">
+		</ul>
+		<div class = "pickerHolder">
+			<canvas id="picker" var="1" width="100" height="100"></canvas>
+		</div>
+		</div>
+	
+		<div class = "customEmoteRightSide split">
+		<h1>Character Background</h1>
+		<div id = "currentHatHolder">
+			<!-- Set this as a session variable to draw current hat -->
+			<img style="display:none" id = "currentHat" src="WebsiteArt/backflip.png">
+			<p style="display: none" id = "currentHatName">0</p>
+		</div>
+		</div>
+
+		<!-- Information about the color picked. Currently hidden -->
+		<div class="controls" style="display: none">
+			<div><label>R</label> <input type="text" id="rVal" /></div>
+			<div><label>G</label> <input type="text" id="gVal" /></div>
+			<div><label>B</label> <input type="text" id="bVal" /></div>
+			<div><label>RGB</label> <input type="text" id="rgbVal" /></div>
+			<div><label>HEX</label> <input type="text" id="hexVal" /></div>
+		</div>
+	
+		<script>
+	
+		var currentHatText = document.getElementById("currentHatName");
+		var currentHatDiv = document.getElementById("currentHat");
+			function setNewHat(hatSrc, hatName)
+			{	
+				currentHat = hatName;
+				currentHatText.innerHTML = hatName;
+				currentHatDiv.src = hatSrc;
+				globalCurrentHat = hatName;
+			
+				if(currentButtonSelected == null)
+				{
+					currentButtonSelected = document.getElementById("hat" + (currentHat + 1));
+				}
+				else
+				{
+					currentButtonSelected.style.border = 'none';
+					currentButtonSelected = document.getElementById("hat" + (currentHat + 1));
+				}
+			
+				currentButtonSelected.style.border = '5px dashed green';
+			}
+		</script>
+	</div>
+	</body>
+	</html>
+	</div>
+</span>
+<script>
+	var chatEnhance = ["bribing the tax man", "short selling",  "having questionable business ethics", "outsmarting Wall Street", "collecting on a predatory loan", "falsifying tax returns", "having excellent portfolio performance", "returns on reckless investments", "...working hard for an honest living, I guess....", "compounding interest", "adding back depreciation", "ruining the game's balance", "getting sponsored by the supplier of our robots", "monopolizing the spaghetti industry", "award winning copypasta", "being a lovely audience member", "loving yourself as you are", "recycling", "taking a predatory loan"];
+
+	var portraitDiv = document.getElementsByClassName('portrait');
+	var messageDiv = document.getElementsByClassName('chat');
+	var emoteDiv = document.getElementsByClassName('emoteTab');
+	var shopDiv = document.getElementsByClassName('shopTab');
+	var streamUI = document.getElementsByClassName('streamUI');
+	var gameLobby = document.getElementsByClassName('gameLobby');
+	var emoteCustom = document.getElementsByClassName('emoteCustomTab');
+	
+	var chatBonusMoney = 5;
+	
+	var currentlySelected = messageDiv[0];
+	var handleOrientationChange = (function() {
+	var struct = function(){
+			struct.parse();
+		};
+		struct.showPortraitView = function(){
+		currentlySelected.style.visibility = "visible";
+					streamUI[0].style.visibility = "visible";
+					gameLobby[0].classList.remove('landscapeStream');
+		};
+		struct.showLandscapeView = function(){
+		portraitDiv[0].style.visibility = "hidden";
+			messageDiv[0].style.visibility = "hidden";
+			emoteDiv[0].style.visibility = "hidden";
+			shopDiv[0].style.visibility = "hidden";
+			streamUI[0].style.visibility = "hidden";
+			emoteCustom[0].style.visibility = "hidden";
+			gameLobby[0].style.visibility = "visible";
+			gameLobby[0].classList.add('landscapeStream');
+		};
+		struct.parse = function(){
+			 switch(window.orientation){
+				case 0:
+						//Portrait Orientation
+						this.showPortraitView();
+					break;
+				default:
+					// Landscape Orientation
+					this.lastOrientation = window.orientation;
+					this.showLandscapeView();
+					break;
+			}
+		};
+		struct.lastOrientation = window.orientation;
+		return struct;
+	})();		
+	window.addEventListener("orientationchange", handleOrientationChange, false);
+	
+	// reset the chat timer to receive money after chat
+	function resetChatTimer()		
+	{
+		var chatTimerInterval = setInterval(function(){
+			if(parseInt(localStorage.getItem('chatTimer')) > 0)
+				window.localStorage['chatTimer'] = parseInt(localStorage.getItem('chatTimer')) - 1;
+			else
+				 clearInterval(chatTimerInterval);
+		}, 1000);
+	}
+	
+	// init the chat timer or set it and call the decrement function
+	window.onload = function() 
+	{
+		correctSizeForIphone();		
+		// check if money needs to be updated every ~3 seconds
+		setInterval(checkUpdateMoney, 3000);
+		if(localStorage.getItem('chatTimer') === null)
+		{
+			window.localStorage['chatTimer'] = 0;
+		}
+		else
+		{
+			resetChatTimer();
+		}
+	}
+	
+	// add money to mysql table and to local variable
+	function addMoney(amount)
+	{
+		var theMoney = document.getElementById('money');
+		var intMoney = theMoney.textContent;
+		var intMoney = parseInt(intMoney.replace(/\D+/g, ''), 10);
+		
+		intMoney += parseInt(amount);
+		
+		theMoney.textContent = "$ " + intMoney + "k";
+		moneyAnimation(amount, true);
+	}
+	
+	// check if chat bonus should be reset
+	function checkChatBonus()
+	{
+		if(localStorage.getItem('chatTimer') == 0)
+		{
+			var chatMoneyToAdd = 3;
+			addMoney(chatMoneyToAdd);
+			writeNotificationToScreen("You gained $" + chatMoneyToAdd + "k for chatting. Keep it up!", 2);
+			window.localStorage['chatTimer'] = 15;
+			resetChatTimer();
+		}
+	}
+
+</script>
+
+<script type="text/javascript">
+	var streamLobbyReconnect = 0;
+
+	$(window).resize(function() {
+			//$("#myCanvas").width($( window ).width())
+			$("canvas").not("#picker").width($(window).width());
+			$("canvas").not("#picker").height("100%");
+	});
+	
+	$("#container > .theForm").submit(function(e)
+		{
+			var chat_msg = $("#container > .theForm > #form-container > .form-text > #comment").val();
+				// do NOT send blank message spam
+				if(!chat_msg.replace(/\s/g, '').length)
+					return;
+				SendMessage(chat_msg);
+				$("#container > .theForm > #form-container > .form-text > #comment").val('');
+				
+				checkChatBonus();
+				
+				$("#container > #result-wrapper > #result > .chats").append("<span>"+chat_msg+"</span><br>");
+				
+				// scrolls down since you sent a message
+				 var out = document.getElementById('result');
+				 out.scrollTop = out.scrollHeight;
+		});
+		
+		// enter key hit in form
+		$("#container > .theForm > #form-container > .form-text > #comment").on('keyup',function(e){
+			if(e.keyCode==13 && !e.shiftKey)
+			{
+				var chat_msg = $(this).val();
+				// do NOT send blank message spam
+				if(!chat_msg.replace(/\s/g, '').length)
+					return;					
+				SendMessage(chat_msg);
+				
+				$("#container > #result-wrapper > #result > .chats").append("<span>"+chat_msg+"</span><br>");
+				
+				$(this).val('');
+				
+				checkChatBonus();
+				
+				// scrolls down since you sent a message
+				 var out = document.getElementById('result');
+				 out.scrollTop = out.scrollHeight;
+			}
+		});
+		
+		$.buyEmoteEvent = function(emoteName)
+		{
+			// send emote the user bought to unity
+			SendEmote(emoteName);
+		};
+		
+		$.buyItem = function(itemName)
+		{
+			SendItem(itemName);
+		};
+/*jQuery(startStreamLobby = function(){
+		// Websocket
+		var websocket_server = new WebSocket("ws://<?php echo $localIP?>:8080/");
+		websocket_server.onopen = function(e) {
+			if(window.streamLobbyReconnect)
+							{
+									window.clearInterval(window.streamLobbyReconnect)
+									window.streamLobbyReconnect = 0;
+							}
+			websocket_server.send(
+				JSON.stringify({
+					'type':'socket',
+					'user_id': <?php echo "'{$_SESSION['username']}'"; ?>,
+					'streamer_name': <?php echo "'{$_SESSION['streamRedir']}'"; ?>
+				})
+			
+			);
+			 websocket_server.send(
+											JSON.stringify({
+													'type':'subscribe',
+													'user_id': <?php echo "'{$_SESSION['username']}'"; ?>,
+													'channel': <?php echo "'{$_SESSION['streamRedir']}'"; ?>
+											})
+									);
+									onloadEmoteData();
+									$.onloadShopData();
+		};
+		websocket_server.onlclose = function(e){
+			$(location).attr('href', 'http://<?php echo $localIP?><?php echo $adminUsername?>/websiteFinal/lobby.php');
+			 //websocket_server = null;
+							//if(!window.streamLobbyReconnect)
+							//{
+									// attempt reconnect every 5 seconds
+							 //       window.streamLobbyReconnect = setInterval(function(){startStreamLobby()}, 5000);
+						   // }	
+		};			
+		websocket_server.onerror = function(e) {
+			// uncomment this once websockets are in
+			$(location).attr('href', 'http://<?php echo $localIP?><?php echo $adminUsername?>/websiteFinal/lobby.php');
+		
+		}
+		
+		websocket_server.onmessage = function(e)
+		{
+			var json = JSON.parse(e.data);
+
+			switch(json.type) {
+				case 'chat':
+					var newMessage = "<span>"+json.msg+"</span><br>";
+					
+					// append the new message
+					$("#container > #result-wrapper > #result > .chats").append(newMessage);
+					 var out = document.getElementById('result');
+					 
+					 // scroll down if they are close enough to the bottom
+					 if(out.scrollHeight - out.scrollTop < 800)
+						out.scrollTop = out.scrollHeight;
+						
+					break;
+				case 'shopData':
+					// update shop data on load
+					serverUpdateContribution(json.buttonID, json.current);
+					break;
+				case 'loadShopData':
+					var buttonInfo = json.buttonData;
+					
+					// hard-coding 9 as that's the max buttons we have currently
+					for(var x = 1; x < 10; x++)
+					{
+						if(buttonInfo && buttonInfo[x] !== null)
+						{
+							// if the button has information, update it
+							if(!(buttonInfo[x] === undefined) && buttonInfo[x].totalAmount != 0)
+							{
+								updateShopButtonData(x, buttonInfo[x].totalAmount, buttonInfo[x].currentAmount)
+							}
+						}
+					}
+					
+					break;
+				case 'roundEndMoneyBonus':
+					// simulating round ended money bonus
+					var cashAmount = json.amount;
+					addMoney(cashAmount);
+					writeNotificationToScreen("You gained $" + cashAmount + "k for " + chatEnhance[Math.floor((Math.random() * chatEnhance.length) + 0)] + ". Keep it up!", 2);
+					break;
+				case 'closing':
+					localStorage.setItem('doc_displayErrorMessage', 'The streamer has closed their lobby. Try joining another!');	
+					$(location).attr('href', 'http://<?php echo $localIP?><?php echo $adminUsername?>/lobby.php');
+					break;
+			}
+		}
+		
+		// submit button hit on form
+		$("#container > .theForm").submit(function(e)
+		{
+			var chat_msg = $("#container > .theForm > #form-container > .form-text > #comment").val();
+				// do NOT send blank message spam
+				if(!chat_msg.replace(/\s/g, '').length)
+					return;
+				websocket_server.send(
+					JSON.stringify({
+						'type':'chat',
+						'user_id': <?php echo "'{$_SESSION['username']}'"; ?>,
+						'chat_msg':chat_msg
+					})
+				);
+				$("#container > .theForm > #form-container > .form-text > #comment").val('');
+				
+				checkChatBonus();
+				
+				// scrolls down since you sent a message
+				 var out = document.getElementById('result');
+				 out.scrollTop = out.scrollHeight;
+		});
+		
+		// enter key hit in form
+		$("#container > .theForm > #form-container > .form-text > #comment").on('keyup',function(e){
+			if(e.keyCode==13 && !e.shiftKey)
+			{
+				var chat_msg = $(this).val();
+				// do NOT send blank message spam
+				if(!chat_msg.replace(/\s/g, '').length)
+					return;					
+				websocket_server.send(
+					JSON.stringify({
+						'type':'chat',
+						'user_id': <?php echo "'{$_SESSION['username']}'"; ?>,
+						'chat_msg':chat_msg
+					})
+				);
+				$(this).val('');
+				
+				checkChatBonus();
+				
+				// scrolls down since you sent a message
+				 var out = document.getElementById('result');
+				 out.scrollTop = out.scrollHeight;
+			}
+		});
+		
+		$.contributeToShopItem = function(totalCost, buttonID)
+		{
+			// send update to shop contribution
+			websocket_server.send(
+				JSON.stringify({
+					'type':'contribution',
+					'lobby': <?php echo "'{$_SESSION['streamRedir']}'"; ?> + "shop",
+					'user_id': <?php echo "'{$_SESSION['username']}'"; ?>,
+					'buttonID': buttonID,
+					'totalCost': totalCost
+				})
+			);
+		};
+		
+		$.buyEmoteEvent = function(emoteName)
+		{
+			// send emote the user bought to unity
+			websocket_server.send(
+				JSON.stringify({
+					'type':'emote',
+					'lobby': <?php echo "'{$_SESSION['streamRedir']}'"; ?>,
+					'user_id': <?php echo "'{$_SESSION['username']}'"; ?>,
+					'emoteName': emoteName,
+					'emoteColor':globalCurrentColor,
+					'emoteHat': globalCurrentHat.toString()
+				})
+			);
+		};
+		
+		$.onloadShopData = function()
+		{	
+			websocket_server.send(
+				JSON.stringify({
+					'type':'loadShopData',
+					'lobby': <?php echo "'{$_SESSION['streamRedir']}'"; ?> + "shop"
+				})
+			);
+		}
+	});*/
+</script>
+
+<script>
+	var currentButton = 1;
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+	function toggleIcons(buttonPress)
+	{
+		var theHighlight = document.getElementById('highlight');
+		var messageDiv = document.getElementsByClassName('chat');
+		var emoteDiv = document.getElementsByClassName('emoteTab');
+		var shopDiv = document.getElementsByClassName('shopTab');
+		
+		currentButton = buttonPress;
+
+		switch(buttonPress)
+		{
+			// message
+			case 0:
+				// go back to the lobby page
+				//window.location.replace("lobby.php");
+				// unset streamer variable here 
+				//<?php unset($_SESSION['streamChat']); ?>
+				currentlySelected = messageDiv[0];
+				theHighlight.src = "WebsiteArt/MessageButtonSelect.png";
+				theHighlight.style.left = "5%";
+				messageDiv[0].style.visibility = "visible";
+				emoteDiv[0].style.visibility = "hidden";
+				shopDiv[0].style.visibility = "hidden";
+				emoteCustom[0].style.visibility = "hidden";
+				break;
+			// shop 
+			case 1:
+				// enable the chat here, hide everything else
+				// move the highlight circle over message
+				theHighlight.style.left = "20%";
+				messageDiv[0].style.visibility = "hidden";
+				emoteDiv[0].style.visibility = "hidden";
+				shopDiv[0].style.visibility = "visible";
+				emoteCustom[0].style.visibility = "hidden";
+				currentlySelected = shopDiv[0];
+				theHighlight.src = "WebsiteArt/ShopButtonSelect.png";
+				// initially set the icon to the chat logo
+				break;
+			// emote
+			case 2:
+				// enable the shop here, hide everything else
+				// move the highlight circle over shop
+				theHighlight.style.left = "35%";
+				messageDiv[0].style.visibility = "hidden";
+				emoteDiv[0].style.visibility = "visible";
+				shopDiv[0].style.visibility = "hidden";
+				emoteCustom[0].style.visibility = "hidden";
+				currentlySelected = emoteDiv[0];
+				theHighlight.src = "WebsiteArt/EmoteButtonSelect.png";
+				break;
+			// emote custom
+			case 3:
+				// enable the emote here, hide everything else
+				// move the highlight circle over emote
+				theHighlight.style.left = "50%";
+				messageDiv[0].style.visibility = "hidden";
+				emoteDiv[0].style.visibility = "hidden";
+				shopDiv[0].style.visibility = "hidden";
+				emoteCustom[0].style.visibility = "visible";
+				currentlySelected = emoteCustom[0];
+				theHighlight.src = "WebsiteArt/EmoteCustomSelect.png";
+				break;
+			default:
+				// error
+		}
+	}
+	
+	 $(function() {      
+			if((/android/i.test(userAgent))  || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream))
+		//Enable swiping...
+			$("html").swipe( {
+				//Generic swipe handler for all directions
+				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+				//$(this).text("You swiped " + direction );  
+				//alert("You sipwed " + direction );
+
+			// 0 = chat
+			// 1 = shop
+			// 2 = emote
+			// 3 = emote custom
+			// toggleIcons
+				if(direction == "right")
+				{
+					if(currentButton > 0)
+						currentButton--;
+				}
+				else if(direction == "left")
+				{
+					if(currentButton < 3)
+						currentButton++;
+				}
+				 toggleIcons(currentButton); 
+			},
+				//Default is 75px, set to 0 for demo so any distance triggers swipe
+				threshold:65
+
+			});
+		});
+</script>
+</html>
