@@ -1,0 +1,221 @@
+body,html {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    top: 0px;
+    background-color: #160F30;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+.HeaderName
+{
+	position: absolute;
+  	top: 25%;
+  	left: 70%;
+  	transform: translate(-50%, -50%);
+  	color: #eae7af;
+  	font-size: 40px;
+}
+
+.HeaderTitle
+{
+	position: absolute;
+  	top: 30%;
+  	left: 80%;
+  	transform: translate(-50%, -50%);
+  	color: #eae7af;
+  	font-size: 20px;
+}
+
+.horizontalLineTop
+{
+	width: 100%;
+	height: 2px;
+	background-color: #241663;
+	position: inherit;
+	margin-top: 5.5;
+}
+
+.horizontalLineBottom
+{
+	width: 100%;
+	height: 2px;
+	background-color: #241663;
+	position: inherit;
+	margin-top: 18;
+}
+
+.MenuHeader
+{
+	text-align: center;
+	height: 5rem;
+	background-color: #160F30;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+.DividerHeader
+{
+	text-align: center;
+	height: 5rem;
+	background-color: #160F30;
+	width: 100%;
+	position: absolute;
+}
+
+.MenuHeader a
+{
+	height: 80%;
+	color: #160F30;
+	border-radius: 20px;
+	font-size: 45px;
+	border: 0;
+	position: relative;
+	background-color: #eae7af;
+	text-decoration: none;
+	/* this value should be 100% - button height / 2 */
+	/* also account for padding */
+	top: calc((100% - 65%)/2);
+	padding-top: .3rem;
+  	padding-right: .3rem;
+  	padding-bottom: .3rem;
+  	padding-left: .3rem;
+}
+
+.MenuHeader a:focus
+{
+	outline: none;
+}
+
+.MenuHeader a:hover
+{
+	background-color: #241663;
+	color: #eae7af;
+}
+
+.ParallaxImage img
+{
+	margin-top: 5rem;
+	width: 100%;
+	height: 40%;
+	background: transparent;
+	position: relative;
+  	text-align: center;
+  	color: #eae7af;
+}
+
+.PortfolioContainer
+{
+  -webkit-columns: 4;
+     -moz-columns: 4;
+          columns: 4;
+  -webkit-column-gap: .8em;
+     -moz-column-gap: .8em;
+          column-gap: .8em;
+          
+	position: relative;
+	margin-top: 5rem;
+	padding: 10 5 .5 5;
+}
+
+.PortfolioPiece img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.PortfolioPiece img:last-child {
+  display: none;  
+}
+.PortfolioPiece:hover img:last-child {
+  display: block;  
+}
+.PortfolioPiece:hover img:first-child {
+  display: none;  
+}
+
+.PortfolioPiece
+{
+	width: 100%;
+	height: 700px;
+	border-radius: 25px;
+  	border: 2px solid #241663;
+}
+
+.dividerText
+{
+	color: #eae7af;
+	font-size: 58px;
+	
+	top: 10%;
+	position: relative;
+	
+}
+
+.ContactContainer
+{
+  -webkit-rows: 4;
+     -moz-rows: 4;
+          rows: 4;
+  -webkit-row-gap: .8em;
+     -moz-row-gap: .8em;
+          row-gap: .8em;
+          
+	position: relative;
+	margin-top: 5rem;
+	padding: 10 5 .5 5;
+}
+
+.ContactInfo:nth-of-type(odd)
+{
+	background-color: white;
+}
+
+.ContactInfo:nth-of-type(even)
+{
+	background-color: green;
+}
+
+.ContactInfo:nth-of-type(even):hover
+{
+	background-color: red;
+}
+.ContactInfo:nth-of-type(even):hover a
+{
+	color: white;
+}
+
+.ContactInfo
+{
+	text-align: center;
+	height: 10%;
+	border-radius: 14px;
+	margin-top: 5px;
+	margin-bottom: 5px;	
+	display: flex;
+   	align-items: center; 
+   	justify-content: center;
+   	font-size: 30px;
+}
+
+.ContactInfo a
+{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+/*.MenuHeader img
+{
+	height: 100%;
+}*/
