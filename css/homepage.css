@@ -1,3 +1,5 @@
+/* general page css */
+
 body,html {
     width:100%;
     height:100%;
@@ -13,6 +15,8 @@ body,html {
 html::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
 }
+
+/* header pic / text css */
 
 .HeaderName
 {
@@ -34,23 +38,18 @@ html::-webkit-scrollbar {
   	font-size: 20px;
 }
 
-.horizontalLineTop
+.ParallaxImage img
 {
+	margin-top: 5rem;
 	width: 100%;
-	height: 2px;
-	background-color: #241663;
-	position: inherit;
-	margin-top: 5.5;
+	height: 40%;
+	background: transparent;
+	position: relative;
+  	text-align: center;
+  	color: #eae7af;
 }
 
-.horizontalLineBottom
-{
-	width: 100%;
-	height: 2px;
-	background-color: #241663;
-	position: inherit;
-	margin-top: 18;
-}
+/* menu navigation bar css */
 
 .MenuHeader
 {
@@ -59,16 +58,7 @@ html::-webkit-scrollbar {
 	background-color: #160F30;
 	position: fixed;
 	width: 100%;
-	z-index: 2;
-}
-
-.DividerHeader
-{
-	text-align: center;
-	height: 5rem;
-	background-color: #160F30;
-	width: 100%;
-	position: absolute;
+	z-index: 3;
 }
 
 .MenuHeader a
@@ -101,54 +91,34 @@ html::-webkit-scrollbar {
 	color: #eae7af;
 }
 
-.ParallaxImage img
-{
-	margin-top: 5rem;
-	width: 100%;
-	height: 40%;
-	background: transparent;
-	position: relative;
-  	text-align: center;
-  	color: #eae7af;
-}
 
-.PortfolioContainer
-{
-  -webkit-columns: 4;
-     -moz-columns: 4;
-          columns: 4;
-  -webkit-column-gap: .8em;
-     -moz-column-gap: .8em;
-          column-gap: .8em;
-          
-	position: relative;
-	margin-top: 5rem;
-	padding: 10 5 .5 5;
-}
+/* page divided css */
 
-.PortfolioPiece img
+.horizontalLineTop
 {
 	width: 100%;
-	height: 100%;
-	border-radius: inherit;
+	height: 2px;
+	background-color: #241663;
+	position: inherit;
+	margin-top: 5.5;
 }
 
-.PortfolioPiece img:last-child {
-  display: none;  
-}
-.PortfolioPiece:hover img:last-child {
-  display: block;  
-}
-.PortfolioPiece:hover img:first-child {
-  display: none;  
-}
-
-.PortfolioPiece
+.horizontalLineBottom
 {
 	width: 100%;
-	height: 700px;
-	border-radius: 25px;
-  	border: 2px solid #241663;
+	height: 2px;
+	background-color: #241663;
+	position: inherit;
+	margin-top: 18;
+}
+
+.DividerHeader
+{
+	text-align: center;
+	height: 5rem;
+	background-color: #160F30;
+	width: 100%;
+	position: absolute;
 }
 
 .dividerText
@@ -160,6 +130,8 @@ html::-webkit-scrollbar {
 	position: relative;
 	
 }
+
+/* Contact Info Css */
 
 .ContactContainer
 {
@@ -204,16 +176,116 @@ html::-webkit-scrollbar {
 	display: flex;
    	align-items: center; 
    	justify-content: center;
-   	font-size: 30px;
+   	font-size: 3vw;
 }
 
 .ContactInfo a
 {
 	text-decoration: none;
+	font-size: 6vw;
 	color: black;
 }
 
+#socialMediaPics img
+{
+	height: 90%;
+	padding: 15;
+}
 
+.SocialMediaLinks a:last-child {
+  display: none;  
+}
+.SocialMediaLinks:hover a:last-child {
+  display: block;  
+}
+.SocialMediaLinks:hover a:first-child {
+  display: none;  
+}
+
+/* Portfolio Piece css */
+
+.PortfolioContainer
+{
+  -webkit-columns: 4;
+     -moz-columns: 4;
+          columns: 4;
+  -webkit-column-gap: .8em;
+     -moz-column-gap: .8em;
+          column-gap: .8em;
+          
+	position: relative;
+	margin-top: 5rem;
+	padding: 10 5 .5 5;
+}
+
+.PortfolioPiece img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	display: block;
+}
+
+.PortfolioPiece
+{
+	width: 100%;
+	height: 700px;
+	border-radius: 25px;
+  	border: 2px solid #241663;
+  	position: relative;
+  	overflow: hidden;
+}
+
+.PortfolioPiece p, .PortfolioPiece h4
+{
+  background: #ddd;
+  height: 0;
+  left: 0;
+  opacity: 0;
+  display:inline;
+  -webkit-transform: translate3d(0, 0, 0);
+  /*border-radius: 25px;*/
+  position: absolute;
+  text-align: center;
+  color: #FFF;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none;
+  padding: 15px 0px 0px 0px;
+}
+
+.PortfolioPiece p
+{
+	z-index: 1;
+	margin-top: 30px;
+	transition: all .35s ease-in;
+}
+
+.PortfolioPiece h4
+{
+ 	margin-top: 0px;
+	z-index: 2;
+	background-color: red;
+	display: block;
+	transition: all .3s ease-in;
+}
+
+.PortfolioPiece:hover p {
+  height: 200px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(0);
+}
+
+.PortfolioPiece:hover h4 {
+  height: 30px;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /*.MenuHeader img
 {
