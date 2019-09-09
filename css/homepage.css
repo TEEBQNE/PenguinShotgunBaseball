@@ -244,7 +244,6 @@ html::-webkit-scrollbar {
   opacity: 0;
   display:inline;
   -webkit-transform: translate3d(0, 0, 0);
-  /*border-radius: 25px;*/
   position: absolute;
   text-align: center;
   color: #FFF;
@@ -263,6 +262,7 @@ html::-webkit-scrollbar {
 	z-index: 1;
 	margin-top: 30px;
 	transition: all .35s ease-in;
+	border-radius: 25px;
 }
 
 .PortfolioPiece h4
