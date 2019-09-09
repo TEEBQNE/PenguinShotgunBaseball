@@ -5,8 +5,6 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On 
 RewriteBase /
 
-RewriteRule (.*)[^a-zA-Z](.*) $1 [N]
-
 #removing trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteRule ^(.*)/$ $1 [R=301,L]
