@@ -18,25 +18,27 @@
 		<meta name="author" content="Tyler Chapman">
 		<!-- favicon here -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<!-- move this out of the base html and put it in its own js file -->
+		<!-- used to remove the #... trailing symbol when a page scroll is done -->
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+			}
+			window.onhashchange = locationHashChanged;
+		</script>
 	</head>
-	<body>
-	<script>
-	function remove_hash_from_url()
-	{
-		history.pushState("", document.title, window.location.pathname
-                                                       + window.location.search);
-	}
-	</script>
-	
+	<body>	
 		<!-- Main header to scroll with user for page anchor selection -->
 		<div class = "MenuHeader">
 			<!-- <img src="img/homeIcon.png"</img> -->
 			<!-- eventually change it to an icon -->
 			<div class = "horizontalLineTop"></div>
-			<a href="#home" onclick=remove_hash_from_url()>Home</a>
-			<a href="#portfolio" onclick=remove_hash_from_url()>Portfolio</a>
-			<a href="#resume" onclick=remove_hash_from_url()>Resume</a>
-			<a href="#contact" onclick=remove_hash_from_url()>Contact</a>
+			<a href="#home">Home</a>
+			<a href="#portfolio">Portfolio</a>
+			<a href="#resume">Resume</a>
+			<a href="#contact">Contact</a>
 			<div class = "horizontalLineBottom"></div>
 		</div>
 		
