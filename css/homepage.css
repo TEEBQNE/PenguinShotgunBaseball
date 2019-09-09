@@ -176,13 +176,13 @@ html::-webkit-scrollbar {
 	display: flex;
    	align-items: center; 
    	justify-content: center;
-   	font-size: 3vw;
+   	font-size: 2.5vw;
 }
 
 .ContactInfo a
 {
 	text-decoration: none;
-	font-size: 6vw;
+	font-size: 5vw;
 	color: black;
 }
 
@@ -236,7 +236,7 @@ html::-webkit-scrollbar {
   	overflow: hidden;
 }
 
-.PortfolioPiece p, .PortfolioPiece h4
+.PortfolioPiece p, .PortfolioPiece h4, .PortfolioPiece h3
 {
   background: #ddd;
   height: 0;
@@ -247,8 +247,6 @@ html::-webkit-scrollbar {
   position: absolute;
   text-align: center;
   color: #FFF;
-  left: 0;
-  top: 0;
   width: 100%;
   font-family: Arial;
   font-size: 20px;
@@ -261,8 +259,10 @@ html::-webkit-scrollbar {
 {
 	z-index: 1;
 	margin-top: 30px;
-	transition: all .35s ease-in;
+	transition: all .35s ease-in-out;
 	border-radius: 25px;
+	left: 0;
+  	top: 0;
 }
 
 .PortfolioPiece h4
@@ -271,7 +271,27 @@ html::-webkit-scrollbar {
 	z-index: 2;
 	background-color: red;
 	display: block;
-	transition: all .3s ease-in;
+	transition: all .3s ease-in-out;
+	left: 0;
+  	top: 0;
+}
+
+.PortfolioPiece h3
+{
+	z-index: 2;
+	background-color: red;
+	display: block;
+	transition: all .3s ease-in-out;
+}
+
+.PortfolioPiece:hover h3 {
+  height: 30px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(0);
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .PortfolioPiece:hover p {
