@@ -185,8 +185,8 @@ html::-webkit-scrollbar {
 
 #socialMediaPics img
 {
-	height: 90%;
-	padding: 15;
+	height: 50px;
+	padding: 15px;
 }
 
 .SocialMediaLinks a:last-child {
@@ -334,6 +334,7 @@ html::-webkit-scrollbar {
 	
 	background-color: #241663;
 	border-radius: 25px;
+	height: 100%;
 }
 
 #skillExperiences
@@ -344,12 +345,12 @@ html::-webkit-scrollbar {
 	
 	background-color: #241663;
 	border-radius: 25px;
+	height: 100%;
 }
 
 #aboutMe
 {
 	width: 140%;
-	
 	-webkit-columns: 2;
      -moz-columns: 2;
           columns: 2;
@@ -405,6 +406,7 @@ html::-webkit-scrollbar {
   pointer-events: none;
   text-align: center;
   border-radius: 25px;
+  float: left;
 }
 
 #ProgramHeader p, #resumePhoto p
