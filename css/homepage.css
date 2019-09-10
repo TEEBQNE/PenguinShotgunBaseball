@@ -135,12 +135,9 @@ html::-webkit-scrollbar {
 
 .ContactContainer
 {
-  -webkit-rows: 4;
-     -moz-rows: 4;
+  -webkit-grid-rows: 4;
+     -moz-grid-rows: 4;
           rows: 4;
-  -webkit-row-gap: .8em;
-     -moz-row-gap: .8em;
-          row-gap: .8em;
           
 	position: relative;
 	margin-top: 5rem;
@@ -245,21 +242,21 @@ html::-webkit-scrollbar {
   display:inline;
   -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
-  text-align: center;
   color: #FFF;
-  width: 100%;
+  width: 101%;
   font-family: Arial;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: bold;
   pointer-events: none;
-  padding: 15px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+  line-height: 0;
 }
 
 .PortfolioPiece p
 {
 	z-index: 1;
 	margin-top: 30px;
-	transition: all .35s ease-in-out;
+	transition: all .35s ease-in;
 	border-radius: 25px;
 	left: 0;
   	top: 0;
@@ -271,17 +268,18 @@ html::-webkit-scrollbar {
 	z-index: 2;
 	background-color: red;
 	display: block;
-	transition: all .3s ease-in-out;
+	transition: all .4s ease-in;
 	left: 0;
   	top: 0;
+  	text-align: center;
 }
 
 .PortfolioPiece h3
 {
 	z-index: 2;
-	background-color: red;
 	display: block;
-	transition: all .3s ease-in-out;
+	transition: all .3s ease-in;
+	text-align: center;
 }
 
 .PortfolioPiece:hover h3 {
@@ -292,22 +290,228 @@ html::-webkit-scrollbar {
   position: absolute;
   bottom: 0px;
   margin-bottom: 0px;
+  display: table;
+  line-height: 1;
 }
 
 .PortfolioPiece:hover p {
-  height: 200px;
+  height: 30px;
   opacity: 1;
   background: rgba(0, 0, 0, 0.7);
   transform: translateY(0);
+  display: table;
+   line-height: 1;
 }
 
 .PortfolioPiece:hover h4 {
   height: 30px;
   opacity: 1;
   transform: translateY(0);
+  display: table;
+  line-height: 1;
 }
 
-/*.MenuHeader img
+/* Resume css */
+
+.ResumeContainer
 {
+	-webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  -webkit-column-gap: .8em;
+     -moz-column-gap: .8em;
+          column-gap: .8em;
+          
+	position: relative;
+	margin-top: 5rem;
+	padding: 10 5 .5 5;
+	height: 700px;
+}
+
+.ResumeMainSection
+{      
+	position: relative;
+	
+	background-color: #241663;
+	border-radius: 25px;
+}
+
+#skillExperiences
+{
+	width: 60%;
+	float: right;
+	position: relative;
+	
+	background-color: #241663;
+	border-radius: 25px;
+}
+
+#aboutMe
+{
+	width: 140%;
+	
+	-webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  -webkit-column-gap: .8em;
+     -moz-column-gap: .8em;
+          column-gap: .8em;
+}
+
+#TextWrapper p
+{
+	color: white;
+	width: 90%;
+	padding: 0 5%;
+	margin 0;
+}
+#imgWrapper
+{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+#resumePhoto
+{
+	width: 200px;
+	height: 200px;
+	border-radius: 25px;
+  	position: relative;
+  	display: inline-block;
+  	margin-top: 2rem;
+}
+
+#resumePhoto img
+{
+	width: 100%;
 	height: 100%;
-}*/
+	border-radius: 25px;
+	display: block;
+}
+
+#resumePhoto p, .ResumeSubSection .SkillHeader p
+{
+  background: #ddd;
+  height: 0;
+  left: 0;
+  top: 0;
+  display:inline;
+  position: absolute;
+  color: #FFF;
+  width: 100%;
+  font-family: Arial;
+  font-size: 2vw;
+  font-weight: bold;
+  pointer-events: none;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+#resumePhoto p
+{
+	height: 10%;
+    padding: 5px 0;
+}
+
+.ResumeSubSection .SkillHeader p
+{
+	height: 4%;
+}
+
+#resumePhoto:hover p
+{
+  background-color: red;
+}
+
+#skillExperiences, .leftAboutMe, .rightAboutMe
+{          
+	height: 100%;
+	position: relative;
+}
+
+/* Skills resume css */
+
+.Language
+{
+	width: 50px;
+	height: 50px;
+  	position: relative;
+  	display: block;
+    margin: 0 auto;
+}
+
+.Language img
+{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+.Language h4
+{
+	display: inline-block;
+	margin-top: 3px;
+	color: white;
+}
+
+#ProgrammingLanguages h2
+{
+	display: block;
+	padding: 30px 0 0 0;
+	font-size: 1.5vw;
+}
+	
+#General
+{
+	-webkit-columns: 3;
+     -moz-columns: 3;
+          columns: 3;
+  text-align: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ResumeSubsection h2
+{
+	text-align: center;
+	color: white; 
+	position: relative;
+}
+
+.Language p
+{
+  height: 0;
+  left: 0;
+  opacity: 0;
+  display:inline;
+  -webkit-transform: translate3d(0, 0, 0);
+  position: absolute;
+  color: #FFF;
+  width: 150%;
+  font-family: Arial;
+  font-size: .75vw;
+  font-weight: bold;
+  transition: all .2s ease-in;
+  pointer-events: none;
+  padding: 10px 0px 0px 0px;
+  line-height: 0;
+  border-radius: 25px;
+  top: 0;
+  left: -25%;
+  margin-top: 0px;
+}
+
+.Language:hover p {
+  height: 30px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(0);
+  position: absolute;
+  margin-top: -30px;
+  display: table;
+  line-height: 1;
+}
