@@ -1,0 +1,306 @@
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1400px) {
+	.ParallaxImage img
+	{
+		height: 50%;
+	}
+	
+	.HeaderName
+	{
+		top: 35%;
+	}
+	
+	.HeaderTitle
+	{
+		top: 40%;
+	}
+	
+	.PortfolioPiece p, .PortfolioPiece h4, .PortfolioPiece h3
+	{
+		font-size: 1.5vw;
+	}
+	
+	.ResumeSubSection .SkillHeader p {
+		font-size: 1.2vw;
+	}
+	
+	.ResumeContainer {
+		height: 750px;
+	}
+	
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (max-width : 825px) {
+	.ParallaxImage img
+	{
+		height: 30%;
+	}
+	
+	.HeaderName
+	{
+		font-size: 30px;
+	}
+	
+	.HeaderTitle
+	{
+		font-size: 15px;
+	}
+}
+
+@media only screen
+and (max-width: 620px){
+	.MenuHeader a
+	{
+		height: 60%;
+		font-size: 25px;
+		padding-top: .3rem;
+		padding-right: .3rem;
+		padding-bottom: .3rem;
+		padding-left: .3rem;
+	}
+	
+	.dividerText 
+	{
+		font-size: 30px;
+	}
+	
+	.MenuHeader
+	{
+		height: 3.5rem;
+	}
+	
+	.dividerText
+	{
+		top: 25%;
+	}
+	
+	.MenuHeader, .DividerHeader
+	{
+		height: 3.5rem;
+	}
+	
+	.ParallaxImage img
+	{
+		margin-top: 3.5rem;
+	}
+	
+	.PortfolioContainer, .ResumeContainer, .ContactContainer
+	{
+		margin-top: 3.5rem;
+	}
+	
+	.ParallaxImage img
+	{
+		margin-top: 3.5rem;
+	}
+	
+	.HeaderName
+	{
+		font-size: 25px;
+		top: 20%;
+		white-space: nowrap;
+	}
+	
+	.HeaderTitle
+	{
+		font-size: 12px;
+		top: 25%;
+		white-space: nowrap;
+	}
+	
+	.PortfolioContainer
+	{
+	  -webkit-columns: 2;
+		 -moz-columns: 2;
+			  columns: 2;
+	  -webkit-column-gap: .8em;
+		 -moz-column-gap: .8em;
+			  column-gap: .8em;
+		  
+		position: relative;
+		margin-top: 3.5rem;
+		padding: 10 5 .5 5;
+	}
+	
+	.PortfolioPiece
+	{
+		height: 600px
+	}
+	
+	.PortfolioContainer {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		-webkit-column-gap: .8em;
+		-moz-column-gap: .8em;
+		column-gap: .8em;
+		position: relative;
+		padding: 10 5 .5 5;
+	}
+	
+	.ResumeContainer {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		height: unset;
+	}
+	
+	.ResumeSubSection .SkillHeader p
+	{
+		font-size: 3vw;
+	}
+	
+	#textWrapper p
+	{
+		font-size: 8px;
+	}
+	
+	.PortfolioPiece p{
+		font-size: 5vw;
+	}
+	
+	.PortfolioPiece h4, .PortfolioPiece h3 
+	{
+		font-size: 3vw;
+	}
+	
+	#aboutMe
+	{
+		width: 100%;
+	}
+	
+	#skillExperiences
+	{
+		width: 100%;
+	}
+	
+	#ProgrammingLanguages h2 {
+		font-size: 5vw;
+	}
+	
+	#skillExperiences
+	{
+		height: 720px;
+	}
+	
+}
+
+/*@media only screen
+and (max-width: 750px)
+{
+	.PortfolioContainer
+	{
+	  -webkit-columns: 2;
+		 -moz-columns: 2;
+			  columns: 2;
+	  -webkit-column-gap: .8em;
+		 -moz-column-gap: .8em;
+			  column-gap: .8em;
+		  
+		position: relative;
+		margin-top: 5rem;
+		padding: 10 5 .5 5;
+	}
+	
+	.PortfolioPiece
+	{
+		height: 400px
+	}
+}*/
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (max-width : 500px) {
+	.ParallaxImage img
+	{
+		height: 20%;
+	}
+	
+	.HeaderName
+	{
+		font-size: 25px;
+		top: 15%;
+		
+	}
+	
+	.HeaderTitle
+	{
+		font-size: 12px;
+		top: 19%;
+	}
+	
+	.PortfolioContainer
+	{
+	  -webkit-columns: 1;
+		 -moz-columns: 1;
+			  columns: 1;
+	  -webkit-column-gap: 0em;
+ 	  -moz-column-gap: 0em;
+	  column-gap: 0em;
+		  
+		position: relative;
+		margin-top: 5rem;
+	}
+	
+	.PortfolioPiece
+	{
+		height: 600px
+	}
+	
+	.PortfolioPiece
+	{
+		border: 3px solid #241663;
+	}
+	
+	.PortfolioPiece p
+	{
+		font-size: 5vw;
+	}
+	.PortfolioPiece h4, .PortfolioPiece h3 
+	{
+		font-size: 5vw;
+	}
+	
+	#socialMediaPics img
+	{
+		height: 70%;
+		padding: 5;
+	}
+	
+	
+}
+
+/* iPhone 4 / 5S */
+@media only screen 
+and (max-width : 330px) {
+	.MenuHeader a, .dividerText 
+	{
+		font-size: 20px;
+	}
+	
+	.dividerText
+	{
+		top: 25%;
+	}
+	
+	.MenuHeader, .DividerHeader
+	{
+		height: 2.9rem;
+	}
+	
+	.ParallaxImage img
+	{
+		margin-top: 2.9rem;
+	}
+	
+	.PortfolioContainer, .ResumeContainer, .ContactContainer
+	{
+		margin-top: 2.9rem;
+	}
+}
