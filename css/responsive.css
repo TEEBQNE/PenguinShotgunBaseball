@@ -189,6 +189,16 @@ and (max-width: 620px){
 		height: 720px;
 	}
 	
+	#resumePhoto {
+		height: 100px;
+		width: 100px;
+		margin-top: .5rem;
+	}
+	
+	#aboutMe
+	{
+		height: 225px;
+	}
 }
 
 /*@media only screen
