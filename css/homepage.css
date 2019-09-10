@@ -151,16 +151,16 @@ html::-webkit-scrollbar {
 
 .ContactInfo:nth-of-type(even)
 {
-	background-color: green;
+	background-color: #241663;
 }
 
 .ContactInfo:nth-of-type(even):hover
 {
-	background-color: red;
+	background-color: purple;
 }
 .ContactInfo:nth-of-type(even):hover a
 {
-	color: white;
+	color: black;
 }
 
 .ContactInfo
@@ -180,7 +180,7 @@ html::-webkit-scrollbar {
 {
 	text-decoration: none;
 	font-size: 5vw;
-	color: black;
+	color: white;
 }
 
 #socialMediaPics img
@@ -325,7 +325,7 @@ html::-webkit-scrollbar {
 	position: relative;
 	margin-top: 5rem;
 	padding: 10 5 .5 5;
-	height: 700px;
+	height: 600px;
 }
 
 .ResumeMainSection
@@ -393,9 +393,7 @@ html::-webkit-scrollbar {
 #resumePhoto p, .ResumeSubSection .SkillHeader p
 {
   background: #ddd;
-  height: 0;
   left: 0;
-  top: 0;
   display:inline;
   position: absolute;
   color: #FFF;
@@ -404,9 +402,19 @@ html::-webkit-scrollbar {
   font-size: 2vw;
   font-weight: bold;
   pointer-events: none;
-  margin-top: 0px;
   text-align: center;
   border-radius: 25px;
+}
+
+#ProgramHeader p, #resumePhoto p
+{
+	top: 0;
+	margin-top: 0px;
+}
+
+#EngineHeader
+{
+	padding: 15px 0;
 }
 
 #resumePhoto p
@@ -417,7 +425,7 @@ html::-webkit-scrollbar {
 
 .ResumeSubSection .SkillHeader p
 {
-	height: 4%;
+	height: 5%;
 }
 
 #resumePhoto:hover p
@@ -514,4 +522,9 @@ html::-webkit-scrollbar {
   margin-top: -30px;
   display: table;
   line-height: 1;
+}
+
+#engineSkill
+{
+	margin-top: 3.5rem;
 }
