@@ -1,3 +1,29 @@
+
+_:default:not(:root:root), .selector { html
+{
+	display: none;
+} }
+
+_::-webkit-full-page-media, _:future, :root .selector { html
+{
+	display: none;
+} }
+
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .selector { html
+{
+	display: none;
+} } }
+
+@media not all and (min-resolution:.001dpcm) { @media { .selector { html
+{
+	display: none;
+} } } }
+
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .selector { html
+{
+	display: none;
+} } } }
+
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1400px) {
@@ -312,5 +338,135 @@ and (max-width : 330px) {
 	.PortfolioContainer, .ResumeContainer, .ContactContainer
 	{
 		margin-top: 2.9rem;
+	}
+} 
+
+/* css hack to target ONLY safari */
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+ .ResumeContainer {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		height: unset;
+	}
+	
+	.ResumeSubSection .SkillHeader p
+	{
+		font-size: 1.5rem;
+	}
+	
+	#textWrapper p
+	{
+		font-size: 13px;
+	}
+	
+	#aboutMe
+	{
+		width: 100%;
+	}
+	
+	#skillExperiences
+	{
+		width: 100%;
+	}
+	
+	#ProgrammingLanguages h2 {
+		font-size: 3rem;
+	}
+	
+	.Language 
+	{
+		height: 50px;
+		width: 50px;
+	}
+	
+	#skillExperiences
+	{
+		height: 1100px;
+	}
+	
+	#resumePhoto {
+		height: 200px;
+		width: 200px;
+		margin-top: .5rem;
+	}
+	
+	#aboutMe
+	{
+		height: 450px;
+	}
+	
+	.Language
+	{
+		height: 100px;
+		width: 100px;
+	}
+ }
+ 
+ /* IE and Edge css hack */
+ .msie7comma, { 
+ 	.ResumeContainer {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		height: unset;
+	}
+	
+	.ResumeSubSection .SkillHeader p
+	{
+		font-size: 1.5rem;
+	}
+	
+	#textWrapper p
+	{
+		font-size: 13px;
+	}
+	
+	#aboutMe
+	{
+		width: 100%;
+	}
+	
+	#skillExperiences
+	{
+		width: 100%;
+	}
+	
+	#ProgrammingLanguages h2 {
+		font-size: 3rem;
+	}
+	
+	.Language 
+	{
+		height: 50px;
+		width: 50px;
+	}
+	
+	#skillExperiences
+	{
+		height: 1100px;
+	}
+	
+	#resumePhoto {
+		height: 200px;
+		width: 200px;
+		margin-top: .5rem;
+	}
+	
+	#aboutMe
+	{
+		height: 450px;
+	}
+	
+	.Language
+	{
+		height: 100px;
+		width: 100px;
 	}
 }
