@@ -449,7 +449,11 @@ and (max-width : 330px) {
 		{
 			height: 100px;
 			width: 100px;
-			margin-top: 5%;
+		}
+		
+		.Language
+		{
+			margin-top: 55px;
 		}
 	}
 }
