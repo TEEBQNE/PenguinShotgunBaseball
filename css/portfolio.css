@@ -28,9 +28,11 @@
 
 .PortfolioTextWrapper p
 {
-	background-color: white;
-	border: 2px red solid;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	border: 2px darkgray solid;
 	font-size: 1rem;
+	padding: 15 0 0 0;
 }
 
 .TextSubHeaders
@@ -41,23 +43,37 @@
   -webkit-column-gap: .8em;
      -moz-column-gap: .8em;
           column-gap: .8em;
-  margin-top: 15%;
+
   display: flex;
-  flex-wrap: no-wrap;
 }
 
 #Awards
 {
 	width: 50%;
-	background-color: white;
-	border: 2px red solid;
+	background-color: rgba(0.0, 0.0, 0.0, 0.3);
+	border: 2px darkgray solid;
+	color: white;
+	padding: 0 0 20 0;
 }
 
 #Links
 {
 	width: 50%;
-	background-color: white;
-	border: 2px red solid;
+	background-color: rgba(0.0, 0.0, 0.0, 0.3);
+	border: 2px darkgray solid;
+	color: white;
+	padding: 0 0 20 0;
+}
+
+#Awards li, #Awards h4, #Links li, #Links h4
+{
+	padding: 0 0 0 20;
+}
+
+#Links li a
+{
+	text-decoration: underline;
+	color: white;
 }
 
 .TextSubHeaders li
@@ -81,7 +97,7 @@
 
 .ImageSlide
 {
-	background-color: red;
+	background-color: gray;
 	padding: 50px 0;
 }
 
@@ -104,42 +120,5 @@
   	
   	width: 300px;
 	height: 200px;
-	background-color: white;
-  	
+	background-color: white;	
 }
-
-/*.Video
-{
-	width: 100%;
-}
-
-.Video iframe
-{
-	width: 50vw; 
-    height: 28.125vw;
-    max-height: 250px;
-    max-width: 500px;
-    top: 5%;
-	left: 50%;
-	position: absolute;
-}
-
-.ImageSlide
-{
-	width: 100%;
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.ImageSlide img
-{
-	width: 50vw; 
-    height: 28.125vw;
-    max-height: 250px;
-    max-width: 500px;
-    bottom: 5%;
-	left: 50%;
-	position: absolute;
-}*/
