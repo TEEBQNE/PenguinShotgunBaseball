@@ -407,6 +407,8 @@ and (max-width : 330px) {
  }
  
 @supports (-ms-ime-align: auto) {
+@media only screen
+and (max-width: 620px){
   .ResumeContainer {
 		-webkit-columns: 1;
 		-moz-columns: 1;
@@ -449,7 +451,7 @@ and (max-width : 330px) {
 	
 	#skillExperiences
 	{
-		height: 1100px;
+		height: 1200px;
 	}
 	
 	#resumePhoto {
@@ -467,5 +469,6 @@ and (max-width : 330px) {
 	{
 		height: 100px;
 		width: 100px;
+	}
 	}
 }
