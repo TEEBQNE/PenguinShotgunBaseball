@@ -407,68 +407,69 @@ and (max-width : 330px) {
  }
  
 @supports (-ms-ime-align: auto) {
-@media only screen
-and (min-width: 620px){
-  .ResumeContainer {
-		-webkit-columns: 1;
-		-moz-columns: 1;
-		columns: 1;
-		display: flex;
-		align-items: stretch;
-		flex-wrap: wrap;
-		height: unset;
-	}
+	@media only screen
+	and (min-width: 620px){
+	  .ResumeContainer {
+			-webkit-columns: 1;
+			-moz-columns: 1;
+			columns: 1;
+			display: flex;
+			align-items: stretch;
+			flex-wrap: wrap;
+			height: unset;
+		}
 	
-	.ResumeSubSection .SkillHeader p
-	{
-		font-size: 1.5rem;
-	}
+		.ResumeSubSection .SkillHeader p
+		{
+			font-size: 1.5rem;
+		}
 	
-	#textWrapper p
-	{
-		font-size: 13px;
-	}
+		#textWrapper p
+		{
+			font-size: 13px;
+		}
 	
-	#aboutMe
-	{
-		width: 100%;
-	}
+		#aboutMe
+		{
+			width: 100%;
+		}
 	
-	#skillExperiences
-	{
-		width: 100%;
-	}
+		#skillExperiences
+		{
+			width: 100%;
+		}
 	
-	#ProgrammingLanguages h2 {
-		font-size: 3rem;
-	}
+		#ProgrammingLanguages h2 {
+			font-size: 3rem;
+		}
 	
-	.Language 
-	{
-		height: 50px;
-		width: 50px;
-	}
+		.Language 
+		{
+			height: 50px;
+			width: 50px;
+		}
 	
-	#skillExperiences
-	{
-		height: 1200px;
-	}
+		#skillExperiences
+		{
+			height: 1200px;
+		}
 	
-	#resumePhoto {
-		height: 200px;
-		width: 200px;
-		margin-top: .5rem;
-	}
+		#resumePhoto {
+			height: 200px;
+			width: 200px;
+			margin-top: .5rem;
+		}
 	
-	#aboutMe
-	{
-		height: 450px;
-	}
+		#aboutMe
+		{
+			height: 450px;
+		}
 	
-	.Language
-	{
-		height: 100px;
-		width: 100px;
-	}
+		.Language
+		{
+			height: 100px;
+			width: 100px;
+			margin-top: 15px;
+		}
 	}
 }
