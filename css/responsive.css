@@ -1,29 +1,3 @@
-
-_:default:not(:root:root), .selector { html
-{
-	display: none;
-} }
-
-_::-webkit-full-page-media, _:future, :root .selector { html
-{
-	display: none;
-} }
-
-@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) { .selector { html
-{
-	display: none;
-} } }
-
-@media not all and (min-resolution:.001dpcm) { @media { .selector { html
-{
-	display: none;
-} } } }
-
-@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) { .selector { html
-{
-	display: none;
-} } } }
-
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1400px) {
@@ -53,8 +27,14 @@ and (min-width : 1400px) {
 	
 	.ResumeContainer {
 		height: 750px;
-	}
+	}	
+}
 	
+@media only screen 
+and (min-width : 1200px) {
+	#ProgrammingLanguages h2 {
+		font-size: 1.1rem;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -469,7 +449,7 @@ and (max-width : 330px) {
 		{
 			height: 100px;
 			width: 100px;
-			margin-top: 15px;
+			margin-top: 5%;
 		}
 	}
 }
