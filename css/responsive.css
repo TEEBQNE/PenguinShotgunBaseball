@@ -406,9 +406,8 @@ and (max-width : 330px) {
 	}
  }
  
- /* IE and Edge css hack */
- .msie7comma, { 
- 	.ResumeContainer {
+@supports (-ms-ime-align: auto) {
+  .ResumeContainer {
 		-webkit-columns: 1;
 		-moz-columns: 1;
 		columns: 1;
