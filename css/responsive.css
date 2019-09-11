@@ -451,9 +451,9 @@ and (max-width : 330px) {
 			width: 100px;
 		}
 		
-		.Language
+		#engineSkill
 		{
-			margin-top: 55px;
+			margin-top: 50px;
 		}
 	}
 }
