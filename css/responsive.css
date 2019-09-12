@@ -83,6 +83,26 @@ and (max-width : 825px) {
 	}
 }
 
+@media only screen 
+and (max-width : 850px) {
+	.TopPortion
+	{
+		-webkit-columns: 1;
+    	-moz-columns: 1;
+    	columns: 1;
+	}
+	
+	#Video
+	{
+		width: 100%;
+	}
+	
+	#infoLink
+	{
+		display: none;
+	}
+}
+
 @media only screen
 and (max-width: 850px){
 	hx
