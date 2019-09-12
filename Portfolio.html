@@ -10,6 +10,7 @@
 		<!-- javascript files here -->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<script type="text/javascript" src="js/RemoveHash.js"></script>
 		
 		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
 		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
@@ -25,10 +26,12 @@
 			<!-- eventually change it to an icon -->
 			<div class = "horizontalLineTop"></div>
 			<a href="index.html#home">Home</a>
-			<a href="#DoC">DoC</a>
+			<a href="index.html#Resume">Resume</a>
+			<a href="index.html#Contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
 			<a href="#BlindFire">BlindFire</a>
 			<a href="#Engine">Engine</a>
-			<a href="#Tool">Tool</a>
+			<a href="#Tool">Tool</a>-->
 			<div class = "horizontalLineBottom"></div>
 		</div>
 		
@@ -55,19 +58,19 @@
 							<div id = "Info">
 								<hX>Project Info</hX>
 								<ul>
-									<li><b>Platform:</b> PC</li>
-									<li><b>Engine:</b> Unity 3D</li>
-									<li><b>Production Time:</b> ~10 Weeks</li>
-									<li><b>Size of Team:</b> 9</li>
+									<li><b>Platform:</b> PC</li><br>
+									<li><b>Engine:</b> Unity 3D</li><br>
+									<li><b>Production Time:</b> ~10 Weeks</li><br>
+									<li><b>Size of Team:</b> 9</li><br>
 									<li><b>Role(s):</b> Full Stack Dev, Gameplay & Systems</li>
 								</ul>
 							</div>
 							<div id = "Links">
-								<hX>Important Links</hX>
+								<hX>Links</hX>
 								<ul>
 									<li><a href="#">Project Frontend</a></li>
-									<li><a href="https://drive.google.com/file/d/1LPB3YQbDDu3ahD2DGV3A-9-ZcSuRv10T/view">Offline Project</a></li>
-									<li><a href="https://github.com/TEEBQNE/UbisoftGameLabWebsite">Github of code</a></li>
+									<li><a href="https://drive.google.com/file/d/1LPB3YQbDDu3ahD2DGV3A-9-ZcSuRv10T/view" target="_blank">Offline Project</a></li>
+									<li><a href="https://github.com/TEEBQNE/UbisoftGameLabWebsite" target="_blank">Github of code</a></li>
 								</ul>
 							</div>
 						</div>
@@ -89,9 +92,46 @@
 			<div class = "PortfolioPiece">
 				<!-- Title Header -->
 				<div id = "BlindFire" class = "DividerHeader">
+				
 					
 					<div class = "dividerText">Blind Fire</div>
 					<div class = "horizontalLineBottom"></div>
+				</div>
+				<div class = "PortfolioHolder">
+					<div class = "TopPortion">
+						<div id = "Video">
+							<iframe height ="2" width="2" src="https://www.youtube.com/embed/p19fIZZDNJc" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+						</div>
+						<div id = "InfoLink">
+							<div id = "Info">
+								<hX>Project Info</hX>
+								<ul>
+									<li><b>Platform:</b> PC</li><br>
+									<li><b>Engine:</b> Unity 2D</li><br>
+									<li><b>Production Time:</b> ~4 Weeks</li><br>
+									<li><b>Size of Team:</b> 4 (Sole Programmer)</li><br>
+									<li><b>Role(s):</b> Networking, UI, Gameplay, etc.</li>
+								</ul>
+							</div>
+							<div id = "Links">
+								<hX>Links</hX>
+								<ul>
+									<li><a href="https://github.com/TEEBQNE/BlindFire" target="_blank">Github of code</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						<div class = "BottomPortion">
+							<div id = "Description">
+								Blind Fire is a networked co-op top down shooter and tower defense game. One player uses an Android tablet to 
+								play the tower defense game while the other player uses a PC with the polarizing filter stripped out
+								using glasses with polarizing film in them. The tablet player can not see most of the map tiles
+								as removing the polarizing film from a PC makes the image unseeable. The two players had to work together 
+								in order to defeat all the mobs and keep their base alive. I made this game as my final project in my
+								sophomore year. It was the first game I networked a game, using UNet which is now deprecated. Even though the game
+								is rather complex and confusing, I had a blast making it.
+							</div>
+						</div>
 				</div>
 			</div>
 			<div class = "PortfolioPiece">
@@ -101,6 +141,41 @@
 					<div class = "dividerText">Hoogan's Alley</div>
 					<div class = "horizontalLineBottom"></div>
 				</div>
+				<div class = "PortfolioHolder">
+					<div class = "TopPortion">
+						<div id = "Video">
+							<iframe height ="2" width="2" src="https://www.youtube.com/embed/aISbs-PI2Ko" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+						</div>
+						<div id = "InfoLink">
+							<div id = "Info">
+								<hX>Project Info</hX>
+								<ul>
+									<li><b>Platform:</b> PC</li><br>
+									<li><b>Engine:</b> Self-Made</li><br>
+									<li><b>Production Time:</b> ~2weeks</li><br>
+									<li><b>Size of Team:</b> 2</li><br>
+									<li><b>Role(s):</b> Systems, gameplay and UI</li>
+								</ul>
+							</div>
+							<div id = "Links">
+								<hX>Links</hX>
+								<ul>
+									<li><a href="#Engine">Contact Me For Source Code</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						<div class = "BottomPortion">
+							<div id = "Description">
+								This Hoogan's Alley clone was created in C++ using the SDL library for low level input and graphics libraries.
+								All other systems such as collision, UI, basic gameloop, etc. were implemented by me. As the game is a clone, it
+								plays the same as the original Hoogan's Alley. If you are unfamiliar, the player has 9 lives and must shoot all mobsters
+								within a certain time for that round. If they are able to do so, they gain points to their total score. If they miss a 
+								mobster or hit a civilian, they get minus 1 to their lives. Even though this game was simpler than my other projects, it was interesting
+								to program my own engine to see what potentially goes into the engines I use. 
+							</div>
+						</div>
+				</div>
 			</div>
 			<div class = "PortfolioPiece">
 				<!-- Title Header -->
@@ -108,6 +183,41 @@
 					
 					<div class = "dividerText">Networked Debug Tool</div>
 					<div class = "horizontalLineBottom"></div>
+				</div>
+				<div class = "PortfolioHolder">
+					<div class = "TopPortion">
+						<div id = "Video">
+							<img src = "img/networkToolPic.png">
+						</div>
+						<div id = "InfoLink">
+							<div id = "Info">
+								<hX>Project Info</hX>
+								<ul>
+									<li><b>Platform:</b> PC</li><br>
+									<li><b>Engine:</b> Unity 2D/3D</li><br>
+									<li><b>Production Time:</b> ~2weeks</li><br>
+									<li><b>Size of Team:</b> 2</li><br>
+									<li><b>Role(s):</b> Networking, Plugin and UI</li>
+								</ul>
+							</div>
+							<div id = "Links">
+								<hX>Links</hX>
+								<ul>
+									<li><a href="https://bitbucket.org/alexandermwest/networkingclassfinal/src/master/" target="_blank">Bitbucket of code</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						<div class = "BottomPortion">
+							<div id = "Description">
+								This network debugging tool was created for a networking final in my junior year with one other classmate.
+								Our objective was to make a tool that we could use during QA of any of our future Unity projects. Generally during QA, we 
+								would have builds of our games so we could not access any data in the game if something went wrong. With
+								our tool, you can track variables indefinitely or within a threshold and have them sent to a host server
+								to have the information stored. When I get freetime, I plan on expanding on this tool to have a more robust frontend
+								interface for the results as well as track more data and even record active gameplay sections for accurate debugging.
+							</div>
+						</div>
 				</div>
 			</div>
 		

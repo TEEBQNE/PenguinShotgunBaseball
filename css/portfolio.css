@@ -1,19 +1,24 @@
 html, body
 {
 	width: 100%;
-    overflow-x: hidden;
 }
 
-#Video iframe
+#Video iframe, #Video img
 {
 	position:absolute;
 	top:0;
 	left:0;
 	width:100%; 
 	height:100%;
+	border-radius: 0px;
 	
 	/* half of the overall container height */
 	max-height: 400px;
+}
+
+#Video img
+{
+	border: 2px white solid;
 }
 
 #Info, #Links
@@ -41,21 +46,25 @@ ul, li
 	 padding: 0;
 	 text-align: left;
 	 white-space:normal;
-	 font-size: 3vw;
+	 font-size: 1.3rem;
 	 color: white;
+	 padding: 0 3% 0 3%;
 }
 
 hX
 {
-	font-size: 4.2vw;
+	font-size: 2rem;
 	font-weight: bold;
 	text-decoration: underline;
 	color: white;
+	padding: 0 5% 0 5%;
+	line-height: 85px;
 }
 
-.PortfolioWrapper
+.PortfolioWrapper, .ParallaxImage
 {
-	width: 100%;
+	width: 90%;
+	padding: 0 5% 0 5%;
 }
 
 .PortfolioPiece
@@ -84,7 +93,7 @@ hX
   	height: 114.25%;
   	background-color: rgba(0.0, 0.0, 0.0, 0.5);
   	border: 2px white solid;
-  	width: 49%;
+  	width: 48.8%;
 }
 
 .PortfolioHolder
@@ -109,11 +118,12 @@ hX
 #Description
 {
 	color: white;
-	height: 58%;
-	width: 99.4%;
+	height: 50%;
+	width: 96.4%;
 	border: 2px white solid;
 	background-color: rgba(0.0, 0.0, 0.0, 0.3);
-	font-size: 1.5rem;
+	font-size: 2.4vw;
+	padding: 1.5%;
 }
 
 #Description span

@@ -12,6 +12,7 @@
 		<!-- javascript files here -->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<script type="text/javascript" src="js/RemoveHash.js"></script>
 		
 		
 		<meta name="This is the portfolio of Tyler Chapman, Game Programmer">
@@ -20,15 +21,6 @@
 		<!-- favicon here -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		
-		<!-- move this out of the base html and put it in its own js file -->
-		<!-- used to remove the #... trailing symbol when a page scroll is done -->
-		<script>
-			function locationHashChanged() {
-				var deleteIndex = window.location.href.indexOf("#");	
-				 history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
-			}
-			window.onhashchange = locationHashChanged;
-		</script>
 	</head>
 	<body>	
 		<!-- Main header to scroll with user for page anchor selection -->
@@ -62,7 +54,7 @@
 		<div class = "PortfolioContainer">
 			<div class = "PortfolioPiece">
 				<h4>Descent Of Champions</h4>
-				<a href="portfolioFramework"><img src = "img/PortfolioPreview/doc0.png"
+				<a href="Portfolio#DoC"><img src = "img/PortfolioPreview/doc0.png"
 				onmouseover="this.src='img/PortfolioPreview/doc1.png'"
 				onmouseout="this.src='img/PortfolioPreview/doc0.png'"></a>
 				<!--<a href="#"><img src = "img/PortfolioPreview/doc1.png"></a>-->
@@ -77,7 +69,7 @@
 			</div>
 			<div class = "PortfolioPiece">
 				<h4>Blind Fire</h4>
-				<a href="portfolioFramework"><img src = "img/PortfolioPreview/blindfire0.png"
+				<a href="Portfolio#BlindFire"><img src = "img/PortfolioPreview/blindfire0.png"
 				onmouseover="this.src='img/PortfolioPreview/blindfire1.png'"
 				onmouseout="this.src='img/PortfolioPreview/blindfire0.png'"></a>
 				<!--<a href="#"><img src = "img/PortfolioPreview/blindfire1.png"></a>-->
@@ -90,7 +82,7 @@
 			</div>
 			<div class = "PortfolioPiece">
 				<h4>Hoogan's Alley Remake</h4>
-				<a href="portfolioFramework"><img src = "img/PortfolioPreview/engine0.png"
+				<a href="Portfolio#Engine"><img src = "img/PortfolioPreview/engine0.png"
 				onmouseover="this.src='img/PortfolioPreview/engine1.png'"
 				onmouseout="this.src='img/PortfolioPreview/engine0.png'"></a>
 				<!--<a href="#"><img src = "img/PortfolioPreview/engine1.png"></a>-->
@@ -101,7 +93,7 @@
 			</div>
 			<div class = "PortfolioPiece">
 				<h4>Network Tool</h4>
-				<a href="portfolioFramework"><img src = "img/PortfolioPreview/tool0.png"
+				<a href="Portfolio#Tool"><img src = "img/PortfolioPreview/tool0.png"
 				onmouseover="this.src='img/PortfolioPreview/tool1.png'"
 				onmouseout="this.src='img/PortfolioPreview/tool0.png'"></a>
 				<!--<a href="#"><img src = "img/PortfolioPreview/dark1.png"></a>-->
