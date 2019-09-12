@@ -10,7 +10,7 @@
 		<!-- javascript files here -->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/parallax.min.js"></script>
-		<script type="text/javascript" src="js/RemoveHash.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
 		
 		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
 		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
@@ -18,6 +18,18 @@
 		<!-- favicon here -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		
+		<script>
+			function locationHashChanged() {
+			var deleteIndex = window.location.href.indexOf("#");	
+			 if(deleteIndex != -1)
+			 {
+				history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+			 }
+		}
+		window.onhashchange = locationHashChanged;
+
+		window.onload = locationHasChanged;
+		</script>
 	</head>
 	<body>	
 		<!-- Main header to scroll with user for page anchor selection -->
