@@ -1,3 +1,11 @@
+@media only screen 
+and (min-width : 800px) {
+	#Description
+	{
+		font-size: 1.1rem;
+	}
+}
+
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1400px) {
@@ -111,14 +119,6 @@ and (max-width: 850px){
 	}
 	
 	li
-	{
-		font-size: 1.1rem;
-	}
-}
-
-@media only screen 
-and (min-width : 800px) {
-	#Description
 	{
 		font-size: 1.1rem;
 	}
