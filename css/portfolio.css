@@ -1,4 +1,136 @@
-.PortfolioPageContentsWrapper
+html, body
+{
+	width: 100%;
+    overflow-x: hidden;
+}
+
+#Video iframe
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%; 
+	height:100%;
+	
+	/* half of the overall container height */
+	max-height: 400px;
+}
+
+#Info, #Links
+{
+	width: 50%;
+	height: 100%;
+}
+
+#Links a
+{
+	text-decoration: underline;
+	color: white;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+/* SET THE MAX HEIGHT OF TEXT IN THE RESPONSIVE CSS */
+/* MAKE IT 36 PX past 1150 or 1125 */
+ul, li
+{
+	 margin: 0; 
+	 padding: 0;
+	 text-align: left;
+	 white-space:normal;
+	 font-size: 3vw;
+	 color: white;
+}
+
+hX
+{
+	font-size: 4.2vw;
+	font-weight: bold;
+	text-decoration: underline;
+	color: white;
+}
+
+.PortfolioWrapper
+{
+	width: 100%;
+}
+
+.PortfolioPiece
+{
+
+	border-radius: 0px;
+}
+
+#Video
+{
+	position:relative; 
+	padding-top: 56%;
+	width: 50%;
+	float: left;
+}
+
+#InfoLink
+{
+	float: left;
+	-webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+          
+    margin-left: 5px;
+    display: flex;
+  	height: 114.25%;
+  	background-color: rgba(0.0, 0.0, 0.0, 0.5);
+  	border: 2px white solid;
+  	width: 49%;
+}
+
+.PortfolioHolder
+{
+	height: 100%;
+	width: 100%;
+}
+
+.TopPortion
+{
+	width: 100%;
+	height: 50%;
+	margin-top: 5.5rem;
+	
+	-webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+          
+    display: flex;
+}
+
+#Description
+{
+	color: white;
+	height: 58%;
+	width: 99.4%;
+	border: 2px white solid;
+	background-color: rgba(0.0, 0.0, 0.0, 0.3);
+	font-size: 1.5rem;
+}
+
+#Description span
+{
+	color: orange;
+}
+
+.BottomPortion
+{
+	width: 100%;
+	height: 50%;
+	position: relative; 
+	margin-top: 3.5rem;
+}
+
+/* Reference for old layout */
+/*.PortfolioPageContentsWrapper
 {
 	-webkit-columns: 2;
      -moz-columns: 2;
@@ -15,8 +147,6 @@
 	height: 600px;
 	width: 100%;
 }
-
-/* left side */
 
 .PortfolioTextWrapper
 {
@@ -86,8 +216,6 @@
 	font-size: .8rem;
 }
 
-/* right side */
-
 .PortfolioVidImgWrapper
 {
 	width: 100%;
@@ -121,4 +249,4 @@
   	width: 300px;
 	height: 200px;
 	background-color: white;	
-}
+}*/
