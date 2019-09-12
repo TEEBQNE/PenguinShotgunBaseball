@@ -20,15 +20,18 @@
 		
 		<script>
 			function locationHashChanged() {
-			var deleteIndex = window.location.href.indexOf("#");	
-			 if(deleteIndex != -1)
-			 {
-				history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
-			 }
-		}
-		window.onhashchange = locationHashChanged;
-
-		window.onload = locationHasChanged;
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
 		</script>
 	</head>
 	<body>	
