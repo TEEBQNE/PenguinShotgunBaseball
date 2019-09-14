@@ -12,6 +12,16 @@ body,html {
     scroll-behavior: smooth;
 }
 
+.dividerText a
+{
+	font-size: 15px;
+	float: left;
+	padding: 0 0 0 1%;
+	margin-top: 60;
+	bottom: 0px;
+	position: inline-block;
+}
+
 html::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
 }
