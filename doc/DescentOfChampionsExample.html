@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="streamUI.css">
 	<link rel="stylesheet" href="gameLobby.css">
 	<link rel="stylesheet" href="emoteCustomization.css">
+	<link rel="stylesheet" href="../css/homepage.css">
+	<link rel="stylesheet" href="../css/responsive.css">
 	<script src="jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
 	<script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <link rel="stylesheet" href="../dark/TemplateData/style.css">
+    <link rel="stylesheet" href="style.css">
     <script>
     	var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Chat.json", {onProgress: UnityProgress});
     	
@@ -36,11 +38,13 @@
 	<img id = "topImage" src="../../websiteHeader.png" alt="alt text" width="100%"></img>
 </head>
 <body>
-<div class = "homepage"> <a href = "../../index.html"> HOME </a> </div>
-   <div class = "games"> <a href = "../../Games.html"> GAMES </a> </div>
-   <div class = "resume"> <a href = "../../Resume.html"> RESUME </a> </div>
-   <!--<div class = "blog"> <a href = "../../Blog.html"> BLOG </a> </div>-->
-<div class = "blog"> <a href = "../../Contact.html"> CONTACT </a> </div>
+<div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<a href="../#home">Home</a>
+			<a href="../#portfolio">Portfolio</a>
+			<a href="../#resume">Resume</a>
+			<a href="../#contact">Contact</a>
+		</div>
 </body>
 <span class = "portrait">
 	<div class = "gameLobby">
