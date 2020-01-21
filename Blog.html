@@ -1,0 +1,126 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Tyler Chapman | Blog</title>
+		<link rel="shortcut icon" type="image/png" href="img/faviconFinal.png"/>
+		<!-- style sheets here -->
+		<link rel="stylesheet" href="css/homepage.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="css/blog.css">
+		<!-- javascript files here -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
+		
+		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
+		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
+		<meta name="author" content="Tyler Chapman">
+		<!-- favicon here -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
+		</script>
+	</head>
+	<body>	
+		<!-- Main header to scroll with user for page anchor selection -->
+		<div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<!-- eventually change it to an icon -->
+			<div class = "horizontalLineTop"></div>
+			<a href="/#home">Home</a>
+			<a href="/#portfolio">Portfolio</a>
+			<a href="/#resume">Resume</a>
+			<a href="/#contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
+			<a href="#BlindFire">BlindFire</a>
+			<a href="#Engine">Engine</a>
+			<a href="#Tool">Tool</a>-->
+			<div class = "horizontalLineBottom"></div>
+		</div>
+		<div class="header">
+		  <div class = "theTitle">
+		  <h2>Tyler Chapman's Blog</h2>
+		  </div>
+		   <h3></h3>
+		</div>
+		<!-- Link to whatever the project or article is when they click on the image-->
+		<div class="row">
+		  <div class="leftcolumn">
+			<div class="card">
+			  <h2>Networked flocking boids</h2>
+			  <h5>Tyler Chapman, Nov, 2, 2018</h5>
+			  <div class="fakeimg" style="height:200px;"><a href = "blogs/NetworkedBoids"><img src="blogs/imgs/boidTemp.png" alt="Networked Boids" height="100%"width="100%"></a></img></div>
+			  <p>Networked Boids...</p>
+			  <p>In my Artificial intelligence class, we learned about a technique called flocking, which when implemented correctly makes a group of units appear to simulate a flock of birds. I then took this one step further and networked my implementation. Click the image above if you would like to learn more!</p>
+			</div>
+			<div class="card">
+			  <h2>Networked flocking boids</h2>
+			  <h5>Tyler Chapman, Nov, 2, 2018</h5>
+			  <div class="fakeimg" style="height:200px;"><a href = "blogs/NetworkedBoids"><img src="blogs/imgs/boidTemp.png" alt="Networked Boids" height="100%"width="100%"></a></img></div>
+			  <p>Networked Boids...</p>
+			  <p>In my Artificial intelligence class, we learned about a technique called flocking, which when implemented correctly makes a group of units appear to simulate a flock of birds. I then took this one step further and networked my implementation. Click the image above if you would like to learn more!</p>
+			</div>
+			<!--
+			Uncomment for future blogs
+			<div class="card">
+			  <h2>Networked flocking boids</h2>
+			  <h5>Tyler Chapman, Nov, 2, 2018</h5>
+			  <div class="fakeimg" style="height:200px;"><a href = "NetworkedBoids"><img src="blogs/imgs/boidTemp.png" alt="Networked Boids" height="100%"width="100%"></a></img></div>
+			  <p>Networked Boids...</p>
+			  <p>In my Artificial intelligence class, we learned about a technique called flocking, which when implemented correctly makes a group of units appear to simulate a flock of birds. I then took this one step further and networked my implementation. Click the image above if you would like to learn more!</p>
+			</div>
+			<div class="card">
+			  <h2>Networked flocking boids</h2>
+			  <h5>Tyler Chapman, Nov, 2, 2018</h5>
+			  <div class="fakeimg" style="height:200px;"><a href = "NetworkedBoids"><img src="blogs/imgs/boidTemp.png" alt="Networked Boids" height="100%"width="100%"></a></img></div>
+			  <p>Networked Boids...</p>
+			  <p>In my Artificial intelligence class, we learned about a technique called flocking, which when implemented correctly makes a group of units appear to simulate a flock of birds. I then took this one step further and networked my implementation. Click the image above if you would like to learn more!</p>
+			</div>-->
+			<!--<div class="card">
+			  <h2>Placeholder title</h2>
+			  <h5>Placeholder title description, Oct, 1, 2018</h5>
+			  <div class="fakeimg" style="height:200px;">otherImage</div>
+			  <p>Text title placeholder</p>
+			  <p>This placeholder is here to maintain the structure of the blog itself </div>
+			  -->
+	  
+		  </div>
+  
+		  <div class="rightcolumn">
+			<div class="card">
+			  <h2>Current project</h2>
+			  <div class="fakeimg" style="height:100px;"><a href = "blogs/NetworkedBoids"><img src="blogs/imgs/boidTemp.png" alt="Networked Boids" height="100%"width="100%"></img></a></div>
+			  <p>I am currently working on various AI/Networking techniques such as flocking, path finding, state machines and more!</p>
+			</div>
+			<div class="card">
+			  <h3>Popular Post</h3>
+			  <div class="fakeimg" style="height:100px;>Networked Boids!<a href = "blogs/NetworkedBoids"><img src="blogs/imgs/boidTemp.png" alt="Networked Boids" height="100%"width="100%"></img></a></div><br>
+			  <!--<div class="fakeimg">Image</div><br>
+			  <div class="fakeimg">Image</div>-->
+			</div>
+			
+	
+		  </div>
+		</div>
+		<div class = "DividerHeader">
+			<div class = "horizontalLineTop"></div>
+			
+			<!-- Needed to keep the spacing of the lines -->
+			<div class = "dividerText">&#8193<a href="https://github.com/TEEBQNE/TEEBQNE.github.io" target="_blank">Website written by Tyler Chapman</a></div>
+			<div class = "horizontalLineBottom"></div>
+		</div>
+	</body>
+</html>

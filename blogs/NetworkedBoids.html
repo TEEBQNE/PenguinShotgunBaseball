@@ -7,96 +7,54 @@ Blog post
 -->
 <html>
 <head>
- <meta name="description" content="Implementation of Craig Reynolds by Tyler Chapman. Networked using three various data models with visual examples.">
-<link rel="shortcut icon" type="image/png" href="faviconFinal.png"/>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128180376-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-128180376-1');
-</script>
-
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <style>
-* {
-    box-sizing: border-box;
-}
-
-
-/* Add a gray background color with some padding */
-body {
-    font-family: Arial;
-    padding: 20px;
-    background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-.header {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
-}
-
-/* Right column */
-.rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-     background-color: white;
-     padding: 20px;
-     margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-        width: 100%;
-        padding: 0;
-    }
-}
-
-</style>
- </head>
- <header>
-  <title>
-  Tyler Chapman's Networked Boids
-  </title>
-   <link rel = "stylesheet" type = "text/css" href = "NetworkedBoids.css"> 
- </header>
- <div class = "headerPic">
-  <img  src="https://i.imgur.com/xVSn18D.png" alt="alt text" width="100%"></img>
-  </div>
+		<meta charset="utf-8">
+		<title> Tyler Chapman | Blog</title>
+		<link rel="shortcut icon" type="image/png" href="img/faviconFinal.png"/>
+		<!-- style sheets here -->
+		<link rel="stylesheet" href="../css/homepage.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href = "css/NetworkedBoids.css"> 
+		<!-- javascript files here -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
+		
+		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
+		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
+		<meta name="author" content="Tyler Chapman">
+		<!-- favicon here -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
+		</script>
+	</head>
  <body>
-  <div>
-   <div class = "homepage"> <a href = "index"> HOME </a> </div>
-   <div class = "games"> <a href = "Games"> GAMES </a> </div>
-   <div class = "resume"> <a href = "Resume"> RESUME </a> </div>
-   <!--<div class = "blog"> <a href = "Blog"> BLOG </a> </div>-->
-    <div class = "blog"> <a href = "Contact"> CONTACT </a> </div>
-  </div>
+ <div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<!-- eventually change it to an icon -->
+			<div class = "horizontalLineTop"></div>
+			<a href="/#home">Home</a>
+			<a href="/#portfolio">Portfolio</a>
+			<a href="/#resume">Resume</a>
+			<a href="/#contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
+			<a href="#BlindFire">BlindFire</a>
+			<a href="#Engine">Engine</a>
+			<a href="#Tool">Tool</a>-->
+		</div>
 <!-- Link to whatever the project or article is when they click on the image-->
 <div class="row">
   <div class="leftcolumn">
@@ -117,7 +75,7 @@ body {
 	</p>
 	</br>
 	<h3 align = "center">Here is my flocking implementation in action</h3>
-	<img src="localBoids.gif"></img>
+	<img src="imgs/localBoids.gif"></img>
 <!--<Have gif of non networking flocking>-->
 
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the AI part out of the way, it was now time for networking! In my networking class, we had just learned of three different data models, which were: data push, data share and data couple. To make it easier to explain them, i’ll use flocking in each explanation.</p>
@@ -125,17 +83,17 @@ body {
 <p> <strong>Data push:</strong> For this implementation, the flocking calculations are done on the server, then each client receives the position and direction data to draw each boid on screen. This means that all calculations are done on the server and all rendering is done by the client after receiving the data. The reason that this looks exactly like the local simulation is because it is! Due to how the data is being handled, the only difference between the local simulation and data push is where the calculations are happening.</p>
 
 <h4 align = "center"> Data push in action</h4>
-<img src="dataPush.gif"></img>
+<img src="imgs/dataPush.gif"></img>
 
 <p> <strong>Data share:</strong> For this implementation, the flocking and rendering are done by each client. The server does not do any calculations here but has a completely different task. It will receive the boids of each connected client and then send the pertinent information off to the other clients connected. This allows every client to draw the other clients boids, but these boids do not interact with one another, they are just drawn on top of each other. This means that if one client disconnects or the packet sending is interrupted, the boids of this client will freeze on all the other client's screens. This can be seen when I hold each window. The non-local boids on the non-held window freeze due to that window not sending any data to the server, so the other client has no updated states to draw. To visually make it easier, I also colored the non-local boids black to distinguish them better from the local boids.</p>
 
 <h4 align = "center"> Data share in action</h4>
-<img src="dataShare.gif"></img>
+<img src="imgs/dataShare.gif"></img>
 
 <p> <strong>Data couple:</strong> For this implementation, the flocking simulation is run both on the server and client. The rendering is still only done on the client side. When the server receives any new boids in the packet it receives, it will add these boids to its existing flock, simulate this flock once, then send this back to each client. The clients will then add these boids to their flock if they do not exist, then simulate the flock and send this data back to the server. Unlike data share, this means that all boids interact with one another as if they are all stored locally. When I hold a window this time, the non-local boids on the other screen do not freeze, they simply continue to simulate. When the window that was held is released, its state is updated to the most current state the server has access to. Again, I colored the non-local boids black to make it easier to distinguish the boids. There is noticeable latency issues with this implementation which is expected. I will improve upon this implementation at a later date by using a technique called dead reckoning to fix the rubber banding affect that is occurring.</p>  
 
 <h4 align = "center"> Data couple in action</h4>
-<img src="dataCouple.gif"></img>
+<img src="imgs/dataCouple.gif"></img>
 
 <div class = "contactMe">
 <p>I had quite a bit of fun with both creating flocks and then networking them. While I might not necessarily use flocking in any of my future games, it was a good base to help me understand the three different data models I learned about in my networking class. If you have any questions regarding my implementation <a href = "Contact">contact me</a> and I will be happy to help!</p></div>
@@ -149,13 +107,12 @@ body {
       
   </div>
   </div>
-
-<p>
-<a href="https://jigsaw.w3.org/css-validator/validator?uri=tylerchapman.me%2FNetworkedBoids&profile=css3svg&usermedium=all&warning=1&vextwarning=">
-    <img style="border:0;width:88px;height:31px"
-        src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!" />
-    </a>
-</p>
+  <div class = "DividerHeader">
+			<div class = "horizontalLineTop"></div>
+			
+			<!-- Needed to keep the spacing of the lines -->
+			<div class = "dividerText">&#8193<a href="https://github.com/TEEBQNE/TEEBQNE.github.io" target="_blank">Website written by Tyler Chapman</a></div>
+			<div class = "horizontalLineBottom"></div>
+		</div>
   </body>
 </html> 

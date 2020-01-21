@@ -12,8 +12,14 @@ body{
      
         background-size: cover;
 	font-family: Verdana,sans-serif;
-	
+	height: 100%;
+	width: 100%;
 }
+.card {
+    background-color: white;
+    padding: 80px;
+}
+
 a {
 	text-decoration: none; 
 }
