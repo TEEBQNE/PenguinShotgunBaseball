@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+Tyler Chapman
+Resume website
+11/2/18
+Blog post
+-->
+<html>
+<head>
+		<meta charset="utf-8">
+		<title> Tyler Chapman | Blog</title>
+		<link rel="shortcut icon" type="image/png" href="img/faviconFinal.png"/>
+		<!-- style sheets here -->
+		<link rel="stylesheet" href="../css/homepage.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href = "css/NetworkedBoids.css"> 
+		<!-- javascript files here -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
+		
+		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
+		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
+		<meta name="author" content="Tyler Chapman">
+		<!-- favicon here -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
+		</script>
+	</head>
+ <body>
+ <div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<!-- eventually change it to an icon -->
+			<div class = "horizontalLineTop"></div>
+			<a href="/#home">Home</a>
+			<a href="/#portfolio">Portfolio</a>
+			<a href="/#resume">Resume</a>
+			<a href="/#contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
+			<a href="#BlindFire">BlindFire</a>
+			<a href="#Engine">Engine</a>
+			<a href="#Tool">Tool</a>-->
+		</div>
+<!-- Link to whatever the project or article is when they click on the image-->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Senior Capstone Post 1 | On Boarding</h2>
+      <h5>Tyler Chapman, Jan, 20, 2020</h5>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the first semester of my senior year, I 
+      worked on a game my team of 5 titled Vacuum Vault. To explain briefly what the game is about, 
+      it is a level based treasure hunter where the player uses a vacuum gun to terraform the world, 
+      rebuild broken structures, and engage with the environment to unlock treasures hidden within the vault. 
+      If you would like to see a short trailer of the game, click on the video below.</p>
+	 </p>
+	</br>
+	<h3 align = "center">Trailer for Vacuum Vault shown during cuts</h3>
+	<iframe height ="2" width="2" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6607085498404089856?compact=1" frameborder="1" allow="accelerometer; autoplay=0 encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+	<p>At the end of my first semester, my school put both 
+	my team and the other 22 teams in my class through a process they call cuts. In this process, a 
+	team of representatives made up mainly of divisions heads of our game development school voted on 
+	which games they thought should go through to the following semester. My team’s game was one of the 
+	8 games to be put through! After the deliberations, we then moved onto drafts to see which classmates 
+	would be coming onto our team. Our team grew from a small team of 5 to a much larger team of 16. After our 
+	new team was assembled, we all left for Winter break for holiday. Once back, we started our onboarding process 
+	for all our new team members. 
+	</p>
+	
+<p>To assure that all of our team members were comfortable with our team, we established a 
+team culture, workflow and set up a basic schedule. We then defined two distinct teams, one termed 
+content and the other team systems. The content team would mainly focus on new implementations, mainly level 
+creation, and future features. This team consisted of artists and designers. The systems team is concentrated on 
+creating tools that the content team can use whether that be architecture for programmers or tools for artists/designers. 
+I am on the systems team, mainly focusing on improving my implementation of marching cubes. If you are unfamiliar with 
+marching cubes, it is an algorithm to allow a player to terraform a mesh in realtime. I am currently working on making 
+my implementation more efficient to allow for a larger mesh to be generated while maintaining a consistent 60 fps refresh rate.
+</p>
+
+<p>Some ideas I had to do this were to move all of the complex calculations to the GPU by using 
+a compute shader. This will allow the CPU to handle the rest of our game, keeping the CPU usage down 
+whenever marching cubes are going to be used. My other idea of how to optimize it would be to put all 
+of the calculations in a C++ DLL and multithread it. I am not too familiar with multithreading with C++ 
+and am unsure if this will really improve our frame usage. An issue with the compute shader solution is that 
+I am by no means a graphics programmer, and have little to no experience with compute shaders. If I am to attempt this, 
+I will either need to do a lot of research or ask the help of a fellow classmate or teacher to assist in its progress. 
+I hope to get marching cubes working in a singular mesh over our entire level so that level designers can have 
+an easier time forming terrain. If I am unable to accomplish this, the level design will prove rather difficult. 
+</p>
+
+<p>If I can fix the frame issue, I continue my work by updating the frontend portion of marching 
+cubes, extending the functionality for artists and designers to utilize the algorithm. Some examples
+ that I might be adding are geometry editing brushes to sculpt the terrain more uniformly, a smoothing
+  tool to give the terrain a more realistic look, splitting drop tables by chunk instead of by mesh for
+   more diverse drops over the entire map and creating a way for certain portions of the map to be 
+   uneditable to give the designers more versatility to their creations.
+   </p>
+    
+<h4 align = "center">Some footage of marching cubes in game</h4>
+<img src="imgs/MCExample.gif"></img>
+
+<p>
+As for the rest of my team, a majority of them are new team members, so they are mainly focusing 
+on getting acquainted with our game, the art style, the codebase and any other relevant information
+ that they will need to work on our game. For the programmers, most of their tasks are focused 
+ on looking into our project and getting familiar with existing systems. Aside from that, other 
+ takes are unrelated to touching code, but to research future optimizations such as object pooling to 
+ further improve the performance of our game. Artists focused on concepting and understanding our current 
+ art direction. Designers learned how to use our existing tool, gave input for future tools and wrote out 
+ docs to have a plan in place for our games end goal.  Our next sprint will focus more on implementation 
+ once everyone has a good understanding of where we are now. 
+ </p>
+ 
+ <p>
+ One large issue that we as a team faced last semester with our game is that we had no narration or 
+ direction for the player to follow. Gaining numerous designers, we were able to put a story to our current
+ features. It is not finalized yet but the preliminary pitch is that your grandfather was apart of a legendary
+ treasure-hunting group, and one day he went missing on one of his voyages. As you are digging through his
+ old belongings, you find a box marked for you that contains a new model of a vacuum gun that your grandfather
+ was known to use. As you gradually understand how to utilize the vacuum, you set out on a quest to find what
+ happened to your grandfather. Along the way, you find hints and clues either to unlock new abilities in the
+ game or to discover where your grandfather is. As it is still in development the story is subject to large
+ changes, but this is the first agreed-upon story that fits our existing game. 
+  </p>
+  
+  <p>
+  I am rather excited to continue development on our game with a larger team, especially as this is the largest
+  team I will have worked on so far. I hope that I can figure out a way to get marching cubes to a point where it 
+  seamlessly fits into gameplay with minimal frame dropping and that it is an easy tool to use to create levels.
+  Future development posts should be more exciting with gifs of progress, possible code snippets and whatever
+  else I can fit into the git repo that hosts this website. 
+  </p>
+  </div>
+  <div class = "DividerHeader">
+			<div class = "horizontalLineTop"></div>
+			
+			<!-- Needed to keep the spacing of the lines -->
+			<div class = "dividerText">&#8193<a href="https://github.com/TEEBQNE/TEEBQNE.github.io" target="_blank">Website written by Tyler Chapman</a></div>
+			<div class = "horizontalLineBottom"></div>
+		</div>
+  </body>
+</html> 
