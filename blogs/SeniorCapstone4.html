@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+Tyler Chapman
+Resume website
+11/2/18
+Blog post
+-->
+<html>
+<head>
+		<meta charset="utf-8">
+		<title> Tyler Chapman | Blog</title>
+		<link rel="shortcut icon" type="image/png" href="img/faviconFinal.png"/>
+		<!-- style sheets here -->
+		<link rel="stylesheet" href="../css/homepage.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href = "css/NetworkedBoids.css"> 
+		<!-- javascript files here -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
+		
+		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
+		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
+		<meta name="author" content="Tyler Chapman">
+		<!-- favicon here -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
+		</script>
+	</head>
+ <body>
+ <div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<!-- eventually change it to an icon -->
+			<div class = "horizontalLineTop"></div>
+			<a href="/#home">Home</a>
+			<a href="/#portfolio">Portfolio</a>
+			<a href="/#resume">Resume</a>
+			<a href="/#contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
+			<a href="#BlindFire">BlindFire</a>
+			<a href="#Engine">Engine</a>
+			<a href="#Tool">Tool</a>-->
+		</div>
+<!-- Link to whatever the project or article is when they click on the image-->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Senior Capstone Post 4 | Marching Cube Tools & New Game Name</h2>
+      <h5>Tyler Chapman, Mar, 4, 2020</h5>
+      <p>Welcome back! Our team is steadily approaching our Alpha deadline and have quite a lot of work to show for it. I am excited to get to a new milestone, but I have noticed a trend with our current team and deadlines. We consistently have a lot of work to do up until the end of the last sprint of the last day before the deadline and that puts a lot of pressure on the original five group members. We strive to make sure whatever we promise to get done by a deadline is done. Our current team dynamic is not working that well and structurally is a mess. Without fail, every single deadline is tied to an all-nighter, and it seems that this deadline is going to be no different. </p>
+      
+      <h4 align = "center">Sweet Ship Interior our Artist Max made</h4>
+	<img src="imgs/ShipInteriorPic.png" width="80%"></img>
+
+<p>	When our team is sprint planning, we place tasks under a given story but do not include varying dependencies of each task and priorities or deadlines for when a task needs to be completed. Nearing the end of our production cycle, most of what is being implemented now is smaller subsystems that connect with overarching baseline game systems. As a lot of the work that was done to create the base of our game was done by the original core members, we generally have the best understanding of how these systems function. To help with onboarding, at least for programming, Scott and I commented every line, and when I mean every line, I would say close to 75% of our files are now made up of comments. The coding standard we put in place for others to continue on with how we comment is not being followed that well, but that is a discussion for another time. Scott and I had hopes that with the detailed descriptions of every line of code we wrote, whoever we picked up would be able to seamlessly transition into our codebase. We were wrong, at least to some extent, and at first, the other programmers were not asking us questions on how to use our systems. I personally started laying out a step by step for every task a programmer would have to do, and given example code snippets on how to use the systems that it would interact with. No progress was really made even with that much explicit guidance. Scott and I have not given up, but in the interest of getting work done, we just decided to do a lot of the work ourselves. 
+</p>
+
+<p>	Similarly to green light, a lot of our group members are busy as it is midterms, but that is not a good excuse. Everyone on our team is busy, we all take the same or similar classes, that is not a valid reason to not do work, or backload all of your tasks. Generally, the ones to suffer from this are Scott, Andy and myself as we string together the work everyone else has done. If someone saves a task for the night before a deadline, we will just do that task for them as it is easier for us to do it from scratch rather than wait for them to finish, understand how their implementation works and then integrate it into the existing project. I have talked briefly with a few of our members to look into restructuring our group so that we can have actual order to our task board, but I feel that at this point, it is too late in development to make such a drastic change. Whenever we do sprint planning, it feels as if we are in a hen house with every chicken having its head chopped off and we consider the planning done when every chicken has dropped dead of blood loss. As I mentioned, we follow a general direction with stories, but so much more information is needed about a task other than a broad description that it falls under. If the designers planned our week by meeting amongst themselves, know what needs to get into the game for a particular sprint, then write down every dependency for each task, I feel our team would work a lot more efficiently. If each task had a priority, then each subtask had a discipline tied to it and an order in which disciplines need to complete their relevant task, we might actually finish our game.</p>
+
+ <h4 align = "center">Scrum Example</h4>
+	<img src="imgs/ScrumExample.jpg" width="80%"></img>
+
+<p>
+	I have little to no experience in actually managing or organizing a scrum, but I have a lot of experience in creating architecture for large systems for games. We do not need to all know what everyone is working on, we only need to know who is working on tasks that tie directly into what we are working on. As tasks are created from the ideas that the designers think we need to get into the game, they are the only discipline that would need to know everything going on. Once the designer group finishes the list of all work, the leads for each discipline review all tasks that have a tag related to their team. Knowing the skills and time of each of their specific discipline team, they can properly assign tasks to each team member. As the designers had already labeled the priority of each task, and the dependencies for each subtask in the tasks are known, and now order begins to form of how all tasks need to be completed by. I have brought this idea up in passing to a few team members, but again, I feel it might be too late to do sprint planning likes this.
+	</p>
+ 
+ <p>
+ 	With that said, if we do not change our structure, I do not see our game getting to a finished state to the point where we can publish. Our team hopes to publish the game on Steam by the end of this semester. I see that will only happen if the core team still puts in ridiculous hours or if our team gets everything together. I do not mind putting in more hours, but as the end of the semester approaches, I want to put more time into looking for a job as I do not see this game taking off to a point where we could form an indie studio. I also have no issue with not publishing, but enough of our team has expressed interest in publishing where I will support it, as long as work is put in. Now with this week's rant into the possible reason our game does not get finished, let’s get into what has gotten finished!</p>
+  
+  <p>
+  	From my last blog, I talked about a giant save load system that I put too many hours into so that using it was as simple as adding brackets over a variable. Not only is it easier to do now, but I also made the system more robust, adding tons of more features to use. We now have three types of save files, one being persistent data that is used throughout every scene, level-specific data that is used for individual levels and total progress data, to track the overall percentage of the game the player has finished. As our game is primarily centered around exploration and completionism, making sure that the system supported tracking the player’s progress over the entire game was extremely important. Along with progress being saved, nearly everything else in the game that is implemented is being saved. Some examples of what is being tracked now are if chests are opened or closed, progress on totems, inventory amounts, progress on all objectives, all upgrades and keys for the vault.</p>
+  
+  <h4 align = "center">Current Ship Interior UI with loaded data</h4>
+	<img src="imgs/UIExample.gif" width="80%"></img>
+  
+  <p>
+ 	Along with saving all the data, it is important to be able to load this data, which is now possible. Players have access to three save slots, allowing them to create three unique games, saving or loading their data to/from any of them while at the main menu or in their ship. With all of the data being saved, all of these changes need to be apparent to the player, which is where the tons of UI helps. Not only was I working on the backend of the save/load system, but I was working alongside Andy to get a pretty looking frontend for the player to look at. With the end of alpha, I hope that I will not need to touch the save load system again as we should be feature complete by this milestone, and nothing new should need to be saved nor loaded. 
+ 	</p>
+ 	
+ 	 <h4 align = "center">GDC Cancelled :(</h4>
+	<img src="imgs/GDCCancelled.jpg" width="80%"></img>
+  
+  <p>
+ 	Looking forward to spring break, a lot of work will be getting done. I usually go home for Spring Break, but as I intended to go to GDC the week after spring break, I wanted to front-load all of my work so that the team can keep going on without me. Now with GDC being canceled, I am sitting on a nonrefundable hostel as well as a nonrefundable flight. Hopefully, if I call back over spring break I can get the refund, but for now, I am still going to California, but not for GDC, just for in and out. Over sprint break, as a lot of others are planning on doing little to no work, that means that Scott and I can drastically change scenes with little to no merge conflicts. We hope to implement multiscene loading, which was a feature Unity offers that I had been looking into using at the start of onboarding, but did not have enough time to do it. Multiscene loading sounds exactly as what it does, it can load multiple Unity scenes at the same time into one scene. Having this utility is extremely powerful as this means you can split up a scene into parts, such as UI, player functionality, AI, lighting, props, etc. and then load them on top of one another. Allowing for each scene to be independent, this allows for multiple developers to work on the same scene, without being in the same scene. Meaning if an artist wants to bake lighting for 7 hours straight, while a designer needs to make narrative and another artist needs to set dress, they can all work at the same time with no merge issues. The largest issue with implementing this feature this late in is Scott and I will need to hand-build each unique scene making sure not to break the scene. Along with multiscene loading, similarly to green light, we will be doing a huge cleanup of the entire repo, the build and any/all assets that need fixing, cleaning, deleting, etc.
+ 	</p>
+  
+ 
+  
+  <p>
+ 	In the long run, the workload for programmers should begin to drop off quite significantly. Alpha should mark the end of features, and from here until the end of the semester, we just have polish/bug fixing. I hope that if our team begins to restructure and the diminishing number of large tasks that our team can have some order. I am hopeful that we can make changes on our team as most people are in agreement that change is needed. 
+ 	</p>
+	  </div>
+	<div class = "DividerHeader">
+			<div class = "horizontalLineTop"></div>
+			
+			<!-- Needed to keep the spacing of the lines -->
+			<div class = "dividerText">&#8193<a href="https://github.com/TEEBQNE/TEEBQNE.github.io" target="_blank">Website written by Tyler Chapman</a></div>
+			<div class = "horizontalLineBottom"></div>
+		</div>
+  </body>
+</html> 
