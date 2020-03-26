@@ -128,7 +128,7 @@ html::-webkit-scrollbar {
 	height: 5rem;
 	background-color: #160F30;
 	width: 100%;
-	position: absolute;
+	position: relative;
 }
 
 .dividerText
