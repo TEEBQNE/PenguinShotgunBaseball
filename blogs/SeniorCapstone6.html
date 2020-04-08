@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Tyler Chapman
+Resume website
+11/2/18
+Blog post
+-->
+<html>
+<head>
+		<meta charset="utf-8">
+		<title> Tyler Chapman | Blog</title>
+		<link rel="shortcut icon" type="image/png" href="img/faviconFinal.png"/>
+		<!-- style sheets here -->
+		<link rel="stylesheet" href="../css/homepage.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href = "css/NetworkedBoids.css"> 
+		<!-- javascript files here -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
+		
+		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
+		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
+		<meta name="author" content="Tyler Chapman">
+		<!-- favicon here -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
+		</script>
+	</head>
+ <body>
+ <div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<!-- eventually change it to an icon -->
+			<div class = "horizontalLineTop"></div>
+			<a href="/#home">Home</a>
+			<a href="/#portfolio">Portfolio</a>
+			<a href="/#resume">Resume</a>
+			<a href="/#contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
+			<a href="#BlindFire">BlindFire</a>
+			<a href="#Engine">Engine</a>
+			<a href="#Tool">Tool</a>-->
+		</div>
+<!-- Link to whatever the project or article is when they click on the image-->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Senior Capstone Post 6 | Remote work Continued ft. Bugs Bugs Bugs and UI</h2>
+      <h5>Tyler Chapman, April, 8, 2020</h5>
+      <p>Welcome back! The world might still be on fire but our project is almost on track for our beta milestone. While our school is still figuring out remote classes, our remote graduation, and the remote senior show, our group is steadily getting the game together. We did have to cut a lot of content, but its quality over quantity any day. As we are slowly approaching the end of the year, our game is getting to a point of near completion. Programmers are starting to not have any feature tasks and are solely responsible for bug fixing. Our team had a bumpy start to remote work, but with restructuring to our team and individuals roles, we have begun to work well.</p>
+
+<p>In my last blog, I was worried about the progress of our game. I am still worried, but we are in a much better spot. We changed the roles of a programmer and one producer to both be dedicated testers. I do not know all the details as to why these changes occurred as I am not in the lead meetings, but I know that we got a lot more work done this sprint. In the previous sprint, I had to do a lot of other work that was not mine to make sure the build was in a spot it needed to be. I was peacefully enjoying my night and was informed that an emergency feature needed programming as it had not been done. I would normally be fine to do extra work, but I would like a heads-up as I schedule my time down to the last second, so having more work put on my plate at the literal last second is not great. It also did not sit well with me that the task I had to do was one that someone else was assigned and it was their only task. Hopefully, this does not happen again as all that is left for programmers is bug fixing, but I will hold my breath as this has happened nearly every sprint.
+</p>
+
+<h4 align = "center">Ship Interior UI fixes (Backend working now)</h4>
+	<img src="imgs/ShipInteriorUI.gif" width="80%"></img>
+
+<p>	Moving onto the work I was assigned in the past two sprints, a lot got done! The ship interior got some much-needed love. Andy and I worked in tandem to give the entire scene a facelift, beautifying the frontend and making sure the backend still functioned as expected. Along with fixing up the ship interior UI, we added newer UI in each level to show the player their progress. The UI will show the player their current amount of chests they have collected, the number of totems they have interacted with and the number of keys they have collected. I ripped out all content that the team decided was cut which includes level 0, level 2, the health bar and all quest dialogue. Most of this content was far behind the level of polish we needed, so I am glad that they were removed. I had also helped the artists bake the lighting for level 3 so the player can actually see where they are going. Bugs were also a target of mine during this past sprint and quite a few were squashed. 
+</p>
+
+<h4 align = "center">Floating Key Collection</h4>
+	<img src="imgs/floatyUI.gif" width="80%"></img>
+
+<p>
+	In the current sprint, my focus did not change but, as I continued my hunt on bugs as well as cleaned up or polished a few other features in the build. To get it out of the way, the bugs that I found and squashed were fixing mac builds not building, the character model flashed like crazy on Mac, both types of totems now work, keys now dispense properly, the escape key now exits the pause menu, a metric ton of metadata issues and the objective UI list in the ship interior now has kinematic bouncing. I have a feeling our next sprint, I will only be working on bug fixing to assure that our build works as intended. As I mentioned, I did not just work on bugs this sprint. I had to re-add the key prefab to our project as one of our artists had accidentally deleted it almost three sprints ago. Along with adding back keys, their core functionality had changed as they are no longer randomly found on the ground but exclusively found either in chests or from totems as a reward. Along with changing where they spawned, how the player collected them had to change as well. Andy proposed to me making a similar mechanic to how the Lego series games collect bits. If you are unfamiliar, when a bit is collected in world space, it then floats on-screen space directly to the top of the screen. I implemented a basic version of this, but as our player does not collect them from the ground, nor are they colorful and bright, the key floats directly into the player when spawned. I also fully implemented and finished the task that was not mine, the outline shader. It makes the objective related items in our game really pop. Along with all of this, I also helped the artists bake level 1 again. 
+</p>
+
+<p>
+	This post is rather short compared to my posts in the past weeks, but I feel that it is a good thing. In a lot of my other blogs, I had a lot to talk about regarding internal team issues, while also going into depth of new systems I thought were cool. Approaching the end of our game, the internal issues are fading and the number of new systems is ceasing. From now until the end of the game, it is slow and tedious progress for all the programmers to just bug fix. I can not wait to see where are game gets to in the next few weeks. I have been in the process of looking for work, but no companies seem to be hiring currently due to the outbreak. I hope the virus begins to decline so our lives can go back to normal. 
+	</p>
+	  </div>
+	<div class = "DividerHeader">
+			<div class = "horizontalLineTop"></div>
+			
+			<!-- Needed to keep the spacing of the lines -->
+			<div class = "dividerText">&#8193<a href="https://github.com/TEEBQNE/TEEBQNE.github.io" target="_blank">Website written by Tyler Chapman</a></div>
+			<div class = "horizontalLineBottom"></div>
+		</div>
+  </body>
+</html> 
