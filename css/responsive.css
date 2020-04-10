@@ -171,10 +171,10 @@ and (max-width: 650px){
 		margin-top: 3.5rem;
 	}
 	
-	.PortfolioContainer, .ResumeContainer, .ContactContainer
+	/*.PortfolioContainer, .ResumeContainer, .ContactContainer
 	{
 		margin-top: 3.5rem;
-	}
+	}*/
 	
 	.ParallaxImage img
 	{
@@ -205,7 +205,7 @@ and (max-width: 650px){
 			  column-gap: .8em;
 		  
 		position: relative;
-		margin-top: 3.5rem;
+		/*margin-top: 3.5rem;*/
 		padding: 10 5 .5 5;
 	}
 	
@@ -339,7 +339,7 @@ and (max-width : 500px) {
 	  column-gap: 0em;
 		  
 		position: relative;
-		margin-top: 5rem;
+		/*margin-top: 5rem;*/
 	}
 	
 	.PortfolioPiece
@@ -391,10 +391,10 @@ and (max-width : 330px) {
 		margin-top: 2.9rem;
 	}
 	
-	.PortfolioContainer, .ResumeContainer, .ContactContainer
+	/*.PortfolioContainer, .ResumeContainer, .ContactContainer
 	{
 		margin-top: 2.9rem;
-	}
+	}*/
 } 
 
 /* css hack to target ONLY safari */
