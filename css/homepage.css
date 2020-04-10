@@ -128,7 +128,7 @@ html::-webkit-scrollbar {
 	height: 5rem;
 	background-color: #160F30;
 	width: 100%;
-	position: relative;
+	position: absolute;
 }
 
 .dividerText
@@ -150,7 +150,7 @@ html::-webkit-scrollbar {
           rows: 4;
           
 	position: relative;
-	/*margin-top: 5rem;*/
+	margin-top: 5rem;
 	padding: 10 5 .5 5;
 }
 
@@ -221,7 +221,7 @@ html::-webkit-scrollbar {
           column-gap: .8em;
           
 	position: relative;
-	/*margin-top: 5rem;*/
+	margin-top: 5rem;
 	padding: 10 5 .5 5;
 }
 
@@ -333,7 +333,7 @@ html::-webkit-scrollbar {
           column-gap: .8em;
           
 	position: relative;
-	/*margin-top: 5rem;*/
+	margin-top: 5rem;
 	padding: 10 5 .5 5;
 	height: 650px;
 }
