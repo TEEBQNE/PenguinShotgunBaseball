@@ -43,7 +43,7 @@ and (min-width : 1400px) {
 	
 	.ParallaxImage img
 	{
-		width: 1500px;
+		width: 90%;
 	}
 	
 	.ParallaxImage
