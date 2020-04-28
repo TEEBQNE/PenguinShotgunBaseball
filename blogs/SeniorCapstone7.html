@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+Tyler Chapman
+Resume website
+11/2/18
+Blog post
+-->
+<html>
+<head>
+		<meta charset="utf-8">
+		<title> Tyler Chapman | Blog</title>
+		<link rel="shortcut icon" type="image/png" href="img/faviconFinal.png"/>
+		<!-- style sheets here -->
+		<link rel="stylesheet" href="../css/homepage.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href = "css/NetworkedBoids.css"> 
+		<!-- javascript files here -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/parallax.min.js"></script>
+		<!--<script type="text/javascript" src="js/RemoveHash.js"></script>-->
+		
+		<meta name="Portfolio piece of Game Programmer Tyler Chapman. Descent of Champions.">
+		<meta name="keywords" content="Tyler, Chapman, Portfolio, Video, Game, Developer, Programmer, C#, C++, Unity, Game Programmer, Descent of Champions">
+		<meta name="author" content="Tyler Chapman">
+		<!-- favicon here -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<script>
+			function locationHashChanged() {
+				var deleteIndex = window.location.href.indexOf("#");	
+				 if(deleteIndex != -1)
+				 {
+					history.replaceState({}, '', window.location.href.slice(0, deleteIndex));
+				 }
+			}
+		
+			window.onhashchange = locationHashChanged;
+		
+			window.onload = function() {
+			  locationHashChanged();
+			};
+		</script>
+	</head>
+ <body>
+ <div class = "MenuHeader">
+			<!-- <img src="img/homeIcon.png"</img> -->
+			<!-- eventually change it to an icon -->
+			<div class = "horizontalLineTop"></div>
+			<a href="/#home">Home</a>
+			<a href="/#portfolio">Portfolio</a>
+			<a href="/#resume">Resume</a>
+			<a href="/#contact">Contact</a>
+			<!--<a href="#DoC">DoC</a>
+			<a href="#BlindFire">BlindFire</a>
+			<a href="#Engine">Engine</a>
+			<a href="#Tool">Tool</a>-->
+		</div>
+<!-- Link to whatever the project or article is when they click on the image-->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Senior Capstone Post 7 | Post Mortem</h2>
+      <h5>Tyler Chapman, April, 28, 2020</h5>
+      <p>Wow, it is crazy that our project is already coming to an end. It feels like just yesterday that our small team of 5 was meeting at Andy’s house, setting off his fire alarm making enchiladas while planning the overscope of our game for midmortems. Our team has put in a lot of good work, and I am happy we got to a product that we can submit to Steam. A lot went well, a lot went wrong and a lot just went. I will go into more detail about all the wenting now.</p>
+      
+<p>For my individual development process, I think quite a lot went right. I have never had an issue with completing tasks assigned to me in a timely fashion to professional quality. I will go out of my way to help whoever needs anything whether it be debugging an issue, not understanding a system, having their computer break, or just about anything else in between. My communication at least digitally is extremely good. I will update all my team members as to what I am doing and when it is done. If I need anything, I will ask whoever I need something from directly. I will also give feedback to teammates such as the artists for a non-artistic critique, or to a designer about the direction of the game. One example more recently is how we had the issue of the player not knowing where to go. I brought up the idea of using a system I saw in Halo ODST to use some sort of quest marker such as an arrow. The team was worried about scope for it, so after I got the okay from them, I took on the entire task myself except for the modeling as I have less than a day worth of experience in Maya and Zbrush. I will generally take on any work that is not done by the team to make sure the game is in a good state. I have also started listening a lot more. Being remote, there is a lot less to distract me from paying attention to what others are saying, so I can keep up with everything. I can also turn on closed captioning and record meetings if I want to make sure I get every detail. With all of this that went well, there are still parts that I saw as bad.
+</p>
+
+<p>	It is not that I do not know how to say no, I do, but I generally can not say no to myself. I know my limitations, but if I like a feature or am too deep into a bug, I will not stop until that feature or bug is complete or solved. I can say no to anyone on the team if I think a suggested idea is too complicated or will not work with our current systems, but once I get interested in doing something, it takes me a lot longer than others to stop trying it. I feel this could also be a positive as I got in a lot of complicated code into our project through a lot of hard work, but at a point, I need to recognize when enough is enough. On the same note, I need to know what to polish and what not to polish. The amount of my work that has been cut this semester is insane. A good portion got in, but to name a few features that got cut, I had a fully functioning front-end/back-end companion app with a server for the game, a procedure line render trajectory for the gun, a companion for the player, the entire inventory system, and my state machine to name a few. I know that iteration is part of the development process, but all of those features were near polish/completed states. I fault myself partially for finishing them as I knew prior that they would not get in for various reasons, but they were still assigned to me. A lot of this happened before this semester, but my inventory system was cut which was a lot of work and the main focus of my UI programming on this project. At a point why even do the work? I feel one other part I need to work on is communicating more with my group about problems I may be having. I talk with a fair number of our teammates, but I feel like I talk to them in passing, not at a moment that is relevant to what I am discussing. I was never in leads meetings, so I never knew what went on in them, but I hope a lot of what I talked with them was discussed there. From the changes that were made, I doubt it was.
+</p>
+
+<p>
+	What I will be taking into the workplace is to trust no one. What I mean by this is I will go in assuming everyone knows nothing and no one can do anything. I do not negatively mean this, just that if I assume the worst, my work can be its best. With a lot of my systems, I made assumptions that the designers would use it in X way or they could understand Y, but in reality, this was not the case. If I try to think more about who is going to use what I make rather than just the functionality of it, I feel my work can be better appreciated and used. I will also talk more with my superiors. I did not talk at all really with the programming professors about anything I was making, and just self-taught. I have never really had a problem, but I am sure it would be easier if I just asked someone more experienced if I had an issue I have been stuck on forever. I do not have issues asking other programmers for help, but for systems like Marching Cubes, I felt that I was not in a position to ask anyone as I was too far into it to ask anyone a good question unless they knew the algorithm inside and out. In a workforce, I hope for at least the first year, anything I am working on is a system someone over me can describe to me in a matter of seconds. One other lesson I learned about myself this semester is that it is okay to not finish work. I finished all my work and even other people’s work. I did it because I enjoy it and game development is a strong passion of mine. In the end though, in a company work is just a way to be paid and every employee is expendable. I will be sure to not overwork myself on a company project and do what is asked of me, no more. I have not experienced this at Champlain yet, but I know those on top are those who talk the loudest, not do the most work nor know the most. Hopefully, I can find a place where this is not the case, but I doubt it.
+	</p>
+
+<p>
+	Now to get onto my team. We had and have a lot of issues. There is no way to sugarcoat it. With that said, not everything was bad. The majority of our team were hard, dedicated workers who were overall great people. I had a lot of fun with them staying up late in Google Hangouts solving why everything in our game was pink and why the baked lighting turned out black instead of dark purple. Our team handled going remote well. We transitioned pretty quickly and I was impressed how most of our team was able to continue doing good work. Our communication was up, people were at most or every meeting, tasks were getting done by particular times. Another plus our team had was we are publishing to Steam. I am still not happy with where the game is for a public release with the number of performance issues I can fix, but with the limited time, I suppose it is fine. I feel if more people did more work, we could be at a farther point, but I know everyone has their limits. I would have to say a lot of our team as a whole, the development did not go right, it either just went or went wrong. A lot of the reason this game got finished is because of a core group of people that broke their back for the game. I will now get into what I thought went wrong overall on the team.
+</p>
+
+<p>	
+	I do not mean to bash the team, as we did get a successful game nearly finished, but a lot needed to be fixed with this team and still needs fixing. Firstly, when we are feature complete, and no new systems are being added by programmers, a designer should not go into the build and add a system. I do not understand how anyone on the team can think that going above the entire team, going above your role, and adding in something last minute is a good idea. It would be a different story if they had gone through the proper channels, got confirmation, and given the task off to someone more relevant. This did not happen often with the team but happened a few other times not with just the same person and not to the same severity, but this should never happen. Leading off of this, our team never followed pipelines. We had numerous pipelines and documentations to follow, which none were followed. Most of our project was held together by duct tape and glue. A lot of the naming conventions, folder hierarchy, coding formatting, etc. were terrible. I had to ask six different people to find a specific fbx file that was mislabeled and in the wrong folder. I can say part of it was due to remote, but this was happening long before the remote work. A lot of these issues happened due to there being no repercussions. I am not exactly sure what they could be as we can not fire a person or cut their pay, but something needed to be changed. I think a lot of the issues happened due to communication issues. Our team communicated but nowhere near enough. We are all remote, no one can tell me they are not sitting somewhere near their phone or computer at any time of day right now, except for essential workers, which I am pretty sure we have none. I get that people have classes, taking work free breaks, etc. but that is not what I am talking about. The lack of communication occurs when people are working. Whenever anyone has a question, they can ask it. That is what is so great about instant messaging and direct messaging. However, our team, a lot of the members just make assumptions about something, do it without telling anyone, and then we have the same issue again for the hundredth time that week. Even when we @all or told people in meetings, pinned messages, or anything in between, repeated issues came up time and time again. If I had an issue or question about anything, I would message the person and wait until I got a response. It sometimes meant I had to wait to work, but it saved me future work and other people's headaches when I knew exactly what I should be doing and how I should be doing it. Along with asking questions, no one reads documentation.
+</p>
+
+<p>
+	A lot of documentation was made for systems, designs, art, etc. and none of it was read. I did not read every single document as there is not enough time in the day to do that. However, a lot of our documentation has quick TLDRs or info graphs to give the reader the pertinent information in a few minutes or seconds by skimming. Our team also had an issue and still has an issue with completing tasks by a deadline or just completing tasks at all. I brought this issue up last semester forever ago, but little to no real changes were made. Every time before a presentation, I would think to myself, what if I did not stay up all night tonight and clean up the project so it was in the state we said it was going to be? Some of my favorite times are during all-nighters, but I want them to be a choice, not a requirement to meet deadlines. If a person can not finish a task, or just does not do a task, communicate this. Do not wait until sprint planning or 5 minutes before class to tell us something is not done or can not get done. Nearing the very end our team tried to implement a deadline and it worked as Scott stopped taking people’s work that was pushed after a certain time. If a task was not done, we just outright cut whatever it was. I think we should have been a bit harsher with tasks and deadlines so we could have finished a bit more for the game, and not relied on a few people to finish the entire game every sprint. Another issue is programmers never did code review. A lot of the code put into the project nearly broke the game, drop frames, froze the game, or had other issues. A the end of the sprint, Scott and I would have to fix everything as whoever implemented the feature did not test it at all in a full build or while playing. Once I got multi-scene loading in, there were no excuses for being able to test the game fully as it was as easy as dragging in all five scenes to see what would happen. I am pretty sure most of what I typed is not structured well or one complete thought, but I do not have a ton of time to write with all my other projects and have had a ton of issues with the team throughout the semester. I have said before I do not mind doing the work as I enjoy doing it, but when I bring up issues and nothing changes, it gets aggravating. We generally just had more of the same and nothing seemed to get done. I think the issues would have been more apparent if the few people who were doing the majority of the work stopped doing the amount of work they were doing. 
+	</p>
+	
+	<p>
+		I learned that if I find myself on a team that has issues, I address the issue and nothing changes to quit outright. The only actual person looking and for me, is me. I know all teams will have small issues here and there or a large issue, but a good team resolves the issue. We in a way just kind of swept it under a rug for it to grow over the semester. We are all still students, but as we are all supposed to be getting ready to go into a professional industry, I would be worried. For an actual team, I will know that over-communicating is key. It could come off as annoying or clingy, but I would want to make sure that everyone knows everything that is going on that is pertinent to them. A lot of the issues that have happened on our team, I would not expect to see them occur to a professional studio. Most of the internal issues we faced were structural ones, something that students new to a larger team would have trouble figuring out. It was more of a business and team dynamic issues than an actual game development issues with our team. I again, want to reiterate that our team was not all bad, we just did most everything we did to a met requirements level, nothing great or exceeding. Working on this team, I have learned what I need to work on and how to be a better teammate. I am still not sure how to help other teammates be better teammates as I do not think that is my place, but I hope industry teams have figured it out.  
+	</p>
+	  </div>
+	<div class = "DividerHeader">
+			<div class = "horizontalLineTop"></div>
+			
+			<!-- Needed to keep the spacing of the lines -->
+			<div class = "dividerText">&#8193<a href="https://github.com/TEEBQNE/TEEBQNE.github.io" target="_blank">Website written by Tyler Chapman</a></div>
+			<div class = "horizontalLineBottom"></div>
+		</div>
+  </body>
+</html> 
