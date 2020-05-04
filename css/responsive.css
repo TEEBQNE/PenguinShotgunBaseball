@@ -68,6 +68,11 @@ and (min-width : 1200px) {
 	{
 		font-size: 1.4rem;
 	}
+	
+	.PortfolioPiece p, .PortfolioPiece h4, .PortfolioPiece h3
+	{
+		font-size: 1.5vw;
+	}
 }
 
 @media only screen 
