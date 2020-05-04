@@ -86,10 +86,6 @@ and (min-width : 1800px) {
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (max-width : 825px) {
-	.ParallaxImage img
-	{
-		height: 30%;
-	}
 	
 	.HeaderName
 	{
@@ -155,16 +151,12 @@ and (max-width: 650px){
 		padding-right: .3rem;
 		padding-bottom: .3rem;
 		padding-left: .3rem;
+		top: calc((100% - 50%)/2);
 	}
 	
 	.dividerText 
 	{
 		font-size: 30px;
-	}
-	
-	.MenuHeader
-	{
-		height: 3.5rem;
 	}
 	
 	.dividerText
@@ -182,14 +174,14 @@ and (max-width: 650px){
 		margin-top: 3.5rem;
 	}
 	
+	.SeniorReelContainer
+	{
+		margin-top: 3.8rem;
+	}
+	
 	.PortfolioContainer, .ResumeContainer, .ContactContainer
 	{
 		margin-top: 3rem;
-	}
-	
-	.ParallaxImage img
-	{
-		margin-top: 3.5rem;
 	}
 	
 	.HeaderName
@@ -322,10 +314,6 @@ and (max-width: 750px)
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (max-width : 500px) {
-	.ParallaxImage img
-	{
-		height: 20%;
-	}
 	
 	.HeaderName
 	{

@@ -52,11 +52,11 @@ html::-webkit-scrollbar {
 {
 	margin-top: 5rem;
 	width: 100%;
-	height: 40%;
 	background: transparent;
 	position: relative;
   	text-align: center;
   	color: #eae7af;
+  	padding-bottom: 2;
 }
 
 /* menu navigation bar css */
@@ -119,7 +119,7 @@ html::-webkit-scrollbar {
 	height: 2px;
 	background-color: #241663;
 	position: inherit;
-	margin-top: 18;
+	margin-top: 20;
 }
 
 .DividerHeader
@@ -179,7 +179,7 @@ html::-webkit-scrollbar {
 	height: 10%;
 	/*border-radius: 14px;*/
 	margin-top: 5px;
-	margin-bottom: 5px;	
+	margin-bottom: .1px;	
 	display: flex;
    	align-items: center; 
    	justify-content: center;
@@ -209,6 +209,20 @@ html::-webkit-scrollbar {
   display: none;  
 }
 
+.SeniorReelContainer
+{
+	margin-top: 6.15rem;
+	position: relative;
+  	text-align: center;
+  	padding-bottom: 4;
+}
+
+.SeniorReelContainer iframe
+{
+	width: 70vw;
+	height: 40vw;
+}
+
 /* Portfolio Piece css */
 
 .PortfolioContainer
@@ -216,13 +230,13 @@ html::-webkit-scrollbar {
   -webkit-columns: 4;
      -moz-columns: 4;
           columns: 4;
-  -webkit-column-gap: .8em;
-     -moz-column-gap: .8em;
-          column-gap: .8em;
+  -webkit-column-gap: .65em;
+     -moz-column-gap: .65em;
+          column-gap: .65em;
           
 	position: relative;
-	margin-top: 5rem;
-	padding: 10 5 .5 5;
+	margin-top: 5.4rem;
+	padding: 10 5 0 0;
 }
 
 .PortfolioPiece img
@@ -328,12 +342,12 @@ html::-webkit-scrollbar {
 	-webkit-columns: 2;
      -moz-columns: 2;
           columns: 2;
-  -webkit-column-gap: .8em;
-     -moz-column-gap: .8em;
-          column-gap: .8em;
+  -webkit-column-gap: .5rem;
+     -moz-column-gap: .5rem;
+          column-gap: .5rem;
           
 	position: relative;
-	margin-top: 5rem;
+	margin-top: 5.4rem;
 	padding: 10 5 .5 5;
 	height: 650px;
 }
