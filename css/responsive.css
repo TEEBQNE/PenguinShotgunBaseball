@@ -79,12 +79,12 @@ and (min-width : 1200px) {
 and (min-width : 1800px) {
 	#Description
 	{
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 	
 	li
 	{
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 	}
 }
 
